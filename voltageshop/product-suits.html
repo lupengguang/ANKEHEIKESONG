@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>智能看护套装 · 按需选择 — Eufy HomeCare 智家看护</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/product-suits.css" />
+</head>
+<body>
+
+<!-- ===== Preloader ===== -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__brand">Eufy HomeCare<i>・智家看护</i></div>
+    <div class="preloader__count"><span id="loadCount">0</span><i>%</i></div>
+    <div class="preloader__bar"><span id="loadBar"></span></div>
+  </div>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress"><span id="scrollProgress"></span></div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== Announcement bar ===== -->
+<div class="topbar">
+  <div class="topbar__inner container">
+    <p class="topbar__text">智能看护套装 · <b>四款设备自由组合</b> &nbsp;|&nbsp; 覆盖家庭 / 庭院 / 无网全场景</p>
+    <a href="#footer" class="topbar__subscribe" data-magnetic>立即订阅</a>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="header__inner container">
+    <a href="index.html" class="logo" data-cursor="hover">Eufy Home<span>Care</span><i>智家看护</i></a>
+
+    <nav class="nav" id="nav">
+      <a href="index.html#hero" class="nav__link">首页</a>
+      <a href="index.html#arrivals" class="nav__link">商品列表</a>
+      <a href="ai-upgrade.html" class="nav__link">AI智能升级</a>
+      <a href="index.html#footer" class="nav__link">关于我们</a>
+      <a href="index.html#footer" class="nav__link">博客资讯</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="搜索" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="我的账户" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </button>
+      <button class="icon-btn icon-btn--cart" id="cartToggle" aria-label="购物车" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <a href="#footer" class="btn-login" data-magnetic>登录</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ===== 顶部标题区 ===== -->
+<section class="suits-hero">
+  <div class="suits-hero__orb suits-hero__orb--1"></div>
+  <div class="suits-hero__orb suits-hero__orb--2"></div>
+  <div class="container">
+    <span class="suits-hero__chip" data-reveal>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+      四大套装 · 按需选择
+    </span>
+    <h1 class="suits-hero__title" data-reveal>智能看护套装 <span>按需选择</span></h1>
+    <p class="suits-hero__sub" data-reveal>四款设备自由组合，覆盖家庭 / 庭院 / 无网全场景</p>
+  </div>
+</section>
+
+<!-- ===== 四款设备卡片 ===== -->
+<section class="section suits-devices">
+  <div class="container">
+    <div class="suits-grid">
+
+      <!-- 卡片1：NVR S4 Max -->
+      <article class="suit-card tilt" data-reveal>
+        <div class="suit-card__top">
+          <span class="suit-card__icon suit-card__icon--blue">
+            <!-- Element Plus · VideoCamera 录像机 -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 7l4-3v16l-4-3v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1z"/><path d="m9 9.2 4.2 2.8L9 14.8z" fill="#fff"/></svg>
+          </span>
+          <span class="suit-card__badge">旗舰中枢</span>
+        </div>
+        <h3 class="suit-card__title">中枢大脑 · NVR S4 Max</h3>
+        <p class="suit-card__tag">8通道PoE · 本地AI · 4K存储</p>
+        <ul class="suit-card__feats">
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>8路摄像头集中接入</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>本地AI智能分析</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>跨摄像头行为追踪</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>2TB本地存储</li>
+        </ul>
+        <a href="product.html?id=eufy-4k-nvr-s4-max-8" class="suit-card__btn" data-magnetic>了解更多
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- 卡片2：eufyCam S4 -->
+      <article class="suit-card tilt" data-reveal>
+        <div class="suit-card__top">
+          <span class="suit-card__icon suit-card__icon--cyan">
+            <!-- Element Plus · Camera 户外摄像头 -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 3h6l2 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3z"/><circle cx="12" cy="13" r="3.6" fill="#fff"/><circle cx="12" cy="13" r="1.9"/></svg>
+          </span>
+          <span class="suit-card__badge">户外首选</span>
+        </div>
+        <h3 class="suit-card__title">户外入口 · eufyCam S4</h3>
+        <p class="suit-card__tag">三镜头 · 360°PTZ · 自动跟踪</p>
+        <ul class="suit-card__feats">
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>4K广角 + 2K PTZ</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>子弹头检测→自动跟踪</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>8倍混合变焦</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>太阳能供电</li>
+        </ul>
+        <a href="product.html?id=eufycam-s4" class="suit-card__btn" data-magnetic>了解更多
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- 卡片3：SoloCam S340 -->
+      <article class="suit-card tilt" data-reveal>
+        <div class="suit-card__top">
+          <span class="suit-card__icon suit-card__icon--pink">
+            <!-- Element Plus · CameraFilled 室内摄像头 -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 3h6l2 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3z"/><circle cx="12" cy="13" r="3.8" fill="#fff"/><circle cx="12" cy="13" r="2" fill="#0f172a"/></svg>
+          </span>
+          <span class="suit-card__badge">灵活安装</span>
+        </div>
+        <h3 class="suit-card__title">室内互动 · SoloCam S340</h3>
+        <p class="suit-card__tag">双镜头 · 360°PTZ · 双向语音</p>
+        <ul class="suit-card__feats">
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>3K广角 + 2K长焦</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>spotlight补光灯</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>双向语音互动</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>太阳能免布线</li>
+        </ul>
+        <a href="product.html?id=solocam-s340" class="suit-card__btn" data-magnetic>了解更多
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- 卡片4：4G LTE Cam S330 -->
+      <article class="suit-card tilt" data-reveal>
+        <div class="suit-card__top">
+          <span class="suit-card__icon suit-card__icon--violet">
+            <!-- Element Plus · Cellphone 4G -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="2" width="14" height="20" rx="2.8"/><path d="M10.8 18h2.4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><path d="M9.2 14.2v-3.4l1.4 2.1 1.4-2.1v3.4h2.3v1.4H6.9v-1.4z" fill="#fff"/></svg>
+          </span>
+          <span class="suit-card__badge">偏远守护</span>
+        </div>
+        <h3 class="suit-card__title">无网场景 · 4G Cam S330</h3>
+        <p class="suit-card__tag">4G LTE · 无WiFi · 100流明</p>
+        <ul class="suit-card__feats">
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>4G全网通，无WiFi也能用</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>360°旋转AI跟踪</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>100流明补光灯</li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 17.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4z"/></svg>永久供电</li>
+        </ul>
+        <a href="product.html?id=eufy-4g-lte-cam-s330" class="suit-card__btn" data-magnetic>了解更多
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 推荐组合方案 ===== -->
+<section class="section suits-combos">
+  <div class="container">
+    <div class="suits-head" data-reveal>
+      <h2>推荐组合方案</h2>
+      <p>按户型与场景一键搭配，套装内设备统一联动</p>
+    </div>
+
+    <div class="combo-grid">
+
+      <!-- 组合A：基础家庭套装（推荐） -->
+      <article class="combo-card combo-card--featured" data-reveal>
+        <div class="combo-card__ribbon">推荐</div>
+        <h3 class="combo-card__name">基础家庭套装</h3>
+        <div class="combo-card__items">
+          <span class="combo-chip">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 7l4-3v16l-4-3v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1z"/></svg>
+            NVR S4 Max ×1
+          </span>
+          <span class="combo-chip">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 3h6l2 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3z"/></svg>
+            eufyCam S4 ×2
+          </span>
+        </div>
+        <p class="combo-card__fit"><b>适合：</b>普通家庭，门口+庭院监控</p>
+        <p class="combo-card__highlight">一步到位，家用首选</p>
+        <a href="index.html#arrivals" class="combo-card__btn" data-magnetic>立即配置
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- 组合B：全屋智能套装 -->
+      <article class="combo-card" data-reveal>
+        <h3 class="combo-card__name">全屋智能套装</h3>
+        <div class="combo-card__items">
+          <span class="combo-chip">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 7l4-3v16l-4-3v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1z"/></svg>
+            NVR S4 Max ×1
+          </span>
+          <span class="combo-chip">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 3h6l2 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3z"/></svg>
+            eufyCam S4 ×2
+          </span>
+          <span class="combo-chip">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 3h6l2 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3z"/><circle cx="12" cy="13" r="3.4" fill="#fff"/></svg>
+            SoloCam S340 ×2
+          </span>
+        </div>
+        <p class="combo-card__fit"><b>适合：</b>别墅 / 大平层，室内外全场景</p>
+        <p class="combo-card__highlight">室内外全覆盖，AI互动</p>
+        <a href="index.html#arrivals" class="combo-card__btn" data-magnetic>立即配置
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- 组合C：全场景旗舰套装 -->
+      <article class="combo-card" data-reveal>
+        <h3 class="combo-card__name">全场景旗舰套装</h3>
+        <div class="combo-card__items">
+          <span class="combo-chip">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 7l4-3v16l-4-3v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1z"/></svg>
+            NVR S4 Max ×1
+          </span>
+          <span class="combo-chip">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 3h6l2 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3z"/></svg>
+            eufyCam S4 ×2
+          </span>
+          <span class="combo-chip">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 3h6l2 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3z"/><circle cx="12" cy="13" r="3.4" fill="#fff"/></svg>
+            SoloCam S340 ×2
+          </span>
+          <span class="combo-chip">
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="2" width="14" height="20" rx="2.8"/></svg>
+            4G Cam S330 ×2
+          </span>
+        </div>
+        <p class="combo-card__fit"><b>适合：</b>大户型 / 农场 / 仓库，含无网区域</p>
+        <p class="combo-card__highlight">无死角守护，含无网场景</p>
+        <a href="index.html#arrivals" class="combo-card__btn" data-magnetic>立即配置
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <a href="index.html" class="logo logo--light footer__logo">Eufy Home<span>Care</span><i>智家看护</i></a>
+
+    <div class="footer__headline">
+      <h2 data-split>智能看护</h2>
+      <h2 data-split>主动理解 · 主动联动</h2>
+      <h2 data-split>守护每一个家</h2>
+    </div>
+
+    <form class="subscribe" id="subscribeForm">
+      <input type="email" placeholder="请输入您的邮箱" required data-cursor="text" />
+      <button type="submit" data-magnetic>订阅</button>
+    </form>
+    <p class="subscribe__msg" id="subscribeMsg"></p>
+
+    <div class="socials">
+      <a href="#" aria-label="脸书 Facebook" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H17V.2C16.7.1 15.7 0 14.6 0 12.2 0 10.5 1.5 10.5 4.2V6H8v3h2.5v9H14V9Z"/></svg></a>
+      <a href="#" aria-label="Instagram" data-cursor="hover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="X 平台" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-5 7H3l8-9L3 2h6l4 6 5-6Z"/></svg></a>
+      <a href="#" aria-label="领英 LinkedIn" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.1c.5-1 1.8-2.1 3.7-2.1 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9V9Z"/></svg></a>
+      <a href="#" aria-label="YouTube" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 16.5 31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg></a>
+    </div>
+
+    <p class="copyright">版权所有 © 2026 Eufy HomeCare 智家看护 | 保留一切权利</p>
+  </div>
+</footer>
+
+<!-- ===== Cart drawer ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer__head">
+    <h3>我的购物车 <span id="cartCountTitle">(0)</span></h3>
+    <button class="icon-btn" id="cartClose" aria-label="关闭购物车">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__items" id="cartItems"></div>
+  <div class="cart-drawer__foot">
+    <div class="cart-total"><span>合计</span><b id="cartTotal">$0</b></div>
+    <button class="btn-checkout" data-magnetic>去结算</button>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

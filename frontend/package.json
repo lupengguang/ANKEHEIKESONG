@@ -1,0 +1,21 @@
+{
+  "name": "eufy-ai-homecare-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "eufy AI HomeCare 智能看护前端（Vue3 + Vite + Axios）",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0"
+  }
+}

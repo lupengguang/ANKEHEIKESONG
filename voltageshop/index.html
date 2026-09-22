@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eufy HomeCare・智家看护 — 智能家居看护平台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== Preloader ===== -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__brand">Eufy HomeCare<i>・智家看护</i></div>
+    <div class="preloader__count"><span id="loadCount">0</span><i>%</i></div>
+    <div class="preloader__bar"><span id="loadBar"></span></div>
+  </div>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress"><span id="scrollProgress"></span></div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== Announcement bar ===== -->
+<div class="topbar">
+  <div class="topbar__inner container">
+    <p class="topbar__text">首单立享 <b>8 折优惠</b> &nbsp;|&nbsp; 高端无人机现已开启预售，全球包邮</p>
+    <a href="#footer" class="topbar__subscribe" data-magnetic>立即订阅</a>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="header__inner container">
+    <a href="#" class="logo" data-cursor="hover">Eufy Home<span>Care</span><i>智家看护</i></a>
+
+    <nav class="nav" id="nav">
+      <a href="#hero" class="nav__link is-active">首页</a>
+      <a href="#arrivals" class="nav__link">商品列表</a>
+      <a href="ai-upgrade.html" class="nav__link">AI智能升级</a>
+      <a href="#footer" class="nav__link">关于我们</a>
+      <a href="#footer" class="nav__link">博客资讯</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="搜索" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="我的账户" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </button>
+      <button class="icon-btn icon-btn--cart" id="cartToggle" aria-label="购物车" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <a href="#footer" class="btn-login" data-magnetic>登录</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="container hero__inner">
+    <div class="hero__top">
+      <span class="hero__pill" data-hero-line>4K 超清 · 太阳能续航 · 智能人形识别</span>
+      <h1 class="hero__title">
+        <span class="line" data-hero-line>智家<em>看护</em></span>
+      </h1>
+    </div>
+
+    <div class="hero__stage" id="heroStage">
+      <div class="hero__slides" id="heroSlides">
+        <div class="hero__slide is-active">
+          <img src="images/products/hero-slide-1.png" alt="eufy 安防系统" />
+        </div>
+        <div class="hero__slide">
+          <img src="images/products/hero-slide-2.png" alt="eufy 户外摄像头" />
+        </div>
+        <div class="hero__slide">
+          <img src="images/products/hero-slide-3.png" alt="eufy 4G LTE 摄像头" />
+        </div>
+        <div class="hero__slide">
+          <img src="images/products/hero-slide-4.png" alt="eufy NVR 录像系统" />
+        </div>
+      </div>
+      <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="上一张">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6 9 12l6 6"/></svg>
+      </button>
+      <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="下一张">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m9 6 6 6-6 6"/></svg>
+      </button>
+      <div class="hero__dots" id="heroDots"></div>
+      <div class="hero__progress"><span id="heroProgress"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Brand marquee ===== -->
+<div class="brands">
+  <div class="brands__track" id="brandsTrack">
+    <span>FENDI</span><span>FURLA</span><span>VIISHOW</span><span>Naturehike</span>
+    <span>MONCLER</span><span>BAIHUHU</span><span>BURBERRY</span><span>EUFY HOMECARE</span>
+    <span>FENDI</span><span>FURLA</span><span>VIISHOW</span><span>Naturehike</span>
+    <span>MONCLER</span><span>BAIHUHU</span><span>BURBERRY</span><span>EUFY HOMECARE</span>
+  </div>
+</div>
+
+<!-- ===== NEW ARRIVALS ===== -->
+<section class="arrivals section" id="arrivals">
+  <div class="container">
+    <h2 class="section-title" data-split>新品上市</h2>
+
+    <div class="product-row">
+      <article class="product tilt" data-reveal
+               data-name="eufy 4K NVR S4 Max 8" data-price="499"
+               data-img="images/products/eufy-4k-nvr-s4-max-8.png"
+               data-product-id="eufy-4k-nvr-s4-max-8">
+        <div class="product__media">
+          <img src="images/products/eufy-4k-nvr-s4-max-8.png" alt="eufy 4K NVR S4 Max 8">
+        </div>
+        <h3 class="product__name">eufy 4K NVR S4 Max 8</h3>
+        <p class="product__desc">8 路 4K 同步录制 · 2TB 本地存储 · 智能人形过滤 · 远程实时预览</p>
+        <div class="product__price">$499</div>
+        <button class="btn-cart add-to-cart" data-cursor="hover">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          加入购物车
+        </button>
+      </article>
+
+      <article class="product product--featured tilt" data-reveal
+               data-name="eufyCam S4" data-price="249"
+               data-img="images/products/eufycam-s4.png"
+               data-product-id="eufycam-s4">
+        <div class="product__media">
+          <img src="images/products/eufycam-s4.png" alt="eufyCam S4">
+        </div>
+        <h3 class="product__name">eufyCam S4</h3>
+        <p class="product__desc">2K 全彩夜视 · 180 天续航 · IP67 防护 · 双向语音对讲</p>
+        <div class="product__price">$249</div>
+        <button class="btn-cart add-to-cart" data-cursor="hover">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          加入购物车
+        </button>
+      </article>
+
+      <article class="product tilt" data-reveal
+               data-name="SoloCam S340" data-price="199"
+               data-img="images/products/solocam-s340.png"
+               data-product-id="solocam-s340">
+        <div class="product__media">
+          <img src="images/products/solocam-s340.png" alt="SoloCam S340">
+        </div>
+        <h3 class="product__name">SoloCam S340</h3>
+        <p class="product__desc">太阳能供电 · 360° 全景视野 · 双摄像头 · 智能追踪</p>
+        <div class="product__price">$199</div>
+        <button class="btn-cart add-to-cart" data-cursor="hover">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          加入购物车
+        </button>
+      </article>
+
+      <article class="product tilt" data-reveal
+               data-name="eufy 4G LTE Cam S330" data-price="299"
+               data-img="images/products/eufy-4g-lte-cam-s330.png"
+               data-product-id="eufy-4g-lte-cam-s330">
+        <div class="product__media">
+          <img src="images/products/eufy-4g-lte-cam-s330.png" alt="eufy 4G LTE Cam S330">
+        </div>
+        <h3 class="product__name">eufy 4G LTE Cam S330</h3>
+        <p class="product__desc">4G 全网通 · 无需 Wi-Fi · 移动侦测告警 · 云端存储</p>
+        <div class="product__price">$299</div>
+        <button class="btn-cart add-to-cart" data-cursor="hover">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          加入购物车
+        </button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED ACCESSORIES (Bento) ===== -->
+<section class="accessories section" id="accessories">
+  <div class="container">
+    <div class="bento">
+      <div class="bento__card bento__card--intro" data-reveal>
+        <h3>精选<br>配件系列</h3>
+        <p>支持个性化定制 | 可遮蔽品牌标志</p>
+      </div>
+
+      <div class="bento__card bento__card--wide" data-reveal>
+        <div class="bento__text">
+          <h3>eufy Video Doorbell 2K</h3>
+          <p>美元 $199</p>
+        </div>
+        <img class="bento__img" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=matte%20black%20professional%20aerial%20photography%20drone%20with%20gimbal%20camera%2C%20light%20grey%20studio%20background&image_size=landscape_16_9" alt="eufy Video Doorbell 2K">
+      </div>
+
+      <div class="bento__card" data-reveal>
+        <img class="bento__thumb" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=black%20octagonal%20360%20degree%20panoramic%20camera%20device%2C%20minimalist%20product%20photo%2C%20light%20grey%20background&image_size=square_hd" alt="eufy Indoor Cam 2K">
+        <h3>eufy Indoor Cam 2K</h3>
+        <p>美元 $129</p>
+      </div>
+
+      <div class="bento__card" data-reveal>
+        <img class="bento__thumb" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=dark%20grey%20portable%20drone%20remote%20controller%20with%20built-in%20screen%2C%20product%20photo%2C%20light%20grey%20background&image_size=square_hd" alt="eufy Smart Lock">
+        <h3>eufy Smart Lock</h3>
+        <p>美元 $249</p>
+      </div>
+
+      <div class="bento__card" data-reveal>
+        <img class="bento__thumb" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ultra%20light%20grey%20mini%20drone%20with%20foldable%20arms%2C%20product%20photo%2C%20light%20grey%20background&image_size=square_hd" alt="eufy Smart Drop">
+        <h3>eufy Smart Drop</h3>
+        <p>美元 $199</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Promo banners ===== -->
+<section class="promo section">
+  <div class="container promo__row">
+    <article class="promo__card promo__card--wide" data-reveal>
+      <div class="promo__watermark">Eufy HomeCare</div>
+      <div class="promo__content">
+        <span class="promo__kicker">四大套装 · 按需选择</span>
+        <h3>智能看护<br><em>套装组合</em><br>按需搭配</h3>
+        <a href="product-suits.html" class="btn-outline" data-magnetic>查看套装</a>
+      </div>
+      <img class="promo__img" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20home%20security%20camera%20family%2C%20white%20NVR%20recorder%20unit%20and%20outdoor%20PTZ%20camera%2C%20clean%20light%20grey%20studio%20background%2C%20minimal%20product%20photo&image_size=landscape_4_3" alt="智能看护套装组合">
+    </article>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <a href="#" class="logo logo--light footer__logo">Eufy Home<span>Care</span><i>智家看护</i></a>
+
+    <div class="footer__headline">
+      <h2 data-split>未来科技</h2>
+      <h2 data-split>4K 航拍无人机</h2>
+      <h2 data-split>悬停于城市上空</h2>
+      <img class="footer__drone" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20camera%20drone%20hovering%20over%20neon%20lit%20cyberpunk%20city%20at%20night%2C%20purple%20and%20blue%20glowing%20skyline%2C%20cinematic&image_size=landscape_16_9" alt="未来无人机飞越城市">
+    </div>
+
+    <form class="subscribe" id="subscribeForm">
+      <input type="email" placeholder="请输入您的邮箱" required data-cursor="text" />
+      <button type="submit" data-magnetic>订阅</button>
+    </form>
+    <p class="subscribe__msg" id="subscribeMsg"></p>
+
+    <div class="socials">
+      <a href="#" aria-label="脸书 Facebook" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H17V.2C16.7.1 15.7 0 14.6 0 12.2 0 10.5 1.5 10.5 4.2V6H8v3h2.5v9H14V9Z"/></svg></a>
+      <a href="#" aria-label="Instagram" data-cursor="hover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="X 平台" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-5 7H3l8-9L3 2h6l4 6 5-6Z"/></svg></a>
+      <a href="#" aria-label="领英 LinkedIn" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.1c.5-1 1.8-2.1 3.7-2.1 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9V9Z"/></svg></a>
+      <a href="#" aria-label="YouTube" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 16.5 31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg></a>
+    </div>
+
+    <p class="copyright">版权所有 © 2023 无人机模板 | 保留一切权利</p>
+  </div>
+</footer>
+
+<!-- ===== Cart drawer ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer__head">
+    <h3>我的购物车 <span id="cartCountTitle">(0)</span></h3>
+    <button class="icon-btn" id="cartClose" aria-label="关闭购物车">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__items" id="cartItems"></div>
+  <div class="cart-drawer__foot">
+    <div class="cart-total"><span>合计</span><b id="cartTotal">$0</b></div>
+    <button class="btn-checkout" data-magnetic>去结算</button>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

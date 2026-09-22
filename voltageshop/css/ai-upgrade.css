@@ -1,0 +1,925 @@
+/* ============================================================
+   AI 智能升级介绍页 — ai-upgrade.css
+   主题：深空科幻数字艺术 + 玻璃拟态（Glassmorphism）
+   —— 所有视觉约束由统一变量驱动，只作用于本页 ——
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   0. 设计令牌
+------------------------------------------------------------ */
+.ai-page {
+  /* 玻璃面 */
+  --glass:        rgba(255, 255, 255, .055);
+  --glass-strong: rgba(255, 255, 255, .095);
+  --glass-line:   rgba(255, 255, 255, .13);
+  --glass-hi:     rgba(255, 255, 255, .22);
+  --blur: 20px;
+
+  /* 文字 */
+  --text:   #e9eeff;
+  --text-2: #a8b3d6;
+  --text-3: #727ea3;
+
+  /* 四大场景霓虹色（--scan 由各板块覆写） */
+  --scan: #60a5fa;
+  --scan-soft: rgba(96, 165, 250, .16);
+  --c-brain-1:#3b82f6;  --c-brain-2:#93c5fd;
+  --c-out-1:#06b6d4;    --c-out-2:#67e8f9;
+  --c-in-1:#ec4899;     --c-in-2:#f9a8d4;
+  --c-off-1:#8b5cf6;    --c-off-2:#c4b5fd;
+
+  background: transparent;
+}
+.ai-page .container { max-width: 1180px; }
+body.ai-body { background: #04060f; color: var(--text); }
+
+/* 主内容浮于深空层之上 */
+.ai-page > section { position: relative; z-index: 1; }
+
+/* ------------------------------------------------------------
+   1. 深空背景层
+------------------------------------------------------------ */
+.ai-space {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 760px at 78% -8%, rgba(29, 78, 216, .28) 0%, transparent 60%),
+    radial-gradient(1000px 720px at 6% 108%, rgba(124, 58, 237, .26) 0%, transparent 58%),
+    linear-gradient(180deg, #04060f 0%, #070b1e 48%, #05070f 100%);
+}
+#aiStarfield {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 极光星云 */
+.ai-space__aurora {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  filter: blur(95px);
+  opacity: .42;
+  will-change: transform;
+  pointer-events: none;
+}
+.ai-space__aurora--1 {
+  background: #1d4ed8;
+  top: -150px; right: -120px;
+  animation: auroraDrift 24s ease-in-out infinite;
+}
+.ai-space__aurora--2 {
+  background: #0e7490;
+  width: 420px; height: 420px;
+  top: 32%; left: -170px;
+  animation: auroraDrift 30s ease-in-out infinite reverse;
+}
+.ai-space__aurora--3 {
+  background: #9d174d;
+  width: 460px; height: 460px;
+  bottom: -160px; left: 12%;
+  animation: auroraDrift 27s ease-in-out infinite;
+}
+.ai-space__aurora--4 {
+  background: #5b21b6;
+  width: 430px; height: 430px;
+  bottom: -120px; right: 6%;
+  animation: auroraDrift 33s ease-in-out infinite reverse;
+}
+@keyframes auroraDrift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%      { transform: translate3d(50px, 36px, 0) scale(1.1); }
+  66%      { transform: translate3d(-36px, 54px, 0) scale(.94); }
+}
+
+/* HUD 网格（缓慢上移） */
+.ai-space__grid {
+  position: absolute;
+  inset: -54px 0 0;
+  background-image:
+    linear-gradient(rgba(147, 197, 253, .075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 197, 253, .075) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 20%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 20%, transparent 78%);
+  animation: gridFlow 18s linear infinite;
+}
+@keyframes gridFlow {
+  from { transform: translateY(0); }
+  to   { transform: translateY(54px); }
+}
+
+/* 暗角 */
+.ai-space__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 52%, rgba(2, 4, 12, .88));
+}
+
+/* ------------------------------------------------------------
+   2. HERO —— 蓝色玻璃舱
+------------------------------------------------------------ */
+.ai-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 28px auto 0;
+  border-radius: 22px;
+  color: #fff;
+  background: linear-gradient(125deg, rgba(11, 30, 91, .66) 0%, rgba(29, 78, 216, .4) 55%, rgba(59, 130, 246, .24) 100%);
+  border: 1px solid rgba(147, 197, 253, .26);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .16),
+    inset 0 -1px 0 rgba(0, 0, 0, .3),
+    0 30px 70px -30px rgba(37, 99, 235, .55);
+}
+
+.ai-hero__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 84px 56px;
+}
+
+/* 科技网格背景（提高明度以在玻璃上可见） */
+.ai-hero__grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(147, 197, 253, .16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 197, 253, .16) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(ellipse 90% 90% at 30% 40%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 90% at 30% 40%, #000 30%, transparent 75%);
+}
+
+/* 玻璃内光斑 */
+.ai-hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+.ai-hero__glow--1 {
+  width: 360px; height: 360px;
+  background: rgba(147, 197, 253, .28);
+  top: -160px; right: -90px;
+}
+.ai-hero__glow--2 {
+  width: 240px; height: 240px;
+  background: rgba(30, 58, 138, .45);
+  bottom: -130px; left: -70px;
+}
+
+/* Hero 文字 */
+.ai-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 999px;
+  padding: 6px 15px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.ai-hero__badge svg { width: 15px; height: 15px; }
+
+.ai-hero__title {
+  font-family: 'Archivo', 'Noto Sans SC', sans-serif;
+  font-size: clamp(36px, 4.6vw, 54px);
+  font-weight: 900;
+  line-height: 1.12;
+  margin: 0 0 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 34px rgba(96, 165, 250, .55);
+}
+
+.ai-hero__sub {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+  color: rgba(233, 238, 255, .88);
+}
+
+.ai-hero__actions {
+  margin-top: 34px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Hero 按钮 */
+.ai-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border-radius: 999px;
+  padding: 14px 30px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+  cursor: pointer;
+}
+.ai-btn svg { width: 18px; height: 18px; }
+.ai-btn--primary {
+  background: #fff;
+  color: #102a6b;
+  box-shadow: 0 12px 28px rgba(11, 30, 91, .4);
+}
+.ai-btn--primary:hover { transform: translateY(-3px); box-shadow: 0 18px 38px rgba(147, 197, 253, .45); }
+.ai-btn--ghost {
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .34);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.ai-btn--ghost:hover { background: rgba(255, 255, 255, .18); transform: translateY(-3px); }
+
+/* ---- 右侧：玻璃摄像头 + AI 光环 ---- */
+.ai-hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.ai-halo {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 2px solid rgba(147, 197, 253, .8);
+  animation: aiHaloPulse 2.8s ease-out infinite;
+}
+.ai-halo--d2 { animation-delay: .9s; }
+.ai-halo--d3 { animation-delay: 1.8s; }
+
+@keyframes aiHaloPulse {
+  0%   { transform: scale(.5); opacity: .95; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+.ai-camera {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .36);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: aiFloat 3.6s ease-in-out infinite;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .35),
+    0 18px 40px rgba(0, 0, 0, .4),
+    0 0 34px -6px rgba(96, 165, 250, .5);
+}
+.ai-camera svg { width: 62px; height: 62px; color: #fff; }
+
+.ai-camera__dot {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: aiRecBlink 1.6s infinite;
+}
+
+@keyframes aiFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-13px); }
+}
+@keyframes aiRecBlink {
+  0%   { box-shadow: 0 0 0 0 rgba(74, 222, 128, .8); }
+  70%  { box-shadow: 0 0 0 11px rgba(74, 222, 128, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* 环绕摄像头轨道上的小粒子 */
+.ai-orbit {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #93c5fd;
+  box-shadow: 0 0 12px rgba(147, 197, 253, .9);
+}
+.ai-orbit--a {
+  top: 30px; left: calc(50% - 110px);
+  animation: aiOrbitMove 4s linear infinite;
+}
+.ai-orbit--b {
+  bottom: 36px; right: calc(50% - 110px);
+  background: #bfdbfe;
+  animation: aiOrbitMove 5.2s linear infinite reverse;
+}
+@keyframes aiOrbitMove {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translate(220px, -40px); opacity: 0; }
+}
+
+/* ------------------------------------------------------------
+   3. 功能板块（四大场景）
+------------------------------------------------------------ */
+.ai-section { padding: 110px 0 14px; scroll-margin-top: 90px; }
+
+/* 各板块霓虹色 */
+#brain   { --scan: var(--c-brain-1); --scan-soft: rgba(59, 130, 246, .15); }
+#outdoor { --scan: var(--c-out-1);   --scan-soft: rgba(34, 211, 238, .14); }
+#indoor  { --scan: var(--c-in-1);    --scan-soft: rgba(236, 72, 153, .14); }
+#offline { --scan: var(--c-off-1);   --scan-soft: rgba(139, 92, 246, .15); }
+
+.ai-section__head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.ai-section__title {
+  font-family: 'Archivo', 'Noto Sans SC', sans-serif;
+  font-size: clamp(26px, 3vw, 35px);
+  font-weight: 900;
+  color: var(--scan);
+  margin: 0 0 12px;
+  letter-spacing: .6px;
+  text-shadow: 0 0 26px var(--scan-soft), 0 0 60px var(--scan-soft);
+}
+.ai-section__title .emoji { margin-right: 8px; }
+
+.ai-section__sub {
+  font-size: 16px;
+  color: var(--text-2);
+  margin: 0;
+  letter-spacing: .6px;
+}
+
+/* ---- 板块头部动效核心：玻璃芯片 + 双层光环 ---- */
+.ai-head-visual {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ai-head-visual__core {
+  position: relative;
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 31px;
+  line-height: 1;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04));
+  border: 1px solid color-mix(in srgb, var(--scan) 55%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 26px -2px var(--scan),
+    inset 0 1px 0 rgba(255, 255, 255, .28);
+}
+.ai-head-visual__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--scan);
+  animation: aiHeadRingPulse 3s ease-out infinite;
+}
+.ai-head-visual__ring--d2 { animation-delay: 1.5s; }
+
+@keyframes aiHeadRingPulse {
+  0%   { transform: scale(.62); opacity: .8; }
+  100% { transform: scale(1.45); opacity: 0; }
+}
+
+/* ---- 板块本地氛围光斑（深空环境中的局部星云） ---- */
+.ai-ambient {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: .32;
+}
+.ai-section--rose .ai-ambient { background: #db2777; }
+.ai-section--violet .ai-ambient { background: #7c3aed; }
+.ai-ambient--a {
+  width: 300px; height: 300px;
+  top: 60px; left: -130px;
+  animation: aiAmbientDrift 14s ease-in-out infinite;
+}
+.ai-ambient--b {
+  width: 260px; height: 260px;
+  bottom: 40px; right: -120px;
+  animation: aiAmbientDrift 18s ease-in-out infinite reverse;
+}
+@keyframes aiAmbientDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(40px, 30px) scale(1.12); }
+}
+
+/* ------------------------------------------------------------
+   4. 玻璃卡片
+------------------------------------------------------------ */
+/* 卡片网格 2 x 2 —— 布局约束沿用旧版 */
+.ai-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.ai-card {
+  position: relative;
+  background: linear-gradient(150deg, var(--glass-strong), var(--glass) 55%);
+  border: 1px solid var(--glass-line);
+  border-radius: 16px;
+  padding: 32px 30px;
+  backdrop-filter: blur(var(--blur)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(150%);
+  box-shadow:
+    inset 0 1px 0 var(--glass-hi),
+    inset 0 -1px 0 rgba(0, 0, 0, .25),
+    0 18px 42px -20px rgba(0, 0, 0, .7);
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.22, 1, .36, 1),
+              box-shadow .35s ease,
+              border-color .35s ease;
+}
+/* 玻璃顶光（静态，不占布局） */
+.ai-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 45%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .08), transparent);
+  pointer-events: none;
+}
+/* 悬停时：斜向高光扫过 */
+.ai-card__sheen {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, .16) 48%, transparent 62%);
+  transform: translateX(-130%);
+  pointer-events: none;
+  transition: transform .9s ease;
+}
+.ai-card:hover .ai-card__sheen { transform: translateX(130%); }
+/* 悬停时：霓虹扫描线（颜色取板块 --scan） */
+.ai-card__scanline {
+  position: absolute;
+  left: 0; right: 0;
+  top: 0;
+  height: 1px;
+  z-index: 2;
+  background: var(--scan);
+  box-shadow: 0 0 12px 2px var(--scan), 0 0 26px 4px var(--scan-soft);
+  opacity: 0;
+  pointer-events: none;
+}
+.ai-card:hover .ai-card__scanline {
+  opacity: 1;
+  animation: cardScan 1.3s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+@keyframes cardScan {
+  from { top: 0; }
+  to   { top: 100%; }
+}
+
+/* 无 3D 指令的卡片：hover 上浮（有 tilt 指令的卡片变换交给 GSAP） */
+.ai-card:hover {
+  transform: translateY(-7px);
+  border-color: color-mix(in srgb, var(--scan) 45%, transparent);
+  box-shadow:
+    inset 0 1px 0 var(--glass-hi),
+    0 24px 50px -18px rgba(0, 0, 0, .7),
+    0 0 38px -8px var(--scan);
+}
+.ai-card[data-tilt]:hover { transform: none; }
+.ai-card[data-tilt] {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+/* 揭示完成后：变换过渡关闭，避免与 GSAP 逐帧 transform 打架；延迟归零 */
+.ai-card[data-tilt].is-visible {
+  transition: box-shadow .3s ease, border-color .3s ease;
+  transition-delay: 0s;
+}
+.ai-card[data-tilt] .ai-card__icon   { transform: translateZ(26px); }
+.ai-card[data-tilt] .ai-card__name   { transform: translateZ(18px); }
+.ai-card[data-tilt] .ai-card__media  { transform: translateZ(10px); }
+/* 扫光 / 扫描线浮在最前景深，避免被 translateZ 子元素遮挡 */
+.ai-card[data-tilt] .ai-card__sheen      { transform: translateX(-130%) translateZ(32px); }
+.ai-card[data-tilt]:hover .ai-card__sheen { transform: translateX(130%) translateZ(32px); }
+.ai-card[data-tilt] .ai-card__scanline   { transform: translateZ(32px); }
+
+/* ---- 卡片顶部图片区（预留路径，放图自动显现） ---- */
+.ai-card__media {
+  position: relative;
+  height: 150px;
+  margin: -32px -30px 22px;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .015));
+  border-bottom: 1px solid rgba(255, 255, 255, .09);
+}
+.ai-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--scan-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--scan-soft) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+.ai-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity .5s ease, transform .5s ease;
+}
+.ai-card__img.is-loading { opacity: 0; }
+.ai-card__img.is-missing { display: none; }
+.ai-card:hover .ai-card__img:not(.is-loading):not(.is-missing) { transform: scale(1.06); }
+
+/* ---- 图标底座（SVG / emoji 通用） ---- */
+.ai-card__icon {
+  position: relative;
+  z-index: 2;
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(140deg, color-mix(in srgb, var(--scan) 26%, transparent), rgba(255, 255, 255, .04));
+  border: 1px solid color-mix(in srgb, var(--scan) 32%, transparent);
+  color: var(--scan);
+  margin-bottom: 20px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .22),
+    0 10px 22px -12px rgba(0, 0, 0, .65);
+}
+.ai-card__icon svg { width: 29px; height: 29px; }
+.ai-card__icon--emoji {
+  font-size: 27px;
+  line-height: 1;
+}
+
+.ai-card__name {
+  position: relative;
+  z-index: 2;
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.ai-card__desc {
+  position: relative;
+  z-index: 2;
+  font-size: 14.5px;
+  color: var(--text-2);
+  line-height: 1.78;
+  margin: 0;
+}
+.ai-card__desc .hl {
+  color: var(--scan);
+  font-weight: 700;
+  text-shadow: 0 0 16px var(--scan-soft);
+}
+
+/* ------------------------------------------------------------
+   5. 对比区 —— 双层玻璃
+------------------------------------------------------------ */
+.ai-compare { padding: 110px 0 14px; }
+
+.ai-compare__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.ai-compare__col {
+  position: relative;
+  border-radius: 18px;
+  padding: 36px 34px 40px;
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+.ai-compare__col--old {
+  background: linear-gradient(160deg, rgba(148, 163, 184, .09), rgba(148, 163, 184, .03));
+  border: 1px solid rgba(148, 163, 184, .2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+.ai-compare__col--new {
+  background: linear-gradient(160deg, rgba(59, 130, 246, .17), rgba(59, 130, 246, .04));
+  border: 1px solid rgba(96, 165, 250, .38);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .16),
+    0 0 44px -10px rgba(59, 130, 246, .45);
+}
+
+.ai-compare__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 21px;
+  font-weight: 800;
+  margin: 0 0 20px;
+  color: var(--text-2);
+}
+.ai-compare__title svg { width: 26px; height: 26px; }
+.ai-compare__col--new .ai-compare__title {
+  color: var(--c-brain-2);
+  text-shadow: 0 0 20px rgba(96, 165, 250, .4);
+}
+
+.ai-compare__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ai-compare__list li {
+  font-size: 15.5px;
+  color: var(--text-2);
+  padding: 13px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, .1);
+  line-height: 1.5;
+}
+.ai-compare__list li:last-child { border-bottom: none; }
+
+/* ------------------------------------------------------------
+   6. 四大场景全覆盖横幅 —— 玻璃条
+------------------------------------------------------------ */
+.ai-coverage {
+  position: relative;
+  margin-top: 38px;
+  background: linear-gradient(150deg, var(--glass-strong), var(--glass));
+  border: 1px solid var(--glass-line);
+  border-radius: 18px;
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  backdrop-filter: blur(18px) saturate(145%);
+  -webkit-backdrop-filter: blur(18px) saturate(145%);
+  box-shadow:
+    inset 0 1px 0 var(--glass-hi),
+    0 14px 34px -18px rgba(0, 0, 0, .7);
+  overflow: hidden;
+}
+.ai-coverage__bulb {
+  font-size: 25px;
+  line-height: 1;
+}
+.ai-coverage__text {
+  margin: 0;
+  font-size: 15.5px;
+  color: var(--text);
+}
+.ai-coverage__text b { font-weight: 800; }
+.ai-coverage__tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.cov-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: 1px solid;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, .05);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.cov-tag__emoji { font-size: 15px; }
+.cov-tag:hover { transform: translateY(-3px); }
+
+.cov-tag--brain   { color: var(--c-brain-2); border-color: rgba(96, 165, 250, .4); }
+.cov-tag--brain:hover   { background: rgba(59, 130, 246, .16); box-shadow: 0 10px 24px -8px rgba(59, 130, 246, .55); }
+.cov-tag--outdoor { color: var(--c-out-2);   border-color: rgba(103, 232, 249, .4); }
+.cov-tag--outdoor:hover { background: rgba(6, 182, 212, .15); box-shadow: 0 10px 24px -8px rgba(6, 182, 212, .55); }
+.cov-tag--indoor  { color: var(--c-in-2);    border-color: rgba(249, 168, 212, .4); }
+.cov-tag--indoor:hover  { background: rgba(236, 72, 153, .15); box-shadow: 0 10px 24px -8px rgba(236, 72, 153, .55); }
+.cov-tag--offline { color: var(--c-off-2);   border-color: rgba(196, 181, 253, .4); }
+.cov-tag--offline:hover { background: rgba(139, 92, 246, .15); box-shadow: 0 10px 24px -8px rgba(139, 92, 246, .55); }
+
+.cov-plus { color: var(--text-3); font-style: normal; font-weight: 700; }
+
+/* 横幅出现后：灯泡 + 标签错峰弹入 */
+.ai-coverage:not(.is-visible) .ai-coverage__bulb,
+.ai-coverage:not(.is-visible) .ai-coverage__text,
+.ai-coverage:not(.is-visible) .cov-tag,
+.ai-coverage:not(.is-visible) .cov-plus {
+  opacity: 0;
+  transform: translateY(14px) scale(.92);
+}
+.ai-coverage.is-visible .ai-coverage__bulb,
+.ai-coverage.is-visible .ai-coverage__text,
+.ai-coverage.is-visible .cov-tag,
+.ai-coverage.is-visible .cov-plus {
+  animation: covPop .55s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+.ai-coverage.is-visible .ai-coverage__bulb  { animation-delay: .05s; }
+.ai-coverage.is-visible .ai-coverage__text  { animation-delay: .12s; }
+.ai-coverage.is-visible .cov-tag:nth-of-type(1) { animation-delay: .22s; }
+.ai-coverage.is-visible .cov-tag:nth-of-type(2) { animation-delay: .32s; }
+.ai-coverage.is-visible .cov-tag:nth-of-type(3) { animation-delay: .42s; }
+.ai-coverage.is-visible .cov-tag:nth-of-type(4) { animation-delay: .52s; }
+.ai-coverage.is-visible .cov-plus:nth-of-type(1) { animation-delay: .27s; }
+.ai-coverage.is-visible .cov-plus:nth-of-type(2) { animation-delay: .37s; }
+.ai-coverage.is-visible .cov-plus:nth-of-type(3) { animation-delay: .47s; }
+
+@keyframes covPop {
+  from { opacity: 0; transform: translateY(14px) scale(.92); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ------------------------------------------------------------
+   7. 底部 CTA —— 霓虹玻璃舱
+------------------------------------------------------------ */
+.ai-cta {
+  position: relative;
+  margin: 110px auto 0;
+  border-radius: 22px;
+  text-align: center;
+  padding: 76px 24px;
+  background: linear-gradient(130deg, rgba(30, 58, 138, .42) 0%, rgba(37, 99, 235, .2) 55%, rgba(124, 58, 237, .28) 100%);
+  border: 1px solid rgba(147, 197, 253, .3);
+  backdrop-filter: blur(22px) saturate(145%);
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .17),
+    0 26px 64px -24px rgba(37, 99, 235, .55),
+    0 0 60px -20px rgba(96, 165, 250, .4);
+  overflow: hidden;
+}
+.ai-cta__text {
+  font-family: 'Archivo', 'Noto Sans SC', sans-serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 32px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 30px rgba(96, 165, 250, .55);
+}
+.ai-btn--light {
+  background: #fff;
+  color: #102a6b;
+  box-shadow: 0 12px 30px rgba(11, 30, 91, .4), 0 0 34px -8px rgba(147, 197, 253, .6);
+}
+.ai-btn--light:hover { transform: translateY(-3px); box-shadow: 0 18px 42px rgba(11, 30, 91, .5), 0 0 44px -6px rgba(147, 197, 253, .7); }
+
+/* ------------------------------------------------------------
+   8. 滚动显现 —— 全息物质化
+   （模糊 → 清晰、上浮、缩放；卡片错峰）
+------------------------------------------------------------ */
+[data-ai-reveal] {
+  opacity: 0;
+  transform: translateY(46px) scale(.97);
+  filter: blur(14px);
+  transition:
+    opacity .95s cubic-bezier(.22, 1, .36, 1),
+    transform .95s cubic-bezier(.22, 1, .36, 1),
+    filter .95s cubic-bezier(.22, 1, .36, 1);
+  will-change: opacity, transform, filter;
+}
+[data-ai-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+/* 卡片网格错峰（仅在物质化阶段生效） */
+.ai-cards > [data-ai-reveal]:nth-child(2) { transition-delay: .1s; }
+.ai-cards > [data-ai-reveal]:nth-child(3) { transition-delay: .2s; }
+.ai-cards > [data-ai-reveal]:nth-child(4) { transition-delay: .3s; }
+
+/* ------------------------------------------------------------
+   9. 深色玻璃 Header（本页专属，不影响官网其它页）
+------------------------------------------------------------ */
+.ai-body .header {
+  background: rgba(7, 11, 28, .55);
+  border-bottom-color: rgba(255, 255, 255, .07);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+}
+.ai-body .header.is-scrolled {
+  border-bottom-color: rgba(255, 255, 255, .1);
+  box-shadow: 0 10px 34px -20px rgba(0, 0, 0, .9);
+}
+.ai-body .logo { color: #fff; }
+.ai-body .logo i {
+  color: rgba(255, 255, 255, .55);
+  border-left-color: rgba(255, 255, 255, .18);
+}
+.ai-body .nav__link { color: rgba(214, 223, 247, .72); }
+.ai-body .nav__link:hover,
+.ai-body .nav__link.is-active { color: #fff; }
+.ai-body .nav__link::after {
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  box-shadow: 0 0 10px rgba(96, 165, 250, .6);
+}
+.ai-body .icon-btn { color: var(--text); }
+.ai-body .icon-btn:hover { background: rgba(255, 255, 255, .1); }
+.ai-body .btn-login {
+  background: linear-gradient(120deg, #2563eb, #7c3aed);
+  box-shadow: 0 8px 22px -10px rgba(59, 130, 246, .7);
+}
+.ai-body .btn-login:hover { background: linear-gradient(120deg, #3b82f6, #8b5cf6); }
+
+/* ------------------------------------------------------------
+   10. 响应式
+------------------------------------------------------------ */
+@media (max-width: 960px) {
+  .ai-hero__inner {
+    grid-template-columns: 1fr;
+    padding: 56px 34px 64px;
+    text-align: center;
+  }
+  .ai-hero__badge { margin-left: auto; margin-right: auto; }
+  .ai-hero__actions { justify-content: center; }
+  .ai-hero__visual { height: 250px; order: -1; }
+}
+
+@media (max-width: 680px) {
+  .ai-cards,
+  .ai-compare__grid {
+    grid-template-columns: 1fr;
+  }
+  .ai-section,
+  .ai-compare { padding-top: 78px; }
+  .ai-hero { margin-top: 14px; border-radius: 18px; }
+  .ai-card { padding: 26px 22px; }
+  .ai-card__media {
+    margin: -26px -22px 18px;
+    height: 132px;
+  }
+  .ai-compare__col { padding: 28px 24px 32px; }
+  .ai-btn { padding: 13px 26px; font-size: 14.5px; }
+  .ai-coverage {
+    padding: 22px 18px;
+    text-align: center;
+  }
+  .ai-coverage__tags { justify-content: center; }
+  /* 移动端卡片依次显现即可，取消错峰延迟 */
+  .ai-cards > [data-ai-reveal] { transition-delay: 0s; }
+}
+
+/* ------------------------------------------------------------
+   11. 减少动效
+------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  [data-ai-reveal] { opacity: 1; transform: none; filter: none; transition: none; }
+  .ai-halo,
+  .ai-camera,
+  .ai-camera__dot,
+  .ai-orbit,
+  .ai-head-visual__ring,
+  .ai-space__aurora,
+  .ai-space__grid,
+  .ai-ambient { animation: none; }
+  .ai-coverage:not(.is-visible) .ai-coverage__bulb,
+  .ai-coverage:not(.is-visible) .ai-coverage__text,
+  .ai-coverage:not(.is-visible) .cov-tag,
+  .ai-coverage:not(.is-visible) .cov-plus { opacity: 1; transform: none; }
+  .ai-coverage.is-visible .ai-coverage__bulb,
+  .ai-coverage.is-visible .ai-coverage__text,
+  .ai-coverage.is-visible .cov-tag,
+  .ai-coverage.is-visible .cov-plus { animation: none; }
+}

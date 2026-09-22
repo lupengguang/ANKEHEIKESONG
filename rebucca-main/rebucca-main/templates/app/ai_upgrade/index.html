@@ -1,0 +1,472 @@
+<!--
+  AI 智能升级介绍页
+  路由: /ai-upgrade
+  技术: Vue 3 + Element Plus（CDN）
+  注意: Vue 模板 HTML 全部用 verbatim 标签包裹，避免与 Django 模板语法冲突。
+-->
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block title %}AI智能升级 - {{ settings.name|default:"Rebucca" }}{% endblock %}
+{% block page_title %}AI智能升级{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+<style>
+/* ========== 页面容器 ========== */
+.ai-upgrade {
+    --brand: #2563eb;
+    --brand-deep: #1e3a8a;
+    --brand-light: #60a5fa;
+    --ink: #0f172a;
+    --gray: #64748b;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+/* ========== Hero 区 ========== */
+.ai-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    padding: 72px 56px;
+    color: #fff;
+    background: linear-gradient(125deg, #0b1e5b 0%, #1d4ed8 52%, #3b82f6 100%);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 32px;
+    box-shadow: 0 20px 50px rgba(37, 99, 235, .35);
+}
+/* 背景装饰光斑 */
+.ai-hero::before,
+.ai-hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(8px);
+    opacity: .25;
+}
+.ai-hero::before { width: 340px; height: 340px; background: #93c5fd; top: -140px; right: -80px; }
+.ai-hero::after  { width: 220px; height: 220px; background: #1e3a8a; bottom: -120px; left: -60px; }
+
+.ai-hero__text { position: relative; z-index: 2; }
+.ai-hero__badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(4px);
+}
+.ai-hero__title {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    letter-spacing: 1px;
+}
+.ai-hero__sub {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+    color: rgba(255,255,255,.88);
+}
+.ai-hero__actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* 右侧：摄像头 + AI 光环动画 */
+.ai-hero__visual {
+    position: relative; z-index: 2;
+    display: flex; align-items: center; justify-content: center;
+    height: 240px;
+}
+.ai-halo {
+    position: absolute;
+    width: 190px; height: 190px;
+    border-radius: 50%;
+    border: 2px solid rgba(147, 197, 253, .7);
+    animation: haloPulse 2.6s ease-out infinite;
+}
+.ai-halo--d2 { animation-delay: .85s; }
+.ai-halo--d3 { animation-delay: 1.7s; }
+@keyframes haloPulse {
+    0%   { transform: scale(.55); opacity: .9; }
+    100% { transform: scale(1.25); opacity: 0; }
+}
+.ai-camera {
+    position: relative;
+    width: 112px; height: 112px;
+    border-radius: 28px;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.35);
+    backdrop-filter: blur(6px);
+    display: flex; align-items: center; justify-content: center;
+    animation: floatY 3.4s ease-in-out infinite;
+    box-shadow: 0 14px 34px rgba(0,0,0,.25);
+}
+.ai-camera .el-icon { font-size: 56px; color: #fff; }
+.ai-camera__dot {
+    position: absolute; top: 14px; right: 14px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74,222,128,.7);
+    animation: recBlink 1.6s infinite;
+}
+@keyframes floatY  { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes recBlink { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,.7);} 70% { box-shadow: 0 0 0 10px rgba(74,222,128,0);} 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0);} }
+
+/* ========== 模块标题 ========== */
+.ai-section { margin-top: 64px; }
+.ai-section__head { text-align: center; margin-bottom: 36px; }
+.ai-section__title {
+    font-size: 30px; font-weight: 800; color: var(--ink);
+    margin: 0 0 10px;
+}
+.ai-section__title .emoji { margin-right: 6px; }
+.ai-section__sub { font-size: 15px; color: var(--gray); margin: 0; }
+.ai-section--outdoor .ai-section__title .accent { color: #0891b2; }
+.ai-section--brain   .ai-section__title .accent { color: var(--brand); }
+
+/* ========== 功能卡片 2x2 ========== */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.feature-card {
+    background: #fff;
+    border: 1px solid #e8eefb;
+    border-radius: 12px;
+    padding: 26px 24px;
+    display: flex;
+    gap: 16px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(37, 99, 235, .14);
+    border-color: var(--brand-light);
+}
+.feature-card__icon {
+    flex-shrink: 0;
+    width: 52px; height: 52px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    color: var(--brand);
+}
+.feature-card__icon .el-icon { font-size: 27px; }
+.ai-section--outdoor .feature-card__icon {
+    background: linear-gradient(135deg, #cffafe, #a5f3fc);
+    color: #0e7490;
+}
+.ai-section--outdoor .feature-card:hover { border-color: #22d3ee; box-shadow: 0 16px 32px rgba(8, 145, 178, .14); }
+.feature-card__name { font-size: 17px; font-weight: 700; color: var(--ink); margin: 2px 0 7px; }
+.feature-card__desc { font-size: 14px; color: var(--gray); line-height: 1.65; margin: 0; }
+.feature-card__desc .hl { color: var(--brand); font-weight: 600; }
+.ai-section--outdoor .feature-card__desc .hl { color: #0891b2; }
+
+/* ========== 对比区 ========== */
+.compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+.compare__col {
+    border-radius: 14px;
+    padding: 28px 28px 32px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+}
+.compare__col--old { background: #f8fafc; }
+.compare__col--new {
+    background: linear-gradient(160deg, #eff6ff, #fff);
+    border-color: #bfdbfe;
+    box-shadow: 0 12px 30px rgba(37,99,235,.10);
+}
+.compare__title {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 19px; font-weight: 800;
+    margin: 0 0 18px;
+    color: var(--gray);
+}
+.compare__col--new .compare__title { color: var(--brand); }
+.compare__list { list-style: none; margin: 0; padding: 0; }
+.compare__list li {
+    font-size: 15px;
+    color: #334155;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e2e8f0;
+    line-height: 1.5;
+}
+.compare__list li:last-child { border-bottom: none; }
+
+/* ========== CTA 区 ========== */
+.ai-cta {
+    margin-top: 56px;
+    border-radius: 16px;
+    text-align: center;
+    padding: 56px 24px;
+    background: linear-gradient(125deg, #1e3a8a, #2563eb 60%, #3b82f6);
+    color: #fff;
+    box-shadow: 0 18px 44px rgba(37,99,235,.3);
+}
+.ai-cta__text { font-size: 27px; font-weight: 800; margin: 0 0 24px; }
+
+/* ========== 滚动淡入动效（v-reveal 指令） ========== */
+.reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ========== 响应式 ========== */
+@media (max-width: 900px) {
+    .ai-hero { grid-template-columns: 1fr; padding: 48px 28px; text-align: center; }
+    .ai-hero__actions { justify-content: center; }
+    .ai-hero__visual { height: 200px; }
+    .ai-hero__title { font-size: 32px; }
+}
+@media (max-width: 640px) {
+    .feature-grid, .compare { grid-template-columns: 1fr; }
+    .ai-hero__title { font-size: 27px; }
+    .ai-section__title { font-size: 24px; }
+    .ai-cta__text { font-size: 21px; }
+    .feature-card { padding: 20px; }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% verbatim %}
+<div id="aiUpgradeApp">
+<div class="ai-upgrade">
+
+    <!-- ========== 1. Hero 区 ========== -->
+    <section class="ai-hero" v-reveal>
+        <div class="ai-hero__text">
+            <span class="ai-hero__badge">
+                <el-icon><MagicStick /></el-icon> AI 2.0 全新升级
+            </span>
+            <h1 class="ai-hero__title">AI 智能看护升级</h1>
+            <p class="ai-hero__sub">从被动监控到主动理解，重新定义家庭安防</p>
+            <div class="ai-hero__actions">
+                <el-button type="primary" size="large" round @click="goDashboard">
+                    <el-icon style="margin-right:5px;"><Right /></el-icon>立即体验
+                </el-button>
+                <el-button size="large" round plain @click="scrollTo('brainPart')">
+                    了解升级内容
+                </el-button>
+            </div>
+        </div>
+        <div class="ai-hero__visual">
+            <span class="ai-halo"></span>
+            <span class="ai-halo ai-halo--d2"></span>
+            <span class="ai-halo ai-halo--d3"></span>
+            <div class="ai-camera">
+                <el-icon><VideoCameraFilled /></el-icon>
+                <span class="ai-camera__dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 2. 中枢大脑升级 ========== -->
+    <section class="ai-section ai-section--brain" id="brainPart">
+        <div class="ai-section__head" v-reveal>
+            <h2 class="ai-section__title">
+                <span class="emoji">🧠</span><span class="accent">中枢大脑升级</span>
+            </h2>
+            <p class="ai-section__sub">不只是检测，更是理解</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card" v-reveal v-for="item in brainFeatures" :key="item.name">
+                <div class="feature-card__icon">
+                    <el-icon><component :is="item.icon" /></el-icon>
+                </div>
+                <div>
+                    <h3 class="feature-card__name">{{ item.name }}</h3>
+                    <p class="feature-card__desc" v-html="item.desc"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 3. 户外入口升级 ========== -->
+    <section class="ai-section ai-section--outdoor" id="outdoorPart">
+        <div class="ai-section__head" v-reveal>
+            <h2 class="ai-section__title">
+                <span class="emoji">🚪</span><span class="accent">户外入口升级</span>
+            </h2>
+            <p class="ai-section__sub">不只是录像，更是互动</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card" v-reveal v-for="item in outdoorFeatures" :key="item.name">
+                <div class="feature-card__icon">
+                    <el-icon><component :is="item.icon" /></el-icon>
+                </div>
+                <div>
+                    <h3 class="feature-card__name">{{ item.name }}</h3>
+                    <p class="feature-card__desc" v-html="item.desc"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 4. 对比区 ========== -->
+    <section class="ai-section">
+        <div class="ai-section__head" v-reveal>
+            <h2 class="ai-section__title">一眼看懂升级价值</h2>
+        </div>
+        <div class="compare">
+            <div class="compare__col compare__col--old" v-reveal>
+                <h3 class="compare__title">
+                    <el-icon><VideoCamera /></el-icon> 传统监控
+                </h3>
+                <ul class="compare__list">
+                    <li>❌ 只录像，不理解</li>
+                    <li>❌ 孤立事件，无关联</li>
+                    <li>❌ 手动翻找，效率低</li>
+                    <li>❌ 被动告警，无互动</li>
+                </ul>
+            </div>
+            <div class="compare__col compare__col--new" v-reveal>
+                <h3 class="compare__title">
+                    <el-icon><MagicStick /></el-icon> AI 智能升级
+                </h3>
+                <ul class="compare__list">
+                    <li>✅ 大模型理解场景</li>
+                    <li>✅ 跨摄像头行为追踪</li>
+                    <li>✅ 自然语言搜索</li>
+                    <li>✅ 主动联动互动</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 5. 底部 CTA ========== -->
+    <section class="ai-cta" v-reveal>
+        <p class="ai-cta__text">立即体验 AI 智能看护</p>
+        <el-button type="primary" size="large" round @click="goDashboard">
+            开始配置
+            <el-icon style="margin-left:5px;"><ArrowRightBold /></el-icon>
+        </el-button>
+    </section>
+
+</div>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<script src="https://unpkg.com/element-plus"></script>
+<script src="https://unpkg.com/@element-plus/icons-vue"></script>
+<script>
+const { createApp } = Vue;
+
+const app = createApp({
+    data() {
+        return {
+            // ---- 中枢大脑 4 个功能卡片 ----
+            // desc 中用 .hl 高亮关键句，v-html 渲染
+            brainFeatures: [
+                {
+                    name: 'VLM 场景理解',
+                    icon: 'Cpu',
+                    desc: 'AI 大模型理解画面内容，不只是“有人”，而是<span class="hl">“老人在沙发上坐了 2 小时”</span>',
+                },
+                {
+                    name: '跨摄像头行为追踪',
+                    icon: 'Aim',
+                    desc: '同一人从门口到客厅，<span class="hl">完整行为轨迹还原</span>',
+                },
+                {
+                    name: '自然语言视频搜索',
+                    icon: 'Search',
+                    desc: '一句话搜索：<span class="hl">“找昨天下午 3 点穿红衣服的人”</span>',
+                },
+                {
+                    name: '智能安全周报',
+                    icon: 'Document',
+                    desc: '每周自动生成<span class="hl">家庭安全分析报告</span>',
+                },
+            ],
+            // ---- 户外入口 4 个功能卡片 ----
+            outdoorFeatures: [
+                {
+                    name: '回家迎宾',
+                    icon: 'HomeFilled',
+                    desc: '家人回来，<span class="hl">PTZ 自动转向，灯光亮起，语音问候</span>',
+                },
+                {
+                    name: '访客智能接待',
+                    icon: 'ChatDotRound',
+                    desc: '陌生人到访，<span class="hl">自动语音询问，推送主人远程对讲</span>',
+                },
+                {
+                    name: '夜间入侵防御',
+                    icon: 'Shield',
+                    desc: '夜间检测到人，<span class="hl">灯光亮起，PTZ 跟踪，语音警告</span>',
+                },
+                {
+                    name: '快递智能识别',
+                    icon: 'Box',
+                    desc: '识别快递员，<span class="hl">自动录制片段，推送取件通知</span>',
+                },
+            ],
+        };
+    },
+    directives: {
+        /**
+         * v-reveal：元素进入视口时添加 is-visible，实现滚动淡入。
+         * 兼容浏览器不支持 IntersectionObserver 的情况（直接显示）。
+         */
+        reveal: {
+            mounted(el) {
+                el.classList.add('reveal');
+                if (!('IntersectionObserver' in window)) {
+                    el.classList.add('is-visible');
+                    return;
+                }
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            io.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12 });
+                io.observe(el);
+                el.__revealIO__ = io;
+            },
+            unmounted(el) {
+                if (el.__revealIO__) el.__revealIO__.disconnect();
+            },
+        },
+    },
+    methods: {
+        /** 跳转控制面板（Rebucca 总控台路径为 /） */
+        goDashboard() {
+            window.location.href = '/';
+        },
+        /** 平滑滚动到指定锚点 */
+        scrollTo(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        },
+    },
+});
+
+// 注册 Element Plus 及全部内置图标
+app.use(ElementPlus);
+for (const [key, comp] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, comp);
+}
+app.mount('#aiUpgradeApp');
+</script>
+{% endblock %}

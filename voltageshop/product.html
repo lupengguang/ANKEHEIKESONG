@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eufy HomeCare・智家看护 — 产品详情</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/detail.css" />
+</head>
+<body>
+
+<!-- ===== Preloader ===== -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__brand">Eufy HomeCare<i>・智家看护</i></div>
+    <div class="preloader__count"><span id="loadCount">0</span><i>%</i></div>
+    <div class="preloader__bar"><span id="loadBar"></span></div>
+  </div>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress"><span id="scrollProgress"></span></div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="header__inner container">
+    <a href="index.html" class="logo" data-cursor="hover">Eufy Home<span>Care</span><i>智家看护</i></a>
+
+    <nav class="nav" id="nav">
+      <a href="index.html#hero" class="nav__link">首页</a>
+      <a href="index.html#arrivals" class="nav__link">商品列表</a>
+      <a href="ai-upgrade.html" class="nav__link">AI智能升级</a>
+      <a href="index.html#footer" class="nav__link">关于我们</a>
+      <a href="index.html#footer" class="nav__link">博客资讯</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="搜索" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="我的账户" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </button>
+      <button class="icon-btn icon-btn--cart" id="cartToggle" aria-label="购物车" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <a href="#footer" class="btn-login" data-magnetic>登录</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Breadcrumb ===== -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">首页</a>
+    <span>/</span>
+    <a href="index.html#arrivals">新品上市</a>
+    <span>/</span>
+    <span class="breadcrumb__current" id="crumbName">产品详情</span>
+  </div>
+</div>
+
+<main id="productMain">
+  <!-- ===== HERO GALLERY ===== -->
+  <section class="detail-hero">
+    <div class="container detail-hero__grid">
+      <!-- 左侧：大图 + 图廊 -->
+      <div class="detail-gallery">
+        <button class="back-btn" id="backBtn" data-magnetic data-cursor="hover">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          返回
+        </button>
+        <div class="detail-stage tilt" id="detailStage">
+          <img id="detailMainImg" src="" alt="" />
+          <div class="detail-stage__shine"></div>
+        </div>
+        <div class="detail-thumbs" id="detailThumbs"></div>
+      </div>
+
+      <!-- 右侧：产品信息 -->
+      <div class="detail-info" data-reveal>
+        <span class="detail-tag" id="detailTag">新品上市</span>
+        <h1 class="detail-name" id="detailName"></h1>
+        <div class="detail-price" id="detailPrice"></div>
+        <p class="detail-desc" id="detailDesc"></p>
+
+        <div class="detail-specs-mini" id="detailSpecsMini"></div>
+
+        <div class="detail-colors" id="detailColors">
+          <span class="detail-colors__label">颜色</span>
+          <div class="detail-colors__list" id="detailColorsList"></div>
+        </div>
+
+        <div class="detail-qty">
+          <span class="detail-qty__label">数量</span>
+          <div class="qty-control">
+            <button class="qty-btn" id="qtyMinus">−</button>
+            <span class="qty-val" id="qtyVal">1</span>
+            <button class="qty-btn" id="qtyPlus">+</button>
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <button class="btn-primary add-to-cart" id="detailAddCart" data-cursor="hover">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            加入购物车
+          </button>
+          <button class="btn-outline" data-magnetic data-cursor="hover">立即购买</button>
+          <button class="icon-btn detail-wish" aria-label="收藏" data-cursor="hover">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+          </button>
+        </div>
+
+        <div class="detail-badges">
+          <div class="detail-badge"><span>✓</span> 全球包邮</div>
+          <div class="detail-badge"><span>✓</span> 30 天无理由退换</div>
+          <div class="detail-badge"><span>✓</span> 2 年官方质保</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 规格参数 ===== -->
+  <section class="detail-specs section">
+    <div class="container">
+      <h2 class="section-title" data-split>规格参数</h2>
+      <div class="specs-grid" id="specsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== 特性亮点 ===== -->
+  <section class="detail-features section">
+    <div class="container">
+      <h2 class="section-title" data-split>产品亮点</h2>
+      <div class="features-bento" id="featuresBento"></div>
+    </div>
+  </section>
+
+  <!-- ===== 相关推荐 ===== -->
+  <section class="detail-related section">
+    <div class="container">
+      <h2 class="section-title" data-split>相关推荐</h2>
+      <div class="product-row" id="relatedRow"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <a href="#" class="logo logo--light footer__logo">Eufy Home<span>Care</span><i>智家看护</i></a>
+
+    <div class="footer__headline">
+      <h2 data-split>未来科技</h2>
+      <h2 data-split>4K 航拍无人机</h2>
+      <h2 data-split>悬停于城市上空</h2>
+      <img class="footer__drone" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20camera%20drone%20hovering%20over%20neon%20lit%20cyberpunk%20city%20at%20night%2C%20purple%20and%20blue%20glowing%20skyline%2C%20cinematic&image_size=landscape_16_9" alt="未来无人机飞越城市">
+    </div>
+
+    <form class="subscribe" id="subscribeForm">
+      <input type="email" placeholder="请输入您的邮箱" required data-cursor="text" />
+      <button type="submit" data-magnetic>订阅</button>
+    </form>
+    <p class="subscribe__msg" id="subscribeMsg"></p>
+
+    <div class="socials">
+      <a href="#" aria-label="脸书 Facebook" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H17V.2C16.7.1 15.7 0 14.6 0 12.2 0 10.5 1.5 10.5 4.2V6H8v3h2.5v9H14V9Z"/></svg></a>
+      <a href="#" aria-label="Instagram" data-cursor="hover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="X 平台" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-5 7H3l8-9L3 2h6l4 6 5-6Z"/></svg></a>
+      <a href="#" aria-label="领英 LinkedIn" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.1c.5-1 1.8-2.1 3.7-2.1 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9V9Z"/></svg></a>
+      <a href="#" aria-label="YouTube" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 16.5 31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg></a>
+    </div>
+
+    <p class="copyright">版权所有 © 2023 Eufy HomeCare・智家看护 | 保留一切权利</p>
+  </div>
+</footer>
+
+<!-- ===== Cart drawer ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer__head">
+    <h3>我的购物车 <span id="cartCountTitle">(0)</span></h3>
+    <button class="icon-btn" id="cartClose" aria-label="关闭购物车">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__items" id="cartItems"></div>
+  <div class="cart-drawer__foot">
+    <div class="cart-total"><span>合计</span><b id="cartTotal">$0</b></div>
+    <button class="btn-checkout" data-magnetic>去结算</button>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/detail.js"></script>
+</body>
+</html>

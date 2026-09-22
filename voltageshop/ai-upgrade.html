@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eufy HomeCare・智家看护 — AI 智能升级</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/ai-upgrade.css" />
+</head>
+<body class="ai-body">
+
+<!-- ===== Preloader ===== -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__brand">Eufy HomeCare<i>・智家看护</i></div>
+    <div class="preloader__count"><span id="loadCount">0</span><i>%</i></div>
+    <div class="preloader__bar"><span id="loadBar"></span></div>
+  </div>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress"><span id="scrollProgress"></span></div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== Announcement bar ===== -->
+<div class="topbar">
+  <div class="topbar__inner container">
+    <p class="topbar__text">AI 智能看护 2.0 现已发布 &nbsp;|&nbsp; 中枢大脑 · 户外入口 · 室内互动 · 无网场景，四大升级</p>
+    <a href="#ai-cta" class="topbar__subscribe" data-magnetic>立即体验</a>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="header__inner container">
+    <a href="index.html" class="logo" data-cursor="hover">Eufy Home<span>Care</span><i>智家看护</i></a>
+
+    <nav class="nav" id="nav">
+      <a href="index.html#hero" class="nav__link">首页</a>
+      <a href="index.html#arrivals" class="nav__link">商品列表</a>
+      <a href="ai-upgrade.html" class="nav__link is-active">AI智能升级</a>
+      <a href="index.html#footer" class="nav__link">关于我们</a>
+      <a href="index.html#footer" class="nav__link">博客资讯</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="搜索" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="我的账户" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </button>
+      <button class="icon-btn icon-btn--cart" id="cartToggle" aria-label="购物车" data-cursor="hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <a href="index.html#footer" class="btn-login" data-magnetic>登录</a>
+    </div>
+  </div>
+</header>
+
+<main class="ai-page" id="aiPage">
+
+  <!-- ========================================================
+       0. 深空背景层（科幻数字艺术）
+       - canvas 星空（闪烁 + 漂移 + 流星，JS 驱动）
+       - 四团极光星云 / HUD 网格 / 暗角
+  ======================================================== -->
+  <div class="ai-space" aria-hidden="true">
+    <canvas id="aiStarfield"></canvas>
+    <span class="ai-space__aurora ai-space__aurora--1" data-aurora></span>
+    <span class="ai-space__aurora ai-space__aurora--2" data-aurora></span>
+    <span class="ai-space__aurora ai-space__aurora--3" data-aurora></span>
+    <span class="ai-space__aurora ai-space__aurora--4" data-aurora></span>
+    <div class="ai-space__grid"></div>
+    <div class="ai-space__vignette"></div>
+  </div>
+
+  <!-- ========================================================
+       1. HERO 区
+  ======================================================== -->
+  <section class="ai-hero" id="aiHero">
+    <!-- 背景网格 + 光斑装饰 -->
+    <div class="ai-hero__grid-bg" aria-hidden="true"></div>
+    <span class="ai-hero__glow ai-hero__glow--1" aria-hidden="true"></span>
+    <span class="ai-hero__glow ai-hero__glow--2" aria-hidden="true"></span>
+
+    <div class="container ai-hero__inner">
+      <div class="ai-hero__text">
+        <span class="ai-hero__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+          AI 2.0 全新升级
+        </span>
+        <h1 class="ai-hero__title">
+          <span class="line">AI 智能看护升级</span>
+        </h1>
+        <p class="ai-hero__sub">从被动监控到主动理解，重新定义家庭安防</p>
+        <div class="ai-hero__actions">
+          <a href="index.html#arrivals" class="ai-btn ai-btn--primary" data-magnetic>
+            立即体验
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#brain" class="ai-btn ai-btn--ghost" data-magnetic>了解升级内容</a>
+        </div>
+      </div>
+
+      <!-- 右侧：摄像头 + AI 光环 -->
+      <div class="ai-hero__visual">
+        <span class="ai-halo"></span>
+        <span class="ai-halo ai-halo--d2"></span>
+        <span class="ai-halo ai-halo--d3"></span>
+        <div class="ai-camera">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M23 7l-7 5 7 5V7z"/>
+            <rect x="1" y="5" width="15" height="14" rx="2"/>
+          </svg>
+          <span class="ai-camera__dot"></span>
+        </div>
+        <!-- 轨道上的小粒子 -->
+        <span class="ai-orbit ai-orbit--a"></span>
+        <span class="ai-orbit ai-orbit--b"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       2. 中枢大脑升级
+  ======================================================== -->
+  <section class="ai-section" id="brain">
+    <div class="container">
+      <div class="ai-section__head" data-ai-reveal>
+        <h2 class="ai-section__title"><span class="emoji">🧠</span>中枢大脑升级</h2>
+        <p class="ai-section__sub">不只是检测，更是理解</p>
+      </div>
+
+      <div class="ai-cards">
+        <!-- 卡片 1：VLM 场景理解 -->
+        <article class="ai-card" data-ai-reveal>
+          <div class="ai-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <rect x="4" y="4" width="16" height="16" rx="3"/>
+              <rect x="9" y="9" width="6" height="6" rx="1.5"/>
+              <path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/>
+            </svg>
+          </div>
+          <h3 class="ai-card__name">VLM 场景理解</h3>
+          <p class="ai-card__desc">AI 大模型理解画面内容，不只是“有人”，而是<span class="hl">“老人在沙发上坐了 2 小时”</span></p>
+        </article>
+
+        <!-- 卡片 2：跨摄像头行为追踪 -->
+        <article class="ai-card" data-ai-reveal>
+          <div class="ai-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <circle cx="6" cy="6" r="2.5"/>
+              <circle cx="18" cy="18" r="2.5"/>
+              <path d="M8 6h6a4 4 0 0 1 4 4v5.5"/>
+              <path d="M6 8v6a4 4 0 0 0 4 4h5.5"/>
+            </svg>
+          </div>
+          <h3 class="ai-card__name">跨摄像头行为追踪</h3>
+          <p class="ai-card__desc">同一人从门口到客厅，<span class="hl">完整行为轨迹还原</span></p>
+        </article>
+
+        <!-- 卡片 3：自然语言视频搜索 -->
+        <article class="ai-card" data-ai-reveal>
+          <div class="ai-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <circle cx="11" cy="11" r="7"/>
+              <path d="m20 20-3.5-3.5"/>
+            </svg>
+          </div>
+          <h3 class="ai-card__name">自然语言视频搜索</h3>
+          <p class="ai-card__desc">一句话搜索：<span class="hl">“找昨天下午 3 点穿红衣服的人”</span></p>
+        </article>
+
+        <!-- 卡片 4：智能安全周报 -->
+        <article class="ai-card" data-ai-reveal>
+          <div class="ai-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <path d="M14 2v6h6"/>
+              <path d="M8 13h2M8 17h2M14 13h2M14 17h2"/>
+            </svg>
+          </div>
+          <h3 class="ai-card__name">智能安全周报</h3>
+          <p class="ai-card__desc">每周自动生成<span class="hl">家庭安全分析报告</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. 户外入口升级
+  ======================================================== -->
+  <section class="ai-section ai-section--cyan" id="outdoor">
+    <div class="container">
+      <div class="ai-section__head" data-ai-reveal>
+        <h2 class="ai-section__title"><span class="emoji">🚪</span>户外入口升级</h2>
+        <p class="ai-section__sub">不只是录像，更是互动</p>
+      </div>
+
+      <div class="ai-cards">
+        <!-- 卡片 1：回家迎宾 -->
+        <article class="ai-card" data-ai-reveal>
+          <div class="ai-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M3 10.5 12 3l9 7.5"/>
+              <path d="M5 9.5V21h14V9.5"/>
+              <path d="M9.5 21v-6h5v6"/>
+            </svg>
+          </div>
+          <h3 class="ai-card__name">回家迎宾</h3>
+          <p class="ai-card__desc">家人回来，<span class="hl">PTZ 自动转向，灯光亮起，语音问候</span></p>
+        </article>
+
+        <!-- 卡片 2：访客智能接待 -->
+        <article class="ai-card" data-ai-reveal>
+          <div class="ai-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.6 9.6 0 0 1-4.9-1.3L3 20l1.4-4A8.4 8.4 0 1 1 21 11.5z"/>
+            </svg>
+          </div>
+          <h3 class="ai-card__name">访客智能接待</h3>
+          <p class="ai-card__desc">陌生人到访，<span class="hl">自动语音询问，推送主人远程对讲</span></p>
+        </article>
+
+        <!-- 卡片 3：夜间入侵防御 -->
+        <article class="ai-card" data-ai-reveal>
+          <div class="ai-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="ai-card__name">夜间入侵防御</h3>
+          <p class="ai-card__desc">夜间检测到人，<span class="hl">灯光亮起，PTZ 跟踪，语音警告</span></p>
+        </article>
+
+        <!-- 卡片 4：快递智能识别 -->
+        <article class="ai-card" data-ai-reveal>
+          <div class="ai-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M21 8 12 3 3 8v8l9 5 9-5z"/>
+              <path d="M3 8l9 5 9-5"/>
+              <path d="M12 13v8"/>
+            </svg>
+          </div>
+          <h3 class="ai-card__name">快递智能识别</h3>
+          <p class="ai-card__desc">识别快递员，<span class="hl">自动录制片段，推送取件通知</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. 室内互动升级
+       说明：卡片图标用 emoji；顶部图片区已预留路径，
+       将图片放入 images/ai-upgrade/ 即自动显示。
+  ======================================================== -->
+  <section class="ai-section ai-section--rose" id="indoor">
+    <!-- 氛围光斑 -->
+    <span class="ai-ambient ai-ambient--a" aria-hidden="true"></span>
+    <span class="ai-ambient ai-ambient--b" aria-hidden="true"></span>
+
+    <div class="container">
+      <div class="ai-section__head" data-ai-reveal>
+        <!-- 头部动效核心：emoji + 双层光环（与首页 Hero 摄像头光环同款） -->
+        <div class="ai-head-visual" data-head-visual>
+          <span class="ai-head-visual__ring"></span>
+          <span class="ai-head-visual__ring ai-head-visual__ring--d2"></span>
+          <span class="ai-head-visual__core">🏠</span>
+        </div>
+        <h2 class="ai-section__title"><span class="emoji">🏠</span>室内互动升级</h2>
+        <p class="ai-section__sub">不只是看护，更是陪伴</p>
+      </div>
+
+      <div class="ai-cards">
+        <!-- 卡片 1：宠物陪伴模式 -->
+        <article class="ai-card ai-card--with-media" data-ai-reveal data-tilt>
+          <div class="ai-card__media">
+            <img class="ai-card__img is-loading"
+                 src="images/ai-upgrade/indoor-pet.png"
+                 alt="宠物陪伴模式"
+                 onload="this.classList.remove('is-loading')"
+                 onerror="this.classList.add('is-missing');this.classList.remove('is-loading')" />
+          </div>
+          <div class="ai-card__icon ai-card__icon--emoji" data-float>🐾</div>
+          <h3 class="ai-card__name">宠物陪伴模式</h3>
+          <p class="ai-card__desc">检测到宠物，<span class="hl">PTZ 自动对准，灯光闪烁互动，播放逗宠音频，生成宠物日常小视频</span></p>
+        </article>
+
+        <!-- 卡片 2：老人看护模式 -->
+        <article class="ai-card ai-card--with-media" data-ai-reveal data-tilt>
+          <div class="ai-card__media">
+            <img class="ai-card__img is-loading"
+                 src="images/ai-upgrade/indoor-elder.png"
+                 alt="老人看护模式"
+                 onload="this.classList.remove('is-loading')"
+                 onerror="this.classList.add('is-missing');this.classList.remove('is-loading')" />
+          </div>
+          <div class="ai-card__icon ai-card__icon--emoji" data-float>👴</div>
+          <h3 class="ai-card__name">老人看护模式</h3>
+          <p class="ai-card__desc">检测到老人跌倒或久站不动，<span class="hl">立即推送告警，语音询问，通知子女</span></p>
+        </article>
+
+        <!-- 卡片 3：儿童陪伴模式 -->
+        <article class="ai-card ai-card--with-media" data-ai-reveal data-tilt>
+          <div class="ai-card__media">
+            <img class="ai-card__img is-loading"
+                 src="images/ai-upgrade/indoor-child.png"
+                 alt="儿童陪伴模式"
+                 onload="this.classList.remove('is-loading')"
+                 onerror="this.classList.add('is-missing');this.classList.remove('is-loading')" />
+          </div>
+          <div class="ai-card__icon ai-card__icon--emoji" data-float>🧒</div>
+          <h3 class="ai-card__name">儿童陪伴模式</h3>
+          <p class="ai-card__desc">检测到小孩靠近危险区域（厨房 / 阳台），<span class="hl">语音提醒，不打扰正常学习玩耍</span></p>
+        </article>
+
+        <!-- 卡片 4：智能夜间模式 -->
+        <article class="ai-card ai-card--with-media" data-ai-reveal data-tilt>
+          <div class="ai-card__media">
+            <img class="ai-card__img is-loading"
+                 src="images/ai-upgrade/indoor-night.png"
+                 alt="智能夜间模式"
+                 onload="this.classList.remove('is-loading')"
+                 onerror="this.classList.add('is-missing');this.classList.remove('is-loading')" />
+          </div>
+          <div class="ai-card__icon ai-card__icon--emoji" data-float>🌙</div>
+          <h3 class="ai-card__name">智能夜间模式</h3>
+          <p class="ai-card__desc">检测到有人起夜，<span class="hl">灯光调暗亮起，PTZ 跟随，避免摔倒</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. 无网场景升级
+       图片路径同样预留：images/ai-upgrade/offline-*.png
+  ======================================================== -->
+  <section class="ai-section ai-section--violet" id="offline">
+    <span class="ai-ambient ai-ambient--a" aria-hidden="true"></span>
+    <span class="ai-ambient ai-ambient--b" aria-hidden="true"></span>
+
+    <div class="container">
+      <div class="ai-section__head" data-ai-reveal>
+        <div class="ai-head-visual" data-head-visual>
+          <span class="ai-head-visual__ring"></span>
+          <span class="ai-head-visual__ring ai-head-visual__ring--d2"></span>
+          <span class="ai-head-visual__core">📡</span>
+        </div>
+        <h2 class="ai-section__title"><span class="emoji">📡</span>无网场景升级</h2>
+        <p class="ai-section__sub">不依赖 WiFi，哪里都能守</p>
+      </div>
+
+      <div class="ai-cards">
+        <!-- 卡片 1：远距离区域监控 -->
+        <article class="ai-card ai-card--with-media" data-ai-reveal data-tilt>
+          <div class="ai-card__media">
+            <img class="ai-card__img is-loading"
+                 src="images/ai-upgrade/offline-farm.png"
+                 alt="远距离区域监控"
+                 onload="this.classList.remove('is-loading')"
+                 onerror="this.classList.add('is-missing');this.classList.remove('is-loading')" />
+          </div>
+          <div class="ai-card__icon ai-card__icon--emoji" data-float>🌾</div>
+          <h3 class="ai-card__name">远距离区域监控</h3>
+          <p class="ai-card__desc">院子边缘 / 果园 / 仓库，检测到入侵，<span class="hl">灯光亮起，PTZ 跟踪，语音驱离</span></p>
+        </article>
+
+        <!-- 卡片 2：动物异常监测 -->
+        <article class="ai-card ai-card--with-media" data-ai-reveal data-tilt>
+          <div class="ai-card__media">
+            <img class="ai-card__img is-loading"
+                 src="images/ai-upgrade/offline-animal.png"
+                 alt="动物异常监测"
+                 onload="this.classList.remove('is-loading')"
+                 onerror="this.classList.add('is-missing');this.classList.remove('is-loading')" />
+          </div>
+          <div class="ai-card__icon ai-card__icon--emoji" data-float>🐕</div>
+          <h3 class="ai-card__name">动物异常监测</h3>
+          <p class="ai-card__desc">农场 / 院子里的动物，<span class="hl">检测到狗叫或异常闯入，推送实时通知</span></p>
+        </article>
+
+        <!-- 卡片 3：低带宽智能优化 -->
+        <article class="ai-card ai-card--with-media" data-ai-reveal data-tilt>
+          <div class="ai-card__media">
+            <img class="ai-card__img is-loading"
+                 src="images/ai-upgrade/offline-bandwidth.png"
+                 alt="低带宽智能优化"
+                 onload="this.classList.remove('is-loading')"
+                 onerror="this.classList.add('is-missing');this.classList.remove('is-loading')" />
+          </div>
+          <div class="ai-card__icon ai-card__icon--emoji" data-float>📶</div>
+          <h3 class="ai-card__name">低带宽智能优化</h3>
+          <p class="ai-card__desc">AI 边缘端先做检测，<span class="hl">只有告警时才传视频片段，4G 流量省一半</span></p>
+        </article>
+
+        <!-- 卡片 4：离线自动补传 -->
+        <article class="ai-card ai-card--with-media" data-ai-reveal data-tilt>
+          <div class="ai-card__media">
+            <img class="ai-card__img is-loading"
+                 src="images/ai-upgrade/offline-sync.png"
+                 alt="离线自动补传"
+                 onload="this.classList.remove('is-loading')"
+                 onerror="this.classList.add('is-missing');this.classList.remove('is-loading')" />
+          </div>
+          <div class="ai-card__icon ai-card__icon--emoji" data-float>☁️</div>
+          <h3 class="ai-card__name">离线自动补传</h3>
+          <p class="ai-card__desc">4G 断网时本地缓存事件，<span class="hl">恢复网络后自动补传，不丢任何关键画面</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6. 对比区
+  ======================================================== -->
+  <section class="ai-compare" id="compare">
+    <div class="container">
+      <div class="ai-section__head" data-ai-reveal>
+        <h2 class="ai-section__title">一眼看懂升级价值</h2>
+      </div>
+
+      <div class="ai-compare__grid">
+        <div class="ai-compare__col ai-compare__col--old" data-ai-reveal>
+          <h3 class="ai-compare__title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M23 7l-7 5 7 5V7z"/>
+              <rect x="1" y="5" width="15" height="14" rx="2"/>
+            </svg>
+            传统监控
+          </h3>
+          <ul class="ai-compare__list">
+            <li>❌ 只录像，不理解</li>
+            <li>❌ 孤立事件，无关联</li>
+            <li>❌ 手动翻找，效率低</li>
+            <li>❌ 被动告警，无互动</li>
+          </ul>
+        </div>
+
+        <div class="ai-compare__col ai-compare__col--new" data-ai-reveal>
+          <h3 class="ai-compare__title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>
+              <circle cx="12" cy="12" r="4"/>
+            </svg>
+            AI 智能升级
+          </h3>
+          <ul class="ai-compare__list">
+            <li>✅ 大模型理解场景</li>
+            <li>✅ 跨摄像头行为追踪</li>
+            <li>✅ 自然语言搜索</li>
+            <li>✅ 主动联动互动</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 四大场景全覆盖横幅（点击标签可直达对应板块） -->
+      <div class="ai-coverage" data-ai-reveal>
+        <span class="ai-coverage__bulb" data-float>💡</span>
+        <p class="ai-coverage__text">
+          <b>四大场景全覆盖：</b>
+        </p>
+        <div class="ai-coverage__tags">
+          <a class="cov-tag cov-tag--brain" href="#brain" data-magnetic><span class="cov-tag__emoji">🧠</span>中枢大脑</a>
+          <span class="cov-plus">+</span>
+          <a class="cov-tag cov-tag--outdoor" href="#outdoor" data-magnetic><span class="cov-tag__emoji">🚪</span>户外入口</a>
+          <span class="cov-plus">+</span>
+          <a class="cov-tag cov-tag--indoor" href="#indoor" data-magnetic><span class="cov-tag__emoji">🏠</span>室内互动</a>
+          <span class="cov-plus">+</span>
+          <a class="cov-tag cov-tag--offline" href="#offline" data-magnetic><span class="cov-tag__emoji">📡</span>无网场景</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       7. 底部 CTA
+  ======================================================== -->
+  <section class="ai-cta" id="ai-cta">
+    <div class="container" data-ai-reveal>
+      <h2 class="ai-cta__text">立即体验 AI 智能看护</h2>
+      <a href="index.html#arrivals" class="ai-btn ai-btn--light" data-magnetic>
+        开始配置
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <a href="index.html" class="logo logo--light footer__logo">Eufy Home<span>Care</span><i>智家看护</i></a>
+
+    <div class="footer__headline">
+      <h2 data-split>AI 智能看护</h2>
+      <h2 data-split>主动理解 · 主动联动</h2>
+      <h2 data-split>守护每一个家</h2>
+    </div>
+
+    <form class="subscribe" id="subscribeForm">
+      <input type="email" placeholder="请输入您的邮箱" required data-cursor="text" />
+      <button type="submit" data-magnetic>订阅</button>
+    </form>
+    <p class="subscribe__msg" id="subscribeMsg"></p>
+
+    <div class="socials">
+      <a href="#" aria-label="脸书 Facebook" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H17V.2C16.7.1 15.7 0 14.6 0 12.2 0 10.5 1.5 10.5 4.2V6H8v3h2.5v9H14V9Z"/></svg></a>
+      <a href="#" aria-label="Instagram" data-cursor="hover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="X 平台" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-5 7H3l8-9L3 2h6l4 6 5-6Z"/></svg></a>
+      <a href="#" aria-label="领英 LinkedIn" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.1c.5-1 1.8-2.1 3.7-2.1 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9V9Z"/></svg></a>
+      <a href="#" aria-label="YouTube" data-cursor="hover"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 16.5 31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg></a>
+    </div>
+
+    <p class="copyright">版权所有 © 2026 Eufy HomeCare 智家看护 | 保留一切权利</p>
+  </div>
+</footer>
+
+<!-- ===== Cart drawer ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer__head">
+    <h3>我的购物车 <span id="cartCountTitle">(0)</span></h3>
+    <button class="icon-btn" id="cartClose" aria-label="关闭购物车">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__items" id="cartItems"></div>
+  <div class="cart-drawer__foot">
+    <div class="cart-total"><span>合计</span><b id="cartTotal">$0</b></div>
+    <button class="btn-checkout" data-magnetic>去结算</button>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ai-upgrade.js"></script>
+</body>
+</html>
