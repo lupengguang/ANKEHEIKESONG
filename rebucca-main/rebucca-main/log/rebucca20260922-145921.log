@@ -1,0 +1,11 @@
+2026-09-22 14:59:21,228 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 14:59:21,229 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 14:59:21,229 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 14:59:21,229 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 14:59:21,230 root:48 [INFO] logDebug=1
+2026-09-22 14:59:21,230 root:51 [INFO] argv_extend=migrate
+2026-09-22 14:59:21,230 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 14:59:21,230 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 14:59:21,230 root:410 [DEBUG] [GSS] start...
+2026-09-22 14:59:21,230 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 14:59:21,271 root:321 [INFO] InnerView.t_init_thread()

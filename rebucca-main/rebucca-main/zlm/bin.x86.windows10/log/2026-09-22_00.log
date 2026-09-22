@@ -1,0 +1,27 @@
+2026-09-22 14:34:25.687 I [rebucca_zlm.exe] [59516-60996] main.cpp:271 start_main | ZLMediaKit(git hash:a050f38/2025-05-11T11:18:34+08:00,branch:,build time:2025-05-11T03:24:50)
+2026-09-22 14:34:25.699 W [rebucca_zlm.exe] [59516-60996] SSLUtil.cpp:104 loadPublicKey | BIO_new_file failed: error:80000002:system library::No such file or directory
+2026-09-22 14:34:25.699 W [rebucca_zlm.exe] [59516-60996] SSLUtil.cpp:132 loadPrivateKey | BIO_new_file failed: error:10000080:BIO routines::no such file
+2026-09-22 14:34:25.699 W [rebucca_zlm.exe] [59516-60996] SSLUtil.cpp:213 makeSSLContext | SSL_CTX_check_private_key failed: error:80000002:system library::No such file or directory
+2026-09-22 14:34:25.700 D [rebucca_zlm.exe] [59516-stamp thread] util.cpp:391 operator () | Stamp thread started
+2026-09-22 14:34:25.728 I [rebucca_zlm.exe] [59516-60996] EventPoller.cpp:616 EventPollerPool | EventPoller created size: 32
+2026-09-22 14:34:25.729 I [rebucca_zlm.exe] [59516-60996] main.cpp:396 start_main | 已启动http api 接口
+2026-09-22 14:34:25.729 I [rebucca_zlm.exe] [59516-60996] main.cpp:398 start_main | 已启动http hook 接口
+2026-09-22 14:34:25.730 I [rebucca_zlm.exe] [59516-60996] TcpServer.cpp:242 start_l | TCP server listening on [::]: 10554
+2026-09-22 14:34:25.732 I [rebucca_zlm.exe] [59516-60996] TcpServer.cpp:242 start_l | TCP server listening on [::]: 10935
+2026-09-22 14:34:25.734 I [rebucca_zlm.exe] [59516-60996] TcpServer.cpp:242 start_l | TCP server listening on [::]: 10002
+2026-09-22 14:34:25.739 I [rebucca_zlm.exe] [59516-60996] UdpServer.cpp:128 start_l | UDP server bind to [::]: 30001
+2026-09-22 14:34:25.740 I [rebucca_zlm.exe] [59516-60996] TcpServer.cpp:242 start_l | TCP server listening on [::]: 30001
+2026-09-22 17:52:45.152 I [rebucca_zlm.exe] [44004-48960] main.cpp:271 start_main | ZLMediaKit(git hash:a050f38/2025-05-11T11:18:34+08:00,branch:,build time:2025-05-11T03:24:50)
+2026-09-22 17:52:45.156 W [rebucca_zlm.exe] [44004-48960] SSLUtil.cpp:104 loadPublicKey | BIO_new_file failed: error:80000002:system library::No such file or directory
+2026-09-22 17:52:45.156 W [rebucca_zlm.exe] [44004-48960] SSLUtil.cpp:132 loadPrivateKey | BIO_new_file failed: error:10000080:BIO routines::no such file
+2026-09-22 17:52:45.156 W [rebucca_zlm.exe] [44004-48960] SSLUtil.cpp:213 makeSSLContext | SSL_CTX_check_private_key failed: error:80000002:system library::No such file or directory
+2026-09-22 17:52:45.156 D [rebucca_zlm.exe] [44004-stamp thread] util.cpp:391 operator () | Stamp thread started
+2026-09-22 17:52:45.169 I [rebucca_zlm.exe] [44004-48960] EventPoller.cpp:616 EventPollerPool | EventPoller created size: 32
+2026-09-22 17:52:45.169 I [rebucca_zlm.exe] [44004-48960] main.cpp:396 start_main | 已启动http api 接口
+2026-09-22 17:52:45.169 I [rebucca_zlm.exe] [44004-48960] main.cpp:398 start_main | 已启动http hook 接口
+2026-09-22 17:52:45.170 I [rebucca_zlm.exe] [44004-48960] TcpServer.cpp:242 start_l | TCP server listening on [::]: 10554
+2026-09-22 17:52:45.170 I [rebucca_zlm.exe] [44004-48960] TcpServer.cpp:242 start_l | TCP server listening on [::]: 10935
+2026-09-22 17:52:45.171 I [rebucca_zlm.exe] [44004-48960] TcpServer.cpp:242 start_l | TCP server listening on [::]: 10002
+2026-09-22 17:52:45.173 I [rebucca_zlm.exe] [44004-48960] UdpServer.cpp:128 start_l | UDP server bind to [::]: 30001
+2026-09-22 17:52:45.174 I [rebucca_zlm.exe] [44004-48960] TcpServer.cpp:242 start_l | TCP server listening on [::]: 30001
+2026-09-22 21:40:14.897 W [rebucca_zlm.exe] [44004-stamp thread] util.cpp:413 operator () | Stamp expired is abnormal: 2843516

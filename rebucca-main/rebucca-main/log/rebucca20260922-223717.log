@@ -1,0 +1,123 @@
+2026-09-22 22:37:17,708 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 22:37:17,708 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 22:37:17,708 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 22:37:17,709 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 22:37:17,709 root:48 [INFO] logDebug=1
+2026-09-22 22:37:17,709 root:51 [INFO] argv_extend=runserver
+2026-09-22 22:37:17,709 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 22:37:17,709 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 22:37:17,709 root:410 [DEBUG] [GSS] start...
+2026-09-22 22:37:17,710 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 22:37:17,754 root:321 [INFO] InnerView.t_init_thread()
+2026-09-22 22:37:17,851 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 22:37:17,851 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 22:37:17,851 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 22:37:17,851 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 22:37:17,851 root:48 [INFO] logDebug=1
+2026-09-22 22:37:17,851 root:51 [INFO] argv_extend=runserver
+2026-09-22 22:37:17,852 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 22:37:17,852 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 22:37:17,852 root:410 [DEBUG] [GSS] start...
+2026-09-22 22:37:17,852 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 22:37:17,890 root:321 [INFO] InnerView.t_init_thread()
+2026-09-22 22:37:19,470 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:37:19,472 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:37:19,472 app.bootstrap:72 [INFO] autoStartMedia: ok=True 流媒体服务已在运行
+2026-09-22 22:37:19,618 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:37:19,620 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:37:19,621 app.bootstrap:72 [INFO] autoStartMedia: ok=True 流媒体服务已在运行
+2026-09-22 22:37:33,756 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:37:33,757 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:37:33,759 root:330 [INFO] autoAddStreamProxy ret=1,msg=成功数量：0，失败数量：0
+2026-09-22 22:37:33,892 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:37:33,893 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:37:33,895 root:330 [INFO] autoAddStreamProxy ret=1,msg=成功数量：0，失败数量：0
+2026-09-22 22:37:56,657 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:37:56,658 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:37:56,660 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:37:56,662 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:37:56,663 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:37:56,664 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:38:56,651 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:38:56,653 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:38:56,654 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:38:56,661 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:38:56,662 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:38:56,663 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:39:04,053 services.event_bus:41 [INFO] SSE 新订阅者，当前订阅数=1
+2026-09-22 22:39:56,650 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:39:56,650 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:39:56,652 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:39:56,655 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:39:56,660 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:39:56,661 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:40:27,789 services.event_bus:41 [INFO] SSE 新订阅者，当前订阅数=2
+2026-09-22 22:40:49,119 services.event_bus:49 [INFO] SSE 订阅者退出，当前订阅数=1
+2026-09-22 22:40:56,662 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:40:56,663 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:40:56,670 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:40:56,671 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:40:56,673 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:40:56,674 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:41:56,659 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:41:56,659 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:41:56,661 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:41:56,662 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:41:56,669 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:41:56,670 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:42:56,655 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:42:56,655 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:42:56,663 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:42:56,664 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:42:56,665 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:42:56,667 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:43:06,888 django.security.csrf:283 [WARNING] Forbidden (CSRF token missing.): /login
+2026-09-22 22:43:44,551 services.video_stream:27 [INFO] 正在打开本地摄像头 index=0 ...
+2026-09-22 22:43:45,547 services.video_stream:57 [INFO] 摄像头已打开 index=0 实际分辨率=1280x720
+2026-09-22 22:43:45,550 services.vlm_client:79 [WARNING] VLM_API_KEY 未配置，understand_scene 将使用本地运动启发式分析（mock 降级）
+2026-09-22 22:43:45,550 services.welcome_scene:69 [INFO] 迎宾场景引擎已启动 frame_interval=5
+2026-09-22 22:43:45,551 services.camera_manager:98 [INFO] 摄像头与迎宾引擎已启动 cam_index=0
+2026-09-22 22:43:45,886 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:46,047 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:46,351 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:46,512 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:46,818 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:46,979 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:47,289 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:47,444 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:47,755 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:47,923 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:48,231 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:48,386 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:48,622 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> left
+2026-09-22 22:43:48,774 services.welcome_scene:86 [WARNING] 迎宾分析循环异常: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\accum.cpp:635: error: (-215:Assertion failed) func != 0 in function 'cv::accumulateWeighted'
+
+2026-09-22 22:43:48,887 services.welcome_scene:76 [INFO] 迎宾场景引擎已停止
+2026-09-22 22:43:49,168 services.video_stream:94 [INFO] 摄像头已释放 index=0
+2026-09-22 22:43:49,168 services.camera_manager:119 [INFO] 摄像头已停止
+2026-09-22 22:43:56,645 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:43:56,647 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:43:56,653 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:43:56,654 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:43:56,660 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:43:56,661 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:44:56,650 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:44:56,651 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:44:56,652 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:44:56,653 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:44:56,654 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:44:56,661 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:45:10,640 django.utils.autoreload:269 [INFO] E:\Anker黑客松\rebucca-main\rebucca-main\app\services\welcome_scene.py changed, reloading.
+2026-09-22 22:45:10,951 django.utils.autoreload:269 [INFO] E:\Anker黑客松\rebucca-main\rebucca-main\app\services\vlm_client.py changed, reloading.

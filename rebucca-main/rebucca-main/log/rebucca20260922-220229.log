@@ -1,0 +1,219 @@
+2026-09-22 22:02:29,645 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 22:02:29,645 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 22:02:29,645 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 22:02:29,645 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 22:02:29,645 root:48 [INFO] logDebug=1
+2026-09-22 22:02:29,645 root:51 [INFO] argv_extend=runserver
+2026-09-22 22:02:29,645 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 22:02:29,645 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 22:02:29,645 root:410 [DEBUG] [GSS] start...
+2026-09-22 22:02:29,646 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 22:02:29,680 root:321 [INFO] InnerView.t_init_thread()
+2026-09-22 22:02:31,466 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:02:31,468 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:02:31,468 app.bootstrap:72 [INFO] autoStartMedia: ok=True 流媒体服务已在运行
+2026-09-22 22:02:45,681 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:02:45,683 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:02:45,684 root:330 [INFO] autoAddStreamProxy ret=1,msg=成功数量：0，失败数量：0
+2026-09-22 22:10:36,562 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 22:10:37,789 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:10:37,791 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:10:37,791 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:10:37,793 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:10:37,793 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:10:37,794 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:10:39,309 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): www.yuturuishi.com:80
+2026-09-22 22:10:39,375 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:10:40,003 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:10:40,038 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 22:10:40,089 recording.manager:36 [INFO] RecordingManager 已启动
+2026-09-22 22:10:40,122 urllib3.connectionpool:544 [DEBUG] http://www.yuturuishi.com:80 "POST /api/rebucca/checkVersion HTTP/1.1" 200 76
+2026-09-22 22:10:40,213 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 22:10:41,414 root:36 [INFO] StreamView.openAddContext() request_ip:127.0.0.1,params:{}
+2026-09-22 22:10:41,414 root:79 [INFO] StreamView.openAddContext() res:{'code': 1000, 'msg': '操作成功', 'stream': {'code': '34020000132001414066', 'app': 'live', 'name': '34020000132001414066', 'camera_device_id': 'default', 'is_audio': 0, 'pull_stream_username': '', 'pull_stream_password': '', 'rtspUrl': 'rtsp://127.0.0.1:10554/live/34020000132001414066', 'hlsUrl': 'http://127.0.0.1:10002/live/34020000132001414066.hls.m3u8', 'httpMp4Url': 'http://127.0.0.1:10002/live/34020000132001414066.live.mp4', 'wsMp4Url': 'ws://127.0.0.1:10002/live/34020000132001414066.live.mp4', 'record_enable': 0}, 'pull_stream_types': [{'id': 1, 'name': 'RTSP'}, {'id': 2, 'name': 'RTMP'}, {'id': 3, 'name': 'FLV'}, {'id': 4, 'name': 'HLS'}, {'id': 21, 'name': 'GB28181'}, {'id': 31, 'name': 'cRTSP'}, {'id': 32, 'name': 'cRTMP'}], 'audio_types': [{'type': 0, 'name': '静音'}, {'type': 1, 'name': '原始音频'}]}
+2026-09-22 22:10:45,616 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 22:10:48,868 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 22:10:49,574 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 22:10:50,771 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:10:50,772 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:10:50,780 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:10:50,780 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:10:50,782 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:10:50,785 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:10:50,810 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 22:10:52,189 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): www.yuturuishi.com:80
+2026-09-22 22:10:52,316 urllib3.connectionpool:544 [DEBUG] http://www.yuturuishi.com:80 "POST /api/rebucca/checkVersion HTTP/1.1" 200 76
+2026-09-22 22:10:52,761 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 22:10:54,141 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): www.yuturuishi.com:80
+2026-09-22 22:10:54,279 urllib3.connectionpool:544 [DEBUG] http://www.yuturuishi.com:80 "POST /api/rebucca/checkVersion HTTP/1.1" 200 76
+2026-09-22 22:10:55,105 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:10:55,107 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:10:55,109 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:10:55,115 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 22:10:55,115 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:10:55,116 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:10:55,117 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:10:56,460 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): www.yuturuishi.com:80
+2026-09-22 22:10:56,573 urllib3.connectionpool:544 [DEBUG] http://www.yuturuishi.com:80 "POST /api/rebucca/checkVersion HTTP/1.1" 200 76
+2026-09-22 22:11:03,655 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:03,657 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:11:05,662 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:11:05,663 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:05,664 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:11:05,665 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:11:11,648 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:11,650 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:11:15,646 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:11:15,652 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:15,653 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:11:15,654 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:11:19,655 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:19,657 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:11:25,645 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:11:25,652 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:25,653 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:11:25,654 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:11:27,636 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:27,637 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:11:35,656 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:11:35,658 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:35,658 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:35,659 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:11:35,660 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:11:35,660 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:11:43,637 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:43,661 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:11:45,645 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:11:45,652 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:45,653 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:11:45,655 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:11:51,645 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:51,646 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:11:55,651 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:11:55,657 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:55,659 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:11:55,660 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:11:59,647 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:11:59,649 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:12:56,655 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:12:56,663 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:12:56,663 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:12:56,665 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:12:56,665 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:12:56,666 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:13:56,677 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:13:56,681 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:13:56,686 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:13:56,688 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:13:56,692 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:13:56,694 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:14:56,691 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:14:56,696 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:14:56,699 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:14:56,702 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:14:56,705 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:14:56,717 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:15:56,686 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:15:56,688 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:15:56,690 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1282
+2026-09-22 22:15:56,693 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:15:56,696 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:15:56,710 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:16:56,687 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:16:56,693 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:16:56,694 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:16:56,708 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:16:56,712 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:16:56,720 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:17:56,672 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:17:56,673 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:17:56,682 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:17:56,683 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:17:56,691 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:17:56,697 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:18:56,678 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:18:56,679 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:18:56,691 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:18:56,694 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:18:56,713 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:18:56,716 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:19:04,743 django.request:283 [WARNING] Not Found: /favicon.ico
+2026-09-22 22:19:56,682 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:19:56,688 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:19:56,691 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:19:56,703 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:19:56,707 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:19:56,708 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:20:56,695 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:20:56,697 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:20:56,703 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:20:56,714 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:20:56,716 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:20:56,724 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:21:56,685 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:21:56,689 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:21:56,692 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:21:56,696 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:21:56,707 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:21:56,712 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:22:56,677 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:22:56,677 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:22:56,688 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:22:56,689 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:22:56,692 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:22:56,699 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:23:56,681 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:23:56,686 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:23:56,690 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:23:56,694 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:23:56,708 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:23:56,715 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:24:56,649 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:24:56,651 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:24:56,652 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:24:56,652 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:24:56,659 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:24:56,659 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:25:56,678 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:25:56,683 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:25:56,686 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:25:56,689 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:25:56,712 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:25:56,717 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:26:56,665 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:26:56,666 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:26:56,673 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:26:56,684 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:26:56,685 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:26:56,689 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:27:56,672 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:27:56,673 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:27:56,677 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:27:56,678 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:27:56,691 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:27:56,695 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:28:56,678 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:28:56,685 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1282
+2026-09-22 22:28:56,703 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:28:56,707 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:28:56,711 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:28:56,716 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:29:56,652 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:29:56,654 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:29:56,661 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:29:56,662 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:29:56,663 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:29:56,664 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:30:56,658 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:30:56,659 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:30:56,660 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:30:56,667 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:30:56,668 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:30:56,669 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:31:56,648 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:31:56,649 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:31:56,650 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:31:56,657 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:31:56,658 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:31:56,660 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:32:10,733 django.utils.autoreload:269 [INFO] E:\Anker黑客松\rebucca-main\rebucca-main\app\models.py changed, reloading.

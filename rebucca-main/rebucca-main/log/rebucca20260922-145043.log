@@ -1,0 +1,17 @@
+2026-09-22 14:50:43,290 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 14:50:43,290 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 14:50:43,290 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 14:50:43,291 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 14:50:43,291 root:48 [INFO] logDebug=1
+2026-09-22 14:50:43,291 root:51 [INFO] argv_extend=runserver
+2026-09-22 14:50:43,291 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 14:50:43,291 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 14:50:43,292 root:410 [DEBUG] [GSS] start...
+2026-09-22 14:50:43,292 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 14:50:43,337 root:321 [INFO] InnerView.t_init_thread()
+2026-09-22 14:50:45,077 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 14:50:45,094 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 14:50:45,095 app.bootstrap:72 [INFO] autoStartMedia: ok=True 流媒体服务已在运行
+2026-09-22 14:50:59,338 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 14:50:59,340 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 14:50:59,342 root:330 [INFO] autoAddStreamProxy ret=1,msg=成功数量：0，失败数量：0

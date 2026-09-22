@@ -1,0 +1,197 @@
+2026-09-22 21:47:58,883 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 21:47:58,883 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 21:47:58,883 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 21:47:58,883 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 21:47:58,883 root:48 [INFO] logDebug=1
+2026-09-22 21:47:58,884 root:51 [INFO] argv_extend=test
+2026-09-22 21:47:58,884 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 21:47:58,884 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 21:47:58,884 root:410 [DEBUG] [GSS] start...
+2026-09-22 21:47:58,884 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 21:47:59,245 root:321 [INFO] InnerView.t_init_thread()
+2026-09-22 21:47:59,269 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,271 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,273 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,275 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,276 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,276 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=2 subject= action= anomaly=0.95
+2026-09-22 21:47:59,278 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,278 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=1 subject= action= anomaly=0.00
+2026-09-22 21:47:59,279 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,279 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=4 subject= action= anomaly=0.00
+2026-09-22 21:47:59,280 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,280 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=3 subject= action= anomaly=0.00
+2026-09-22 21:47:59,282 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,283 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,285 services.brain_center:82 [WARNING] VLM 返回无法解析为 JSON: hello
+2026-09-22 21:47:59,286 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,289 services.brain_center:292 [INFO] WeeklyReport 生成 id=1 week=2026-09-21~2026-09-27 anomaly=2
+2026-09-22 21:47:59,290 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:47:59,293 services.brain_center:292 [INFO] WeeklyReport 生成 id=1 week=2026-09-21~2026-09-27 anomaly=2
+2026-09-22 21:47:59,295 services.brain_center:292 [INFO] WeeklyReport 生成 id=2 week=2026-09-21~2026-09-27 anomaly=2
+2026-09-22 21:47:59,297 services.device_hub:99 [INFO] 设备已注册/更新 device_id=cam-1 type=outdoor status=offline
+2026-09-22 21:47:59,298 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> cam-1 payload={'direction': 'up', 'angle': 90}
+2026-09-22 21:47:59,300 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': {'track_id': 't1', 'from': 'cam-a'}}
+2026-09-22 21:47:59,301 services.device_hub:298 [INFO] [stub] 下发命令 broadcast -> ? payload={'event_type': 'cross_camera_handoff', 'event': {'type': 'cross_camera_handoff', 'track_id': 't1', 'source_camera': 'cam-a', 'target_camera': 'cam-b', 'timestamp': '2026-09-22T21:47:59.301180', 'targets': ['cam-b']}}
+2026-09-22 21:47:59,301 services.device_hub:226 [INFO] 事件广播 type=cross_camera_handoff targets=['cam-b'] subscribers=0
+2026-09-22 21:47:59,302 services.device_hub:193 [INFO] 跨摄像头联动执行 track=t1 cam-a→cam-b
+2026-09-22 21:47:59,302 services.device_hub:99 [INFO] 设备已注册/更新 device_id=cam-1 type=4g status=offline
+2026-09-22 21:47:59,304 services.device_hub:99 [INFO] 设备已注册/更新 device_id=cam-1 type=outdoor status=offline
+2026-09-22 21:47:59,305 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> cam-1 payload={'direction': 'right', 'angle': 45}
+2026-09-22 21:47:59,306 services.device_hub:298 [INFO] [stub] 下发命令 light -> cam-1 payload={'on': True, 'brightness': 100}
+2026-09-22 21:47:59,307 services.device_hub:298 [INFO] [stub] 下发命令 audio -> cam-1 payload={'audio_url': 'https://a/b.mp3'}
+2026-09-22 21:47:59,309 services.device_hub:43 [WARNING] ptz->cam-1 第 1/3 次尝试失败: device unreachable
+2026-09-22 21:47:59,509 services.device_hub:43 [WARNING] ptz->cam-1 第 2/3 次尝试失败: device unreachable
+2026-09-22 21:47:59,910 services.device_hub:43 [WARNING] ptz->cam-1 第 3/3 次尝试失败: device unreachable
+2026-09-22 21:47:59,910 services.device_hub:278 [ERROR] 设备命令执行失败 cam-1 -> ptz: device unreachable
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\services\device_hub.py", line 266, in _dispatch
+    with_retry(
+    ~~~~~~~~~~^
+        lambda: self._send_command(dev, command_type, payload),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        label=f"{command_type}->{target_label}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\services\device_hub.py", line 46, in with_retry
+    raise last_exc
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\services\device_hub.py", line 40, in with_retry
+    return fn()
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\services\device_hub.py", line 267, in <lambda>
+    lambda: self._send_command(dev, command_type, payload),
+            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\tests_indoor.py", line 371, in _boom
+    raise RuntimeError("device unreachable")
+RuntimeError: device unreachable
+2026-09-22 21:47:59,913 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'left', 'angle': 10}
+2026-09-22 21:47:59,915 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'left', 'angle': 90}
+2026-09-22 21:47:59,915 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 60}
+2026-09-22 21:47:59,916 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'https://a/b.mp3'}
+2026-09-22 21:47:59,917 services.device_hub:162 [INFO] 跨摄像头联动无目标 track=track-9 from=cam-x（未指定目标且无拓扑）
+2026-09-22 21:47:59,918 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': {'track_id': 'track-1', 'from': 'cam-a'}}
+2026-09-22 21:47:59,919 services.device_hub:298 [INFO] [stub] 下发命令 broadcast -> ? payload={'event_type': 'cross_camera_handoff', 'event': {'type': 'cross_camera_handoff', 'track_id': 'track-1', 'source_camera': 'cam-a', 'target_camera': 'cam-b', 'timestamp': '2026-09-22T21:47:59.918924', 'targets': ['cam-b']}}
+2026-09-22 21:47:59,919 services.device_hub:226 [INFO] 事件广播 type=cross_camera_handoff targets=['cam-b'] subscribers=0
+2026-09-22 21:47:59,919 services.device_hub:193 [INFO] 跨摄像头联动执行 track=track-1 cam-a→cam-b
+2026-09-22 21:47:59,919 services.device_hub:173 [INFO] 联动防抖命中，跳过 track=track-1 cam-a→cam-b
+2026-09-22 21:47:59,920 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': {'track_id': 'track-2', 'from': 'cam-a'}}
+2026-09-22 21:47:59,920 services.device_hub:298 [INFO] [stub] 下发命令 broadcast -> ? payload={'event_type': 'cross_camera_handoff', 'event': {'type': 'cross_camera_handoff', 'track_id': 'track-2', 'source_camera': 'cam-a', 'target_camera': 'cam-b', 'timestamp': '2026-09-22T21:47:59.920527', 'targets': ['cam-b']}}
+2026-09-22 21:47:59,921 services.device_hub:226 [INFO] 事件广播 type=cross_camera_handoff targets=['cam-b'] subscribers=0
+2026-09-22 21:47:59,921 services.device_hub:193 [INFO] 跨摄像头联动执行 track=track-2 cam-a→cam-b
+2026-09-22 21:47:59,922 services.device_hub:298 [INFO] [stub] 下发命令 broadcast -> ? payload={'event_type': 'test', 'event': {'type': 'test', 'targets': ['cam-b']}}
+2026-09-22 21:47:59,922 services.device_hub:226 [INFO] 事件广播 type=test targets=['cam-b'] subscribers=1
+2026-09-22 21:47:59,923 services.device_hub:99 [INFO] 设备已注册/更新 device_id=cam-1 type=outdoor status=offline
+2026-09-22 21:47:59,924 services.device_hub:43 [WARNING] call 第 1/3 次尝试失败: temporary
+2026-09-22 21:47:59,934 services.device_hub:43 [WARNING] call 第 2/3 次尝试失败: temporary
+2026-09-22 21:47:59,957 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': {'label': 'cat', 'bbox': [120, 90, 300, 360]}}
+2026-09-22 21:47:59,958 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 70}
+2026-09-22 21:47:59,959 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://逗宠音效'}
+2026-09-22 21:47:59,960 services.indoor_scene:119 [INFO] 宠物模式触发 cam=1 animal=cat clip=static/upload/clips/pet_cam1_20260922214759.mp4
+2026-09-22 21:47:59,965 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://紧急告警，请立即关注'}
+2026-09-22 21:47:59,966 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://您好，您还好吗？需要帮助吗？'}
+2026-09-22 21:47:59,967 services.device_hub:226 [INFO] 事件广播 type=elder_notify_family targets=[] subscribers=0
+2026-09-22 21:47:59,967 services.indoor_scene:161 [WARNING] 老人看护告警 cam=1 type=elder_fall 已通知子女
+2026-09-22 21:47:59,968 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': {'label': 'cat', 'bbox': [120, 90, 300, 360]}}
+2026-09-22 21:47:59,969 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 70}
+2026-09-22 21:47:59,970 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://逗宠音效'}
+2026-09-22 21:47:59,971 services.indoor_scene:119 [INFO] 宠物模式触发 cam=1 animal=cat clip=static/upload/clips/pet_cam1_20260922214759.mp4
+2026-09-22 21:47:59,972 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://小朋友，这里危险哦，快离开这里'}
+2026-09-22 21:47:59,973 services.indoor_scene:194 [INFO] 儿童危险区域提醒 cam=1 zone=kitchen
+2026-09-22 21:47:59,975 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://紧急告警，请立即关注'}
+2026-09-22 21:47:59,976 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://您好，您还好吗？需要帮助吗？'}
+2026-09-22 21:47:59,976 services.device_hub:226 [INFO] 事件广播 type=elder_notify_family targets=[] subscribers=0
+2026-09-22 21:47:59,977 services.indoor_scene:161 [WARNING] 老人看护告警 cam=1 type=elder_fall 已通知子女
+2026-09-22 21:47:59,980 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://紧急告警，请立即关注'}
+2026-09-22 21:47:59,981 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://您好，您还好吗？需要帮助吗？'}
+2026-09-22 21:47:59,981 services.device_hub:226 [INFO] 事件广播 type=elder_notify_family targets=[] subscribers=0
+2026-09-22 21:47:59,981 services.indoor_scene:161 [WARNING] 老人看护告警 cam=1 type=elder_stationary 已通知子女
+2026-09-22 21:47:59,984 services.indoor_scene:86 [INFO] 室内运动事件 cam=1 触发模式 0/2
+2026-09-22 21:47:59,985 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 20}
+2026-09-22 21:47:59,987 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': [60, 40, 420, 520]}
+2026-09-22 21:47:59,987 services.indoor_scene:220 [INFO] 夜间起夜跟随 cam=1
+2026-09-22 21:47:59,989 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': {'label': 'cat', 'bbox': [120, 90, 300, 360]}}
+2026-09-22 21:47:59,990 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 70}
+2026-09-22 21:47:59,992 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://逗宠音效'}
+2026-09-22 21:47:59,992 services.indoor_scene:119 [INFO] 宠物模式触发 cam=1 animal=cat clip=static/upload/clips/pet_cam1_20260922214759.mp4
+2026-09-22 21:47:59,993 services.indoor_scene:86 [INFO] 室内运动事件 cam=1 触发模式 1/3
+2026-09-22 21:47:59,995 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': {'label': 'cat', 'bbox': [120, 90, 300, 360]}}
+2026-09-22 21:47:59,996 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 70}
+2026-09-22 21:47:59,997 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://逗宠音效'}
+2026-09-22 21:47:59,997 services.indoor_scene:119 [INFO] 宠物模式触发 cam=1 animal=cat clip=static/upload/clips/pet_cam1_20260922214759.mp4
+2026-09-22 21:48:00,000 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 100}
+2026-09-22 21:48:00,001 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': [60, 40, 420, 520]}
+2026-09-22 21:48:00,002 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://警告：这里是私人区域，请立即离开'}
+2026-09-22 21:48:00,003 services.device_hub:226 [INFO] 事件广播 type=offline_intrusion targets=[] subscribers=0
+2026-09-22 21:48:00,003 services.offline_scene:103 [WARNING] 入侵防御触发 cam=1 policy={'upload_video': True, 'keyframe_only': False, 'bytes': 2500000, 'edge_filtered': True}
+2026-09-22 21:48:00,009 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 100}
+2026-09-22 21:48:00,011 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': [60, 40, 420, 520]}
+2026-09-22 21:48:00,012 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://警告：这里是私人区域，请立即离开'}
+2026-09-22 21:48:00,012 services.offline_scene:320 [INFO] 事件已本地缓存待补传 cam=1 type=intrusion
+2026-09-22 21:48:00,013 services.device_hub:226 [INFO] 事件广播 type=offline_intrusion targets=[] subscribers=0
+2026-09-22 21:48:00,013 services.offline_scene:103 [WARNING] 入侵防御触发 cam=1 policy={'upload_video': True, 'keyframe_only': False, 'bytes': 2500000, 'edge_filtered': True}
+2026-09-22 21:48:00,013 services.offline_scene:197 [INFO] 离线补传完成 cam=1 补传 1 条
+2026-09-22 21:48:00,015 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 100}
+2026-09-22 21:48:00,016 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': [60, 40, 420, 520]}
+2026-09-22 21:48:00,017 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://警告：这里是私人区域，请立即离开'}
+2026-09-22 21:48:00,018 services.device_hub:226 [INFO] 事件广播 type=offline_intrusion targets=[] subscribers=0
+2026-09-22 21:48:00,018 services.offline_scene:103 [WARNING] 入侵防御触发 cam=1 policy={'upload_video': True, 'keyframe_only': False, 'bytes': 2500000, 'edge_filtered': True}
+2026-09-22 21:48:00,019 services.device_hub:226 [INFO] 事件广播 type=offline_animal targets=[] subscribers=0
+2026-09-22 21:48:00,019 services.offline_scene:140 [INFO] 动物监测记录 cam=1 animal=dog policy={'upload_video': False, 'keyframe_only': True, 'bytes': 120000, 'edge_filtered': True}
+2026-09-22 21:48:00,022 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 100}
+2026-09-22 21:48:00,023 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': [60, 40, 420, 520]}
+2026-09-22 21:48:00,025 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://警告：这里是私人区域，请立即离开'}
+2026-09-22 21:48:00,025 services.device_hub:226 [INFO] 事件广播 type=offline_intrusion targets=[] subscribers=0
+2026-09-22 21:48:00,025 services.offline_scene:103 [WARNING] 入侵防御触发 cam=1 policy={'upload_video': True, 'keyframe_only': False, 'bytes': 2500000, 'edge_filtered': True}
+2026-09-22 21:48:00,027 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 100}
+2026-09-22 21:48:00,028 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': [60, 40, 420, 520]}
+2026-09-22 21:48:00,030 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://警告：这里是私人区域，请立即离开'}
+2026-09-22 21:48:00,030 services.offline_scene:320 [INFO] 事件已本地缓存待补传 cam=1 type=intrusion
+2026-09-22 21:48:00,030 services.device_hub:226 [INFO] 事件广播 type=offline_intrusion targets=[] subscribers=0
+2026-09-22 21:48:00,030 services.offline_scene:103 [WARNING] 入侵防御触发 cam=1 policy={'upload_video': True, 'keyframe_only': False, 'bytes': 2500000, 'edge_filtered': True}
+2026-09-22 21:48:00,031 services.offline_scene:182 [INFO] 网络未恢复，等待补传 cam=1
+2026-09-22 21:48:00,031 services.offline_scene:197 [INFO] 离线补传完成 cam=1 补传 1 条
+2026-09-22 21:48:00,033 services.device_hub:298 [INFO] [stub] 下发命令 light -> ? payload={'on': True, 'brightness': 100}
+2026-09-22 21:48:00,034 services.device_hub:298 [INFO] [stub] 下发命令 ptz -> ? payload={'direction': 'track', 'angle': [60, 40, 420, 520]}
+2026-09-22 21:48:00,036 services.device_hub:298 [INFO] [stub] 下发命令 audio -> ? payload={'audio_url': 'tts://警告：这里是私人区域，请立即离开'}
+2026-09-22 21:48:00,036 services.device_hub:226 [INFO] 事件广播 type=offline_intrusion targets=[] subscribers=0
+2026-09-22 21:48:00,036 services.offline_scene:103 [WARNING] 入侵防御触发 cam=1 policy={'upload_video': True, 'keyframe_only': False, 'bytes': 2500000, 'edge_filtered': True}
+2026-09-22 21:48:00,089 services.outdoor_scene:297 [INFO] PTZ 控制 cam=300 direction=preset angle=3 (ONVIF 未真正实现)
+2026-09-22 21:48:00,089 services.outdoor_scene:317 [INFO] 灯光控制 cam=300 on=True brightness=100
+2026-09-22 21:48:00,089 services.outdoor_scene:332 [INFO] TTS 播报 cam=300 text=这里是私人区域，请立即离开！
+2026-09-22 21:48:00,089 services.outdoor_scene:252 [WARNING] 入侵场景触发 cam=300
+2026-09-22 21:48:00,091 services.outdoor_scene:297 [INFO] PTZ 控制 cam=300 direction=preset angle=1 (ONVIF 未真正实现)
+2026-09-22 21:48:00,091 services.outdoor_scene:317 [INFO] 灯光控制 cam=300 on=True brightness=80
+2026-09-22 21:48:00,091 services.outdoor_scene:332 [INFO] TTS 播报 cam=300 text=欢迎回家
+2026-09-22 21:48:00,091 services.outdoor_scene:204 [INFO] 迎宾场景 cam=300 person=family actions=3
+2026-09-22 21:48:00,092 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:48:00,096 services.outdoor_scene:317 [INFO] 灯光控制 cam=1 on=True brightness=80
+2026-09-22 21:48:00,097 services.outdoor_scene:297 [INFO] PTZ 控制 cam=1 direction=preset angle=3 (ONVIF 未真正实现)
+2026-09-22 21:48:00,097 services.outdoor_scene:332 [INFO] TTS 播报 cam=1 text=你好
+2026-09-22 21:48:00,099 services.outdoor_scene:297 [INFO] PTZ 控制 cam=100 direction=preset angle=2 (ONVIF 未真正实现)
+2026-09-22 21:48:00,099 services.outdoor_scene:317 [INFO] 灯光控制 cam=100 on=True brightness=80
+2026-09-22 21:48:00,099 services.outdoor_scene:332 [INFO] TTS 播报 cam=100 text=快递已到门口，请查收。
+2026-09-22 21:48:00,102 services.outdoor_scene:297 [INFO] PTZ 控制 cam=100 direction=preset angle=3 (ONVIF 未真正实现)
+2026-09-22 21:48:00,102 services.outdoor_scene:317 [INFO] 灯光控制 cam=100 on=True brightness=100
+2026-09-22 21:48:00,102 services.outdoor_scene:332 [INFO] TTS 播报 cam=100 text=这里是私人区域，请立即离开！
+2026-09-22 21:48:00,102 services.outdoor_scene:252 [WARNING] 入侵场景触发 cam=100
+2026-09-22 21:48:00,105 services.outdoor_scene:297 [INFO] PTZ 控制 cam=100 direction=preset angle=2 (ONVIF 未真正实现)
+2026-09-22 21:48:00,105 services.outdoor_scene:317 [INFO] 灯光控制 cam=100 on=True brightness=60
+2026-09-22 21:48:00,105 services.outdoor_scene:332 [INFO] TTS 播报 cam=100 text=您好，请问找谁？
+2026-09-22 21:48:00,107 services.outdoor_scene:297 [INFO] PTZ 控制 cam=100 direction=preset angle=1 (ONVIF 未真正实现)
+2026-09-22 21:48:00,107 services.outdoor_scene:317 [INFO] 灯光控制 cam=100 on=True brightness=80
+2026-09-22 21:48:00,107 services.outdoor_scene:332 [INFO] TTS 播报 cam=100 text=欢迎回家
+2026-09-22 21:48:00,107 services.outdoor_scene:204 [INFO] 迎宾场景 cam=100 person=family actions=3
+2026-09-22 21:48:00,110 services.outdoor_scene:297 [INFO] PTZ 控制 cam=200 direction=preset angle=1 (ONVIF 未真正实现)
+2026-09-22 21:48:00,110 services.outdoor_scene:317 [INFO] 灯光控制 cam=200 on=True brightness=80
+2026-09-22 21:48:00,110 services.outdoor_scene:332 [INFO] TTS 播报 cam=200 text=欢迎回家
+2026-09-22 21:48:00,110 services.outdoor_scene:204 [INFO] 迎宾场景 cam=200 person=family actions=3
+2026-09-22 21:48:00,110 services.outdoor_scene:109 [INFO] OutdoorEvent 入库 id=1 cam=200 scene=welcome person=family
+2026-09-22 21:48:00,114 services.outdoor_scene:297 [INFO] PTZ 控制 cam=200 direction=preset angle=2 (ONVIF 未真正实现)
+2026-09-22 21:48:00,114 services.outdoor_scene:317 [INFO] 灯光控制 cam=200 on=True brightness=60
+2026-09-22 21:48:00,114 services.outdoor_scene:332 [INFO] TTS 播报 cam=200 text=您好，请问找谁？
+2026-09-22 21:48:00,114 services.outdoor_scene:109 [INFO] OutdoorEvent 入库 id=1 cam=200 scene=visitor person=stranger
+2026-09-22 21:48:00,118 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 21:48:00,118 services.outdoor_scene:297 [INFO] PTZ 控制 cam=200 direction=preset angle=2 (ONVIF 未真正实现)
+2026-09-22 21:48:00,118 services.outdoor_scene:317 [INFO] 灯光控制 cam=200 on=True brightness=60
+2026-09-22 21:48:00,118 services.outdoor_scene:332 [INFO] TTS 播报 cam=200 text=您好，请问找谁？
+2026-09-22 21:48:00,118 services.outdoor_scene:109 [INFO] OutdoorEvent 入库 id=1 cam=200 scene=visitor person=unknown

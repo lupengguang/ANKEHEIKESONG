@@ -1,0 +1,1889 @@
+2026-09-22 22:45:11,947 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 22:45:11,947 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 22:45:11,947 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 22:45:11,947 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 22:45:11,947 root:48 [INFO] logDebug=1
+2026-09-22 22:45:11,947 root:51 [INFO] argv_extend=runserver
+2026-09-22 22:45:11,947 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 22:45:11,947 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 22:45:11,948 root:410 [DEBUG] [GSS] start...
+2026-09-22 22:45:11,948 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 22:45:12,026 root:321 [INFO] InnerView.t_init_thread()
+2026-09-22 22:45:13,477 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:45:13,480 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:45:13,481 app.bootstrap:72 [INFO] autoStartMedia: ok=True 流媒体服务已在运行
+2026-09-22 22:45:14,195 services.event_bus:41 [INFO] SSE 新订阅者，当前订阅数=1
+2026-09-22 22:45:28,027 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:45:28,029 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:45:28,031 root:330 [INFO] autoAddStreamProxy ret=1,msg=成功数量：0，失败数量：0
+2026-09-22 22:45:56,655 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:45:56,655 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:45:56,658 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:45:56,659 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:45:56,682 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:45:56,683 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:46:56,659 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:46:56,661 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:46:56,661 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:46:56,669 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:46:56,671 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:46:56,672 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:47:56,651 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:47:56,652 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:47:56,654 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:47:56,654 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:47:56,662 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:47:56,664 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:48:26,432 services.event_bus:41 [INFO] SSE 新订阅者，当前订阅数=2
+2026-09-22 22:48:38,038 services.video_stream:27 [INFO] 正在打开本地摄像头 index=0 ...
+2026-09-22 22:48:38,936 services.video_stream:57 [INFO] 摄像头已打开 index=0 实际分辨率=1280x720
+2026-09-22 22:48:38,938 services.vlm_client:79 [WARNING] VLM_API_KEY 未配置，understand_scene 将使用本地运动启发式分析（mock 降级）
+2026-09-22 22:48:38,938 services.welcome_scene:69 [INFO] 迎宾场景引擎已启动 frame_interval=5
+2026-09-22 22:48:38,939 services.camera_manager:98 [INFO] 摄像头与迎宾引擎已启动 cam_index=0
+2026-09-22 22:48:39,246 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.047
+2026-09-22 22:48:39,247 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:48:39,455 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:48:39,455 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:48:39,633 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #1 age=adult source=mock alert_id=155
+2026-09-22 22:48:39,634 services.event_bus:49 [INFO] SSE 订阅者退出，当前订阅数=1
+2026-09-22 22:48:39,792 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.103
+2026-09-22 22:48:39,792 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:48:39,948 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.099
+2026-09-22 22:48:40,253 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.093
+2026-09-22 22:48:40,412 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.093
+2026-09-22 22:48:40,716 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.092
+2026-09-22 22:48:40,876 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.084
+2026-09-22 22:48:41,180 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.075
+2026-09-22 22:48:41,492 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.089
+2026-09-22 22:48:41,493 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.8 秒内不重复触发
+2026-09-22 22:48:41,646 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.103
+2026-09-22 22:48:41,647 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.6 秒内不重复触发
+2026-09-22 22:48:41,815 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.120
+2026-09-22 22:48:41,815 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.4 秒内不重复触发
+2026-09-22 22:48:41,985 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.160
+2026-09-22 22:48:41,986 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.3 秒内不重复触发
+2026-09-22 22:48:42,139 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.205
+2026-09-22 22:48:42,139 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.1 秒内不重复触发
+2026-09-22 22:48:42,443 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.241
+2026-09-22 22:48:42,444 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.8 秒内不重复触发
+2026-09-22 22:48:42,759 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.195
+2026-09-22 22:48:42,915 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.125
+2026-09-22 22:48:43,225 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.108
+2026-09-22 22:48:43,378 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.132
+2026-09-22 22:48:43,378 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:48:43,533 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.158
+2026-09-22 22:48:43,534 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.7 秒内不重复触发
+2026-09-22 22:48:43,839 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.172
+2026-09-22 22:48:43,840 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.4 秒内不重复触发
+2026-09-22 22:48:44,144 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.159
+2026-09-22 22:48:44,305 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.153
+2026-09-22 22:48:44,462 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.149
+2026-09-22 22:48:44,781 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.141
+2026-09-22 22:48:45,097 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.143
+2026-09-22 22:48:45,098 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:48:45,266 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:48:45,266 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:48:45,422 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #2 age=adult source=mock alert_id=156
+2026-09-22 22:48:45,578 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.147
+2026-09-22 22:48:45,578 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:48:45,891 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.148
+2026-09-22 22:48:45,892 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:48:46,045 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.147
+2026-09-22 22:48:46,356 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.145
+2026-09-22 22:48:46,509 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.143
+2026-09-22 22:48:46,665 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.140
+2026-09-22 22:48:46,970 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.137
+2026-09-22 22:48:47,134 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.158
+2026-09-22 22:48:47,134 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:48:47,438 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.177
+2026-09-22 22:48:47,439 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.7 秒内不重复触发
+2026-09-22 22:48:47,598 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.201
+2026-09-22 22:48:47,598 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:48:47,909 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.248
+2026-09-22 22:48:47,910 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:48:48,065 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.185
+2026-09-22 22:48:48,374 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.177
+2026-09-22 22:48:48,686 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.167
+2026-09-22 22:48:48,842 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.169
+2026-09-22 22:48:48,842 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.3 秒内不重复触发
+2026-09-22 22:48:49,152 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.356
+2026-09-22 22:48:49,152 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:48:49,306 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.496
+2026-09-22 22:48:49,307 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.8 秒内不重复触发
+2026-09-22 22:48:49,617 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.466
+2026-09-22 22:48:49,928 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.399
+2026-09-22 22:48:50,084 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.260
+2026-09-22 22:48:50,392 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.239
+2026-09-22 22:48:50,561 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.440
+2026-09-22 22:48:50,562 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:48:50,722 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:48:50,722 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:48:50,877 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #3 age=adult source=mock alert_id=157
+2026-09-22 22:48:51,042 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.658
+2026-09-22 22:48:51,042 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:48:51,196 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.638
+2026-09-22 22:48:51,500 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.668
+2026-09-22 22:48:51,501 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:48:51,659 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.615
+2026-09-22 22:48:51,964 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.563
+2026-09-22 22:48:52,123 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.506
+2026-09-22 22:48:52,290 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.445
+2026-09-22 22:48:52,445 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.379
+2026-09-22 22:48:52,753 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.315
+2026-09-22 22:48:52,908 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.225
+2026-09-22 22:48:53,216 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.119
+2026-09-22 22:48:53,523 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.095
+2026-09-22 22:48:53,677 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.084
+2026-09-22 22:48:53,988 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.074
+2026-09-22 22:48:54,298 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.065
+2026-09-22 22:48:54,454 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.058
+2026-09-22 22:48:54,764 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.067
+2026-09-22 22:48:54,765 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.8 秒内不重复触发
+2026-09-22 22:48:55,070 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.088
+2026-09-22 22:48:55,071 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.5 秒内不重复触发
+2026-09-22 22:48:55,229 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.087
+2026-09-22 22:48:55,534 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.079
+2026-09-22 22:48:55,692 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.071
+2026-09-22 22:48:55,860 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.062
+2026-09-22 22:48:56,017 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.048
+2026-09-22 22:48:56,328 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.046
+2026-09-22 22:48:56,484 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.041
+2026-09-22 22:48:56,652 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:48:56,652 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:48:56,653 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:48:56,655 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:48:56,655 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:48:56,662 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:48:56,796 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.036
+2026-09-22 22:48:56,950 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.023
+2026-09-22 22:48:57,262 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:48:58,033 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.016
+2026-09-22 22:48:58,033 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:48:58,166 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:48:58,166 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:48:58,311 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #4 age=adult source=mock alert_id=158
+2026-09-22 22:48:58,464 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.016
+2026-09-22 22:48:58,465 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:48:59,557 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.020
+2026-09-22 22:48:59,558 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.5 秒内不重复触发
+2026-09-22 22:48:59,725 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.083
+2026-09-22 22:48:59,726 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.3 秒内不重复触发
+2026-09-22 22:49:00,033 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.075
+2026-09-22 22:49:00,190 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.054
+2026-09-22 22:49:00,357 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.049
+2026-09-22 22:49:00,513 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.061
+2026-09-22 22:49:00,513 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:49:00,831 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.082
+2026-09-22 22:49:00,831 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:49:00,990 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.080
+2026-09-22 22:49:01,294 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.154
+2026-09-22 22:49:01,295 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.7 秒内不重复触发
+2026-09-22 22:49:01,454 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.187
+2026-09-22 22:49:01,454 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:49:01,765 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.207
+2026-09-22 22:49:01,765 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.3 秒内不重复触发
+2026-09-22 22:49:01,919 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.199
+2026-09-22 22:49:02,230 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.180
+2026-09-22 22:49:02,384 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.174
+2026-09-22 22:49:02,552 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.169
+2026-09-22 22:49:02,709 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.172
+2026-09-22 22:49:02,709 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.3 秒内不重复触发
+2026-09-22 22:49:03,017 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.210
+2026-09-22 22:49:03,017 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.0 秒内不重复触发
+2026-09-22 22:49:03,324 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.257
+2026-09-22 22:49:03,324 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:49:03,510 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:49:03,511 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:49:03,704 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #5 age=adult source=mock alert_id=159
+2026-09-22 22:49:03,869 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.297
+2026-09-22 22:49:03,870 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:49:04,024 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.255
+2026-09-22 22:49:04,178 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.196
+2026-09-22 22:49:04,483 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.161
+2026-09-22 22:49:04,640 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.167
+2026-09-22 22:49:04,641 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.7 秒内不重复触发
+2026-09-22 22:49:04,948 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.180
+2026-09-22 22:49:04,948 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.4 秒内不重复触发
+2026-09-22 22:49:05,258 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.176
+2026-09-22 22:49:05,412 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.166
+2026-09-22 22:49:05,568 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.155
+2026-09-22 22:49:05,876 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.149
+2026-09-22 22:49:06,197 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.146
+2026-09-22 22:49:06,352 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.140
+2026-09-22 22:49:06,656 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.132
+2026-09-22 22:49:06,814 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.126
+2026-09-22 22:49:07,122 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.117
+2026-09-22 22:49:07,436 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.108
+2026-09-22 22:49:07,591 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.099
+2026-09-22 22:49:07,746 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.092
+2026-09-22 22:49:07,903 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.085
+2026-09-22 22:49:08,209 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.078
+2026-09-22 22:49:08,522 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.073
+2026-09-22 22:49:08,680 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.068
+2026-09-22 22:49:08,833 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.063
+2026-09-22 22:49:09,141 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.058
+2026-09-22 22:49:09,296 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.054
+2026-09-22 22:49:09,607 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.051
+2026-09-22 22:49:09,776 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.047
+2026-09-22 22:49:09,944 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.042
+2026-09-22 22:49:10,100 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.035
+2026-09-22 22:49:10,406 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.026
+2026-09-22 22:49:10,716 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.022
+2026-09-22 22:49:10,885 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:49:15,882 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> left
+2026-09-22 22:49:29,026 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.017
+2026-09-22 22:49:29,026 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:49:29,199 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:49:29,200 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:49:29,355 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #6 age=adult source=mock alert_id=160
+2026-09-22 22:49:29,521 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.021
+2026-09-22 22:49:29,521 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:49:29,832 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.019
+2026-09-22 22:49:29,987 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.019
+2026-09-22 22:49:30,156 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.018
+2026-09-22 22:49:30,325 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.018
+2026-09-22 22:49:30,325 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.7 秒内不重复触发
+2026-09-22 22:49:30,480 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.018
+2026-09-22 22:49:30,789 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:49:30,946 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.016
+2026-09-22 22:49:31,255 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.016
+2026-09-22 22:49:31,410 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.015
+2026-09-22 22:49:31,906 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> left
+2026-09-22 22:49:35,314 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.046
+2026-09-22 22:49:35,315 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:49:35,443 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:49:35,443 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:49:35,577 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #7 age=adult source=mock alert_id=161
+2026-09-22 22:49:35,734 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.140
+2026-09-22 22:49:35,735 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:49:35,888 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.181
+2026-09-22 22:49:35,889 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:49:36,044 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.212
+2026-09-22 22:49:36,044 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.3 秒内不重复触发
+2026-09-22 22:49:36,353 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.255
+2026-09-22 22:49:36,353 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.0 秒内不重复触发
+2026-09-22 22:49:36,512 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.260
+2026-09-22 22:49:36,512 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.8 秒内不重复触发
+2026-09-22 22:49:36,815 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.252
+2026-09-22 22:49:37,130 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.248
+2026-09-22 22:49:37,298 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.202
+2026-09-22 22:49:37,607 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.170
+2026-09-22 22:49:37,919 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.199
+2026-09-22 22:49:37,919 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.4 秒内不重复触发
+2026-09-22 22:49:38,073 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.224
+2026-09-22 22:49:38,074 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:49:38,385 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.252
+2026-09-22 22:49:38,386 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.9 秒内不重复触发
+2026-09-22 22:49:38,539 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.262
+2026-09-22 22:49:38,540 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.8 秒内不重复触发
+2026-09-22 22:49:38,844 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.266
+2026-09-22 22:49:38,845 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.5 秒内不重复触发
+2026-09-22 22:49:39,152 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.254
+2026-09-22 22:49:39,314 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.243
+2026-09-22 22:49:39,470 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.242
+2026-09-22 22:49:39,774 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.239
+2026-09-22 22:49:39,932 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.247
+2026-09-22 22:49:39,933 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.4 秒内不重复触发
+2026-09-22 22:49:40,086 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.266
+2026-09-22 22:49:40,086 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.2 秒内不重复触发
+2026-09-22 22:49:40,240 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.291
+2026-09-22 22:49:40,241 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.1 秒内不重复触发
+2026-09-22 22:49:40,551 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.332
+2026-09-22 22:49:40,551 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:49:40,699 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:49:40,699 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:49:40,833 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #8 age=adult source=mock alert_id=162
+2026-09-22 22:49:40,997 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.346
+2026-09-22 22:49:40,997 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:49:41,153 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.336
+2026-09-22 22:49:41,307 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.318
+2026-09-22 22:49:41,615 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.291
+2026-09-22 22:49:41,927 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.280
+2026-09-22 22:49:42,081 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.282
+2026-09-22 22:49:42,081 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.5 秒内不重复触发
+2026-09-22 22:49:42,394 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.276
+2026-09-22 22:49:42,701 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.273
+2026-09-22 22:49:42,860 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.264
+2026-09-22 22:49:43,165 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.255
+2026-09-22 22:49:43,324 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.242
+2026-09-22 22:49:43,636 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.248
+2026-09-22 22:49:43,636 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.9 秒内不重复触发
+2026-09-22 22:49:43,958 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.239
+2026-09-22 22:49:44,112 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.232
+2026-09-22 22:49:44,424 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.230
+2026-09-22 22:49:44,593 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.225
+2026-09-22 22:49:44,747 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.210
+2026-09-22 22:49:44,900 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.197
+2026-09-22 22:49:45,211 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.177
+2026-09-22 22:49:45,520 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.181
+2026-09-22 22:49:45,520 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.0 秒内不重复触发
+2026-09-22 22:49:45,688 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.170
+2026-09-22 22:49:45,999 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.177
+2026-09-22 22:49:46,000 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:49:46,154 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:49:46,155 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:49:46,338 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #9 age=adult source=mock alert_id=163
+2026-09-22 22:49:46,492 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.153
+2026-09-22 22:49:46,801 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.152
+2026-09-22 22:49:46,961 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.151
+2026-09-22 22:49:47,266 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.148
+2026-09-22 22:49:47,580 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.151
+2026-09-22 22:49:47,581 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.4 秒内不重复触发
+2026-09-22 22:49:47,735 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.143
+2026-09-22 22:49:47,891 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.137
+2026-09-22 22:49:48,045 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.137
+2026-09-22 22:49:48,046 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:49:48,364 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.131
+2026-09-22 22:49:48,524 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.117
+2026-09-22 22:49:48,831 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.133
+2026-09-22 22:49:48,831 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:49:49,145 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.140
+2026-09-22 22:49:49,146 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.9 秒内不重复触发
+2026-09-22 22:49:49,315 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.138
+2026-09-22 22:49:49,625 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.137
+2026-09-22 22:49:49,936 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.127
+2026-09-22 22:49:50,246 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.124
+2026-09-22 22:49:50,400 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.120
+2026-09-22 22:49:50,568 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.117
+2026-09-22 22:49:50,735 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.115
+2026-09-22 22:49:50,890 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.114
+2026-09-22 22:49:51,196 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.113
+2026-09-22 22:49:51,503 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.108
+2026-09-22 22:49:51,662 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.100
+2026-09-22 22:49:51,968 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.077
+2026-09-22 22:49:52,125 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.075
+2026-09-22 22:49:52,185 django.request:283 [WARNING] Not Found: /upload/snapshots/seed_welcome_20260922224758.jpg
+2026-09-22 22:49:52,430 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.072
+2026-09-22 22:49:52,590 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.071
+2026-09-22 22:49:52,758 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.086
+2026-09-22 22:49:52,759 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:49:52,899 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:49:52,899 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:49:53,021 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #10 age=adult source=mock alert_id=164
+2026-09-22 22:49:53,178 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.155
+2026-09-22 22:49:53,179 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:49:53,334 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.184
+2026-09-22 22:49:53,334 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:49:53,488 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.201
+2026-09-22 22:49:53,489 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.3 秒内不重复触发
+2026-09-22 22:49:53,797 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.231
+2026-09-22 22:49:53,797 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.0 秒内不重复触发
+2026-09-22 22:49:53,965 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.246
+2026-09-22 22:49:53,966 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.8 秒内不重复触发
+2026-09-22 22:49:54,120 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.259
+2026-09-22 22:49:54,121 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:49:54,429 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.270
+2026-09-22 22:49:54,430 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.3 秒内不重复触发
+2026-09-22 22:49:54,583 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.246
+2026-09-22 22:49:54,893 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.181
+2026-09-22 22:49:55,199 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.189
+2026-09-22 22:49:55,199 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.6 秒内不重复触发
+2026-09-22 22:49:55,360 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.193
+2026-09-22 22:49:55,360 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.4 秒内不重复触发
+2026-09-22 22:49:55,663 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.186
+2026-09-22 22:49:55,824 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.176
+2026-09-22 22:49:56,134 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.178
+2026-09-22 22:49:56,135 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:49:56,289 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.165
+2026-09-22 22:49:56,456 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.180
+2026-09-22 22:49:56,457 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.3 秒内不重复触发
+2026-09-22 22:49:56,625 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.197
+2026-09-22 22:49:56,626 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.1 秒内不重复触发
+2026-09-22 22:49:56,651 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:49:56,658 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:49:56,659 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:49:56,660 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:49:56,661 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:49:56,662 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:49:56,939 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.210
+2026-09-22 22:49:56,939 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.8 秒内不重复触发
+2026-09-22 22:49:57,096 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.205
+2026-09-22 22:49:57,252 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.201
+2026-09-22 22:49:57,560 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.190
+2026-09-22 22:49:57,715 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.174
+2026-09-22 22:49:58,027 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.163
+2026-09-22 22:49:58,182 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.158
+2026-09-22 22:49:58,493 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.175
+2026-09-22 22:49:58,493 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:49:58,633 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:49:58,633 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:49:58,788 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #11 age=adult source=mock alert_id=165
+2026-09-22 22:49:58,788 services.event_bus:49 [INFO] SSE 订阅者退出，当前订阅数=0
+2026-09-22 22:49:58,954 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.190
+2026-09-22 22:49:58,954 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:49:59,108 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.175
+2026-09-22 22:49:59,418 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.200
+2026-09-22 22:49:59,419 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:49:59,584 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.212
+2026-09-22 22:49:59,585 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.9 秒内不重复触发
+2026-09-22 22:49:59,754 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.213
+2026-09-22 22:49:59,754 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.7 秒内不重复触发
+2026-09-22 22:49:59,908 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.224
+2026-09-22 22:49:59,909 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:50:00,225 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.271
+2026-09-22 22:50:00,226 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.3 秒内不重复触发
+2026-09-22 22:50:00,540 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.294
+2026-09-22 22:50:00,541 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:50:00,695 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.307
+2026-09-22 22:50:00,696 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.8 秒内不重复触发
+2026-09-22 22:50:00,849 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.311
+2026-09-22 22:50:00,850 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.6 秒内不重复触发
+2026-09-22 22:50:01,008 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.312
+2026-09-22 22:50:01,008 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:50:01,313 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.328
+2026-09-22 22:50:01,313 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:50:01,473 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.335
+2026-09-22 22:50:01,474 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.0 秒内不重复触发
+2026-09-22 22:50:01,784 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.355
+2026-09-22 22:50:01,784 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.7 秒内不重复触发
+2026-09-22 22:50:01,938 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.359
+2026-09-22 22:50:01,938 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:50:02,248 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.358
+2026-09-22 22:50:02,402 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.351
+2026-09-22 22:50:02,714 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.348
+2026-09-22 22:50:03,023 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.319
+2026-09-22 22:50:03,180 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.302
+2026-09-22 22:50:03,486 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.296
+2026-09-22 22:50:03,648 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.289
+2026-09-22 22:50:03,960 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.287
+2026-09-22 22:50:04,113 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.286
+2026-09-22 22:50:04,271 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.301
+2026-09-22 22:50:04,271 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:50:04,432 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:50:04,432 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:50:04,576 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #12 age=adult source=mock alert_id=166
+2026-09-22 22:50:04,735 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.311
+2026-09-22 22:50:04,736 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:50:05,046 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.304
+2026-09-22 22:50:05,201 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.287
+2026-09-22 22:50:05,512 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.271
+2026-09-22 22:50:05,669 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.260
+2026-09-22 22:50:05,838 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.250
+2026-09-22 22:50:06,144 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.249
+2026-09-22 22:50:06,303 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.248
+2026-09-22 22:50:06,470 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.246
+2026-09-22 22:50:06,779 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.224
+2026-09-22 22:50:07,093 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.207
+2026-09-22 22:50:07,247 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.195
+2026-09-22 22:50:07,551 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.182
+2026-09-22 22:50:07,712 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.168
+2026-09-22 22:50:08,019 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.158
+2026-09-22 22:50:08,330 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.146
+2026-09-22 22:50:08,500 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.133
+2026-09-22 22:50:08,827 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.122
+2026-09-22 22:50:09,133 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.112
+2026-09-22 22:50:09,295 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.101
+2026-09-22 22:50:09,606 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.100
+2026-09-22 22:50:09,917 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.134
+2026-09-22 22:50:09,917 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:50:10,055 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:50:10,055 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:50:10,221 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #13 age=adult source=mock alert_id=167
+2026-09-22 22:50:10,384 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.128
+2026-09-22 22:50:10,694 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.085
+2026-09-22 22:50:10,848 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.079
+2026-09-22 22:50:11,158 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.092
+2026-09-22 22:50:11,159 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.8 秒内不重复触发
+2026-09-22 22:50:11,311 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.093
+2026-09-22 22:50:11,312 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:50:11,621 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.094
+2026-09-22 22:50:11,622 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.3 秒内不重复触发
+2026-09-22 22:50:11,932 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.092
+2026-09-22 22:50:12,086 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.090
+2026-09-22 22:50:12,392 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.094
+2026-09-22 22:50:12,393 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:50:12,702 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.090
+2026-09-22 22:50:12,871 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.070
+2026-09-22 22:50:13,182 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.077
+2026-09-22 22:50:13,182 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.7 秒内不重复触发
+2026-09-22 22:50:13,494 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.094
+2026-09-22 22:50:13,495 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.4 秒内不重复触发
+2026-09-22 22:50:13,650 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.089
+2026-09-22 22:50:13,961 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.073
+2026-09-22 22:50:14,115 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.063
+2026-09-22 22:50:14,424 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.052
+2026-09-22 22:50:14,736 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.048
+2026-09-22 22:50:14,891 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.047
+2026-09-22 22:50:15,196 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.044
+2026-09-22 22:50:15,350 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.041
+2026-09-22 22:50:15,503 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.042
+2026-09-22 22:50:15,504 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:50:15,677 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:50:15,677 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:50:15,832 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #14 age=adult source=mock alert_id=168
+2026-09-22 22:50:15,989 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.107
+2026-09-22 22:50:15,989 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:50:16,299 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.086
+2026-09-22 22:50:16,468 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.077
+2026-09-22 22:50:16,778 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.302
+2026-09-22 22:50:16,779 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.7 秒内不重复触发
+2026-09-22 22:50:16,931 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.337
+2026-09-22 22:50:16,932 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:50:17,100 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.353
+2026-09-22 22:50:17,100 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.4 秒内不重复触发
+2026-09-22 22:50:17,405 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.378
+2026-09-22 22:50:17,405 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.1 秒内不重复触发
+2026-09-22 22:50:17,562 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.388
+2026-09-22 22:50:17,563 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.9 秒内不重复触发
+2026-09-22 22:50:17,717 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.398
+2026-09-22 22:50:17,717 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.8 秒内不重复触发
+2026-09-22 22:50:18,027 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.405
+2026-09-22 22:50:18,027 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:50:18,333 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.462
+2026-09-22 22:50:18,334 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:50:18,649 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.497
+2026-09-22 22:50:18,650 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.9 秒内不重复触发
+2026-09-22 22:50:18,816 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.495
+2026-09-22 22:50:18,971 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.487
+2026-09-22 22:50:19,141 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.479
+2026-09-22 22:50:19,294 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.467
+2026-09-22 22:50:19,601 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.450
+2026-09-22 22:50:19,759 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.485
+2026-09-22 22:50:19,760 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.7 秒内不重复触发
+2026-09-22 22:50:20,069 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.512
+2026-09-22 22:50:20,070 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.4 秒内不重复触发
+2026-09-22 22:50:20,224 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.503
+2026-09-22 22:50:20,382 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.489
+2026-09-22 22:50:20,692 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.446
+2026-09-22 22:50:20,847 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.427
+2026-09-22 22:50:21,156 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.408
+2026-09-22 22:50:21,466 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.398
+2026-09-22 22:50:21,621 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.389
+2026-09-22 22:50:21,931 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.386
+2026-09-22 22:50:22,087 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.390
+2026-09-22 22:50:22,088 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:50:22,232 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:50:22,233 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:50:22,365 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #15 age=adult source=mock alert_id=169
+2026-09-22 22:50:22,521 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.423
+2026-09-22 22:50:22,522 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:50:22,829 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.431
+2026-09-22 22:50:22,829 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.3 秒内不重复触发
+2026-09-22 22:50:22,983 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.416
+2026-09-22 22:50:23,293 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.391
+2026-09-22 22:50:23,605 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.375
+2026-09-22 22:50:23,758 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.354
+2026-09-22 22:50:24,063 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.336
+2026-09-22 22:50:24,220 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.333
+2026-09-22 22:50:24,526 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.344
+2026-09-22 22:50:24,526 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.6 秒内不重复触发
+2026-09-22 22:50:24,687 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.335
+2026-09-22 22:50:24,992 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.311
+2026-09-22 22:50:25,153 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.288
+2026-09-22 22:50:25,462 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.266
+2026-09-22 22:50:25,772 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.256
+2026-09-22 22:50:25,929 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.246
+2026-09-22 22:50:26,084 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.237
+2026-09-22 22:50:26,240 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.228
+2026-09-22 22:50:26,553 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.223
+2026-09-22 22:50:26,707 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.224
+2026-09-22 22:50:26,708 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.4 秒内不重复触发
+2026-09-22 22:50:27,015 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.227
+2026-09-22 22:50:27,016 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.1 秒内不重复触发
+2026-09-22 22:50:27,184 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.223
+2026-09-22 22:50:27,489 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.222
+2026-09-22 22:50:27,809 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.205
+2026-09-22 22:50:28,120 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.191
+2026-09-22 22:50:28,274 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.185
+2026-09-22 22:50:28,585 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.174
+2026-09-22 22:50:28,753 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.164
+2026-09-22 22:50:29,063 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.156
+2026-09-22 22:50:29,217 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.148
+2026-09-22 22:50:29,520 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.138
+2026-09-22 22:50:29,836 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.131
+2026-09-22 22:50:29,988 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.135
+2026-09-22 22:50:29,989 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:50:30,154 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:50:30,154 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:50:30,288 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #16 age=adult source=mock alert_id=170
+2026-09-22 22:50:30,451 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.204
+2026-09-22 22:50:30,452 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:50:30,607 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.252
+2026-09-22 22:50:30,607 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:50:30,919 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.307
+2026-09-22 22:50:30,919 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:50:31,074 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.285
+2026-09-22 22:50:31,231 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.223
+2026-09-22 22:50:31,543 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.165
+2026-09-22 22:50:31,853 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.213
+2026-09-22 22:50:31,854 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.1 秒内不重复触发
+2026-09-22 22:50:32,021 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.220
+2026-09-22 22:50:32,022 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:50:32,175 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.233
+2026-09-22 22:50:32,176 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.8 秒内不重复触发
+2026-09-22 22:50:32,489 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.221
+2026-09-22 22:50:32,646 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.213
+2026-09-22 22:50:32,817 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.207
+2026-09-22 22:50:33,125 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.200
+2026-09-22 22:50:33,279 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.190
+2026-09-22 22:50:33,339 django.request:283 [WARNING] Not Found: /upload/snapshots/seed_welcome_20260922224758.jpg
+2026-09-22 22:50:33,584 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.193
+2026-09-22 22:50:33,584 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.4 秒内不重复触发
+2026-09-22 22:50:33,747 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.190
+2026-09-22 22:50:33,903 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.185
+2026-09-22 22:50:34,210 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.173
+2026-09-22 22:50:34,371 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.167
+2026-09-22 22:50:34,526 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.162
+2026-09-22 22:50:34,837 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.155
+2026-09-22 22:50:35,148 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.148
+2026-09-22 22:50:35,303 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.145
+2026-09-22 22:50:35,613 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.143
+2026-09-22 22:50:35,770 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.140
+2026-09-22 22:50:35,941 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.136
+2026-09-22 22:50:36,106 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.129
+2026-09-22 22:50:36,417 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.121
+2026-09-22 22:50:36,727 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.114
+2026-09-22 22:50:36,880 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.108
+2026-09-22 22:50:37,190 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.101
+2026-09-22 22:50:37,505 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.112
+2026-09-22 22:50:37,506 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:50:37,621 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:50:37,621 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:50:37,809 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #17 age=adult source=mock alert_id=171
+2026-09-22 22:50:37,975 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.139
+2026-09-22 22:50:37,975 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:50:38,284 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.142
+2026-09-22 22:50:38,284 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:50:38,438 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.144
+2026-09-22 22:50:38,439 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:50:38,746 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.140
+2026-09-22 22:50:38,907 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.136
+2026-09-22 22:50:39,075 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.142
+2026-09-22 22:50:39,076 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.4 秒内不重复触发
+2026-09-22 22:50:39,385 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.171
+2026-09-22 22:50:39,386 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.1 秒内不重复触发
+2026-09-22 22:50:39,541 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.179
+2026-09-22 22:50:39,541 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:50:39,849 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.214
+2026-09-22 22:50:39,849 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.7 秒内不重复触发
+2026-09-22 22:50:40,002 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.230
+2026-09-22 22:50:40,003 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:50:40,311 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.225
+2026-09-22 22:50:40,466 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.195
+2026-09-22 22:50:40,777 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.167
+2026-09-22 22:50:41,086 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.154
+2026-09-22 22:50:41,240 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.149
+2026-09-22 22:50:41,550 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.152
+2026-09-22 22:50:41,550 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.0 秒内不重复触发
+2026-09-22 22:50:41,704 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.151
+2026-09-22 22:50:42,013 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.145
+2026-09-22 22:50:42,332 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.138
+2026-09-22 22:50:42,491 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.131
+2026-09-22 22:50:42,796 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.129
+2026-09-22 22:50:42,949 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.120
+2026-09-22 22:50:43,103 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.114
+2026-09-22 22:50:43,260 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.107
+2026-09-22 22:50:43,565 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.104
+2026-09-22 22:50:43,723 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.099
+2026-09-22 22:50:44,028 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.089
+2026-09-22 22:50:44,188 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.081
+2026-09-22 22:50:44,343 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.072
+2026-09-22 22:50:44,498 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.066
+2026-09-22 22:50:44,807 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.063
+2026-09-22 22:50:44,961 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.054
+2026-09-22 22:50:45,265 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.041
+2026-09-22 22:50:45,570 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.037
+2026-09-22 22:50:45,724 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.035
+2026-09-22 22:50:45,889 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.033
+2026-09-22 22:50:46,200 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.036
+2026-09-22 22:50:46,200 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:50:46,376 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:50:46,376 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:50:46,509 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #18 age=adult source=mock alert_id=172
+2026-09-22 22:50:46,664 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.039
+2026-09-22 22:50:46,665 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:50:46,820 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.034
+2026-09-22 22:50:47,129 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.030
+2026-09-22 22:50:47,286 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.029
+2026-09-22 22:50:47,594 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.029
+2026-09-22 22:50:47,595 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:50:47,902 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.028
+2026-09-22 22:50:48,058 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.028
+2026-09-22 22:50:48,365 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.029
+2026-09-22 22:50:48,365 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.8 秒内不重复触发
+2026-09-22 22:50:48,519 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.024
+2026-09-22 22:50:48,827 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:50:55,647 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.067
+2026-09-22 22:50:55,647 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:50:55,821 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:50:55,821 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:50:55,965 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #19 age=adult source=mock alert_id=173
+2026-09-22 22:50:56,127 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.109
+2026-09-22 22:50:56,127 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:50:56,282 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.122
+2026-09-22 22:50:56,282 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:50:56,588 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.151
+2026-09-22 22:50:56,589 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:50:56,652 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:50:56,652 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:50:56,654 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:50:56,655 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:50:56,656 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:50:56,663 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:50:56,749 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.165
+2026-09-22 22:50:56,749 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.9 秒内不重复触发
+2026-09-22 22:50:57,056 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.181
+2026-09-22 22:50:57,057 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:50:57,216 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.180
+2026-09-22 22:50:57,528 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.159
+2026-09-22 22:50:57,682 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.146
+2026-09-22 22:50:57,988 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.135
+2026-09-22 22:50:58,305 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.124
+2026-09-22 22:50:58,615 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.105
+2026-09-22 22:50:58,772 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.095
+2026-09-22 22:50:59,081 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.099
+2026-09-22 22:50:59,082 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:50:59,236 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.094
+2026-09-22 22:50:59,547 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.102
+2026-09-22 22:50:59,547 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.1 秒内不重复触发
+2026-09-22 22:50:59,853 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.107
+2026-09-22 22:50:59,854 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.8 秒内不重复触发
+2026-09-22 22:51:00,012 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.098
+2026-09-22 22:51:00,179 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.088
+2026-09-22 22:51:00,489 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.081
+2026-09-22 22:51:00,644 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.074
+2026-09-22 22:51:00,801 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.087
+2026-09-22 22:51:00,802 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:00,943 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:00,943 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:01,098 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #20 age=adult source=mock alert_id=174
+2026-09-22 22:51:01,262 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.086
+2026-09-22 22:51:01,580 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.082
+2026-09-22 22:51:01,742 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.075
+2026-09-22 22:51:01,910 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.070
+2026-09-22 22:51:02,064 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.063
+2026-09-22 22:51:02,373 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.056
+2026-09-22 22:51:02,542 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.053
+2026-09-22 22:51:02,848 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.053
+2026-09-22 22:51:02,849 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:51:03,153 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.053
+2026-09-22 22:51:03,153 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.6 秒内不重复触发
+2026-09-22 22:51:03,312 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.049
+2026-09-22 22:51:03,622 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.050
+2026-09-22 22:51:03,622 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:51:03,774 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.049
+2026-09-22 22:51:04,088 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.051
+2026-09-22 22:51:04,089 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.7 秒内不重复触发
+2026-09-22 22:51:04,241 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.051
+2026-09-22 22:51:04,242 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:51:04,402 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.055
+2026-09-22 22:51:04,402 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.4 秒内不重复触发
+2026-09-22 22:51:04,727 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.058
+2026-09-22 22:51:04,727 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.1 秒内不重复触发
+2026-09-22 22:51:04,880 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.051
+2026-09-22 22:51:05,192 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.046
+2026-09-22 22:51:05,503 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.040
+2026-09-22 22:51:05,808 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.037
+2026-09-22 22:51:05,968 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.032
+2026-09-22 22:51:06,280 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.030
+2026-09-22 22:51:06,436 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.027
+2026-09-22 22:51:06,744 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.026
+2026-09-22 22:51:06,900 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.024
+2026-09-22 22:51:07,205 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.022
+2026-09-22 22:51:07,521 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.021
+2026-09-22 22:51:07,675 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.019
+2026-09-22 22:51:07,988 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.015
+2026-09-22 22:51:08,604 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.016
+2026-09-22 22:51:08,604 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:08,743 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:08,743 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:08,976 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #21 age=adult source=mock alert_id=175
+2026-09-22 22:51:09,133 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.021
+2026-09-22 22:51:09,134 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:51:09,301 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.020
+2026-09-22 22:51:09,614 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.026
+2026-09-22 22:51:09,614 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.0 秒内不重复触发
+2026-09-22 22:51:09,927 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.027
+2026-09-22 22:51:09,928 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.7 秒内不重复触发
+2026-09-22 22:51:10,082 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.025
+2026-09-22 22:51:10,390 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.042
+2026-09-22 22:51:10,390 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.2 秒内不重复触发
+2026-09-22 22:51:10,700 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.077
+2026-09-22 22:51:10,700 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.9 秒内不重复触发
+2026-09-22 22:51:10,856 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.067
+2026-09-22 22:51:11,168 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.122
+2026-09-22 22:51:11,169 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.4 秒内不重复触发
+2026-09-22 22:51:11,324 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.129
+2026-09-22 22:51:11,325 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.3 秒内不重复触发
+2026-09-22 22:51:11,630 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.130
+2026-09-22 22:51:11,630 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.0 秒内不重复触发
+2026-09-22 22:51:11,793 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.131
+2026-09-22 22:51:11,793 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.8 秒内不重复触发
+2026-09-22 22:51:12,102 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.128
+2026-09-22 22:51:12,411 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.109
+2026-09-22 22:51:12,567 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.091
+2026-09-22 22:51:12,722 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.109
+2026-09-22 22:51:12,723 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:51:12,878 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.102
+2026-09-22 22:51:13,187 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.077
+2026-09-22 22:51:13,498 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.076
+2026-09-22 22:51:13,653 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.082
+2026-09-22 22:51:13,654 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:13,810 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:13,810 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:13,987 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #22 age=adult source=mock alert_id=176
+2026-09-22 22:51:14,147 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.073
+2026-09-22 22:51:14,302 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.059
+2026-09-22 22:51:14,457 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.057
+2026-09-22 22:51:14,767 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.072
+2026-09-22 22:51:14,768 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.9 秒内不重复触发
+2026-09-22 22:51:14,921 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.066
+2026-09-22 22:51:15,230 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.058
+2026-09-22 22:51:15,535 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.052
+2026-09-22 22:51:15,695 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.046
+2026-09-22 22:51:15,863 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.045
+2026-09-22 22:51:16,018 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.054
+2026-09-22 22:51:16,018 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.6 秒内不重复触发
+2026-09-22 22:51:16,328 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.081
+2026-09-22 22:51:16,328 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.3 秒内不重复触发
+2026-09-22 22:51:16,484 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.086
+2026-09-22 22:51:16,485 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:51:16,796 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.144
+2026-09-22 22:51:16,797 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.9 秒内不重复触发
+2026-09-22 22:51:16,952 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.161
+2026-09-22 22:51:16,952 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.7 秒内不重复触发
+2026-09-22 22:51:17,260 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.206
+2026-09-22 22:51:17,260 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.4 秒内不重复触发
+2026-09-22 22:51:17,572 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.233
+2026-09-22 22:51:17,573 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.1 秒内不重复触发
+2026-09-22 22:51:17,725 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.236
+2026-09-22 22:51:17,726 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:51:18,031 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.243
+2026-09-22 22:51:18,032 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.6 秒内不重复触发
+2026-09-22 22:51:18,189 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.242
+2026-09-22 22:51:18,495 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.222
+2026-09-22 22:51:18,808 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.213
+2026-09-22 22:51:18,964 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.206
+2026-09-22 22:51:19,118 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.198
+2026-09-22 22:51:19,423 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.201
+2026-09-22 22:51:19,423 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:19,565 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:19,565 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:19,698 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #23 age=adult source=mock alert_id=177
+2026-09-22 22:51:19,851 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.229
+2026-09-22 22:51:19,852 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:51:20,016 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.239
+2026-09-22 22:51:20,017 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:51:20,325 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.240
+2026-09-22 22:51:20,326 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:51:20,494 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.235
+2026-09-22 22:51:20,648 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.228
+2026-09-22 22:51:20,956 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.223
+2026-09-22 22:51:21,260 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.216
+2026-09-22 22:51:21,419 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.207
+2026-09-22 22:51:21,586 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.196
+2026-09-22 22:51:21,754 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.185
+2026-09-22 22:51:22,061 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.178
+2026-09-22 22:51:22,222 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.168
+2026-09-22 22:51:22,526 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.163
+2026-09-22 22:51:22,684 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.152
+2026-09-22 22:51:22,990 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.142
+2026-09-22 22:51:23,160 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.135
+2026-09-22 22:51:23,316 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.129
+2026-09-22 22:51:23,470 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.122
+2026-09-22 22:51:23,790 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.117
+2026-09-22 22:51:23,944 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.108
+2026-09-22 22:51:24,255 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.102
+2026-09-22 22:51:24,421 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.094
+2026-09-22 22:51:24,589 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.087
+2026-09-22 22:51:24,745 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.079
+2026-09-22 22:51:25,056 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.068
+2026-09-22 22:51:25,364 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.057
+2026-09-22 22:51:25,517 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.051
+2026-09-22 22:51:25,822 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.047
+2026-09-22 22:51:25,980 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.033
+2026-09-22 22:51:26,286 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.192
+2026-09-22 22:51:26,286 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:26,432 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:26,432 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:26,580 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #24 age=adult source=mock alert_id=178
+2026-09-22 22:51:26,742 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.261
+2026-09-22 22:51:26,742 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:51:27,048 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.254
+2026-09-22 22:51:27,216 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.250
+2026-09-22 22:51:27,526 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.260
+2026-09-22 22:51:27,526 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.8 秒内不重复触发
+2026-09-22 22:51:27,680 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.253
+2026-09-22 22:51:27,991 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.235
+2026-09-22 22:51:28,144 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.244
+2026-09-22 22:51:28,145 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.1 秒内不重复触发
+2026-09-22 22:51:28,311 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.253
+2026-09-22 22:51:28,312 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:51:28,467 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.260
+2026-09-22 22:51:28,467 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.8 秒内不重复触发
+2026-09-22 22:51:28,777 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.269
+2026-09-22 22:51:28,778 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:51:29,088 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.264
+2026-09-22 22:51:29,242 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.237
+2026-09-22 22:51:29,551 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.208
+2026-09-22 22:51:29,709 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.200
+2026-09-22 22:51:30,014 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.209
+2026-09-22 22:51:30,014 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.3 秒内不重复触发
+2026-09-22 22:51:30,327 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.212
+2026-09-22 22:51:30,328 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.0 秒内不重复触发
+2026-09-22 22:51:30,481 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.203
+2026-09-22 22:51:30,639 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.195
+2026-09-22 22:51:30,944 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.180
+2026-09-22 22:51:31,101 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.169
+2026-09-22 22:51:31,407 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.160
+2026-09-22 22:51:31,567 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.151
+2026-09-22 22:51:31,890 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.143
+2026-09-22 22:51:32,044 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.133
+2026-09-22 22:51:32,351 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.123
+2026-09-22 22:51:32,507 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.110
+2026-09-22 22:51:32,814 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.107
+2026-09-22 22:51:33,125 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.100
+2026-09-22 22:51:33,279 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.093
+2026-09-22 22:51:33,585 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.105
+2026-09-22 22:51:33,586 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:33,723 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:33,723 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:33,908 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #25 age=adult source=mock alert_id=179
+2026-09-22 22:51:34,067 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.111
+2026-09-22 22:51:34,068 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:51:34,377 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.104
+2026-09-22 22:51:34,686 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.089
+2026-09-22 22:51:34,854 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.076
+2026-09-22 22:51:35,165 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.066
+2026-09-22 22:51:35,320 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.061
+2026-09-22 22:51:35,631 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.061
+2026-09-22 22:51:35,632 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:51:35,955 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.060
+2026-09-22 22:51:36,107 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.058
+2026-09-22 22:51:36,419 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.053
+2026-09-22 22:51:36,730 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.055
+2026-09-22 22:51:36,730 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.9 秒内不重复触发
+2026-09-22 22:51:36,898 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.052
+2026-09-22 22:51:37,207 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.047
+2026-09-22 22:51:37,515 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.044
+2026-09-22 22:51:37,669 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.044
+2026-09-22 22:51:37,977 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.030
+2026-09-22 22:51:38,134 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.026
+2026-09-22 22:51:38,288 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.022
+2026-09-22 22:51:38,442 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.020
+2026-09-22 22:51:38,766 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.019
+2026-09-22 22:51:38,922 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:51:39,228 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.017
+2026-09-22 22:51:39,228 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:39,368 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:39,368 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:39,509 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #26 age=adult source=mock alert_id=180
+2026-09-22 22:51:39,662 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.081
+2026-09-22 22:51:39,662 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:51:39,824 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.109
+2026-09-22 22:51:39,824 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:51:40,128 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.176
+2026-09-22 22:51:40,128 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:51:40,434 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.246
+2026-09-22 22:51:40,434 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.8 秒内不重复触发
+2026-09-22 22:51:40,595 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.256
+2026-09-22 22:51:40,595 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:51:40,902 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.265
+2026-09-22 22:51:40,902 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.3 秒内不重复触发
+2026-09-22 22:51:41,224 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.257
+2026-09-22 22:51:41,390 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.253
+2026-09-22 22:51:41,701 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.248
+2026-09-22 22:51:42,008 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.244
+2026-09-22 22:51:42,164 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.240
+2026-09-22 22:51:42,320 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.236
+2026-09-22 22:51:42,627 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.245
+2026-09-22 22:51:42,627 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:51:42,937 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.261
+2026-09-22 22:51:42,938 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.3 秒内不重复触发
+2026-09-22 22:51:43,105 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.265
+2026-09-22 22:51:43,105 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.1 秒内不重复触发
+2026-09-22 22:51:43,259 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.259
+2026-09-22 22:51:43,566 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.251
+2026-09-22 22:51:43,726 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.246
+2026-09-22 22:51:44,032 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.243
+2026-09-22 22:51:44,193 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.237
+2026-09-22 22:51:44,501 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.231
+2026-09-22 22:51:44,654 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.229
+2026-09-22 22:51:44,968 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.239
+2026-09-22 22:51:44,968 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:45,131 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:45,131 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:45,276 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #27 age=adult source=mock alert_id=181
+2026-09-22 22:51:45,432 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.234
+2026-09-22 22:51:45,587 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.216
+2026-09-22 22:51:45,741 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.230
+2026-09-22 22:51:45,742 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:51:46,053 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.259
+2026-09-22 22:51:46,053 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.9 秒内不重复触发
+2026-09-22 22:51:46,363 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.261
+2026-09-22 22:51:46,363 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:51:46,517 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.264
+2026-09-22 22:51:46,517 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.5 秒内不重复触发
+2026-09-22 22:51:46,825 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.260
+2026-09-22 22:51:46,983 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.250
+2026-09-22 22:51:47,152 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.239
+2026-09-22 22:51:47,462 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.228
+2026-09-22 22:51:47,616 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.222
+2026-09-22 22:51:47,922 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.217
+2026-09-22 22:51:48,083 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.208
+2026-09-22 22:51:48,394 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.204
+2026-09-22 22:51:48,550 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.198
+2026-09-22 22:51:48,862 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.198
+2026-09-22 22:51:49,015 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.192
+2026-09-22 22:51:49,327 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.186
+2026-09-22 22:51:49,495 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.174
+2026-09-22 22:51:49,650 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.162
+2026-09-22 22:51:49,958 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.178
+2026-09-22 22:51:49,958 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.0 秒内不重复触发
+2026-09-22 22:51:50,112 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.177
+2026-09-22 22:51:50,421 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.181
+2026-09-22 22:51:50,422 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:50,587 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:50,587 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:50,731 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #28 age=adult source=mock alert_id=182
+2026-09-22 22:51:50,887 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.178
+2026-09-22 22:51:51,042 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.169
+2026-09-22 22:51:51,352 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.164
+2026-09-22 22:51:51,506 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.156
+2026-09-22 22:51:51,817 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.151
+2026-09-22 22:51:52,123 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.158
+2026-09-22 22:51:52,123 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.3 秒内不重复触发
+2026-09-22 22:51:52,281 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.155
+2026-09-22 22:51:52,449 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.151
+2026-09-22 22:51:52,757 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.127
+2026-09-22 22:51:52,912 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.107
+2026-09-22 22:51:53,225 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.100
+2026-09-22 22:51:53,380 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.098
+2026-09-22 22:51:53,536 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.094
+2026-09-22 22:51:53,844 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.090
+2026-09-22 22:51:53,999 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.081
+2026-09-22 22:51:54,308 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.076
+2026-09-22 22:51:54,617 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.067
+2026-09-22 22:51:54,772 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.059
+2026-09-22 22:51:55,093 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.052
+2026-09-22 22:51:55,247 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.046
+2026-09-22 22:51:55,557 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.041
+2026-09-22 22:51:55,710 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.041
+2026-09-22 22:51:55,877 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.043
+2026-09-22 22:51:55,877 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:51:56,067 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:51:56,067 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:51:56,276 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #29 age=adult source=mock alert_id=183
+2026-09-22 22:51:56,435 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.050
+2026-09-22 22:51:56,436 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:51:56,649 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:51:56,650 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:51:56,658 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:51:56,659 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:51:56,659 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:51:56,660 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:51:56,746 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.049
+2026-09-22 22:51:57,057 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.054
+2026-09-22 22:51:57,058 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.8 秒内不重复触发
+2026-09-22 22:51:57,224 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.052
+2026-09-22 22:51:57,380 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.052
+2026-09-22 22:51:57,380 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.5 秒内不重复触发
+2026-09-22 22:51:57,689 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.050
+2026-09-22 22:51:57,843 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.048
+2026-09-22 22:51:58,000 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.046
+2026-09-22 22:51:58,321 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.040
+2026-09-22 22:51:58,481 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.034
+2026-09-22 22:51:58,792 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.029
+2026-09-22 22:51:59,101 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.029
+2026-09-22 22:51:59,270 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.027
+2026-09-22 22:51:59,439 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.025
+2026-09-22 22:51:59,751 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.026
+2026-09-22 22:51:59,751 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.1 秒内不重复触发
+2026-09-22 22:51:59,904 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.025
+2026-09-22 22:52:00,215 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.029
+2026-09-22 22:52:00,216 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.7 秒内不重复触发
+2026-09-22 22:52:00,370 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.028
+2026-09-22 22:52:00,692 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.019
+2026-09-22 22:52:00,846 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:52:01,003 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.018
+2026-09-22 22:52:01,003 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:52:01,176 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:52:01,176 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:52:01,309 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #30 age=adult source=mock alert_id=184
+2026-09-22 22:52:01,466 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.065
+2026-09-22 22:52:01,466 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:52:01,621 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.082
+2026-09-22 22:52:01,622 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:52:01,932 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.080
+2026-09-22 22:52:02,088 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.070
+2026-09-22 22:52:02,240 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.068
+2026-09-22 22:52:02,553 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.066
+2026-09-22 22:52:02,706 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.060
+2026-09-22 22:52:02,862 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.055
+2026-09-22 22:52:03,167 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.062
+2026-09-22 22:52:03,168 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.8 秒内不重复触发
+2026-09-22 22:52:03,325 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.075
+2026-09-22 22:52:03,326 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.7 秒内不重复触发
+2026-09-22 22:52:03,634 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.070
+2026-09-22 22:52:03,944 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.064
+2026-09-22 22:52:04,098 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.055
+2026-09-22 22:52:04,410 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.049
+2026-09-22 22:52:04,722 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.090
+2026-09-22 22:52:04,723 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.3 秒内不重复触发
+2026-09-22 22:52:04,876 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.101
+2026-09-22 22:52:04,876 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.1 秒内不重复触发
+2026-09-22 22:52:05,186 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.111
+2026-09-22 22:52:05,186 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.8 秒内不重复触发
+2026-09-22 22:52:05,494 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.124
+2026-09-22 22:52:05,494 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.5 秒内不重复触发
+2026-09-22 22:52:05,651 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.117
+2026-09-22 22:52:05,961 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.059
+2026-09-22 22:52:06,116 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.060
+2026-09-22 22:52:06,117 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:52:06,243 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:52:06,243 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:52:06,375 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #31 age=adult source=mock alert_id=185
+2026-09-22 22:52:06,536 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.077
+2026-09-22 22:52:06,537 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:52:06,690 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.065
+2026-09-22 22:52:06,845 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.052
+2026-09-22 22:52:07,156 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.043
+2026-09-22 22:52:07,310 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.041
+2026-09-22 22:52:07,620 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.055
+2026-09-22 22:52:07,621 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.5 秒内不重复触发
+2026-09-22 22:52:07,929 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.100
+2026-09-22 22:52:07,929 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.2 秒内不重复触发
+2026-09-22 22:52:08,085 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.091
+2026-09-22 22:52:08,392 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.086
+2026-09-22 22:52:08,701 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.083
+2026-09-22 22:52:08,857 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.075
+2026-09-22 22:52:09,025 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.063
+2026-09-22 22:52:09,194 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.055
+2026-09-22 22:52:09,504 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.086
+2026-09-22 22:52:09,505 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:52:09,814 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.101
+2026-09-22 22:52:09,815 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.3 秒内不重复触发
+2026-09-22 22:52:09,969 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.101
+2026-09-22 22:52:10,125 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.101
+2026-09-22 22:52:10,125 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.0 秒内不重复触发
+2026-09-22 22:52:10,293 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.101
+2026-09-22 22:52:10,602 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.095
+2026-09-22 22:52:10,758 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.085
+2026-09-22 22:52:10,913 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.077
+2026-09-22 22:52:11,224 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.075
+2026-09-22 22:52:11,532 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.061
+2026-09-22 22:52:11,693 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.062
+2026-09-22 22:52:11,693 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:52:11,809 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:52:11,809 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:52:11,975 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #32 age=adult source=mock alert_id=186
+2026-09-22 22:52:12,128 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.069
+2026-09-22 22:52:12,129 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:52:12,292 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.065
+2026-09-22 22:52:12,448 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.060
+2026-09-22 22:52:12,758 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.056
+2026-09-22 22:52:12,912 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.050
+2026-09-22 22:52:13,226 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.044
+2026-09-22 22:52:13,531 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.053
+2026-09-22 22:52:13,532 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.2 秒内不重复触发
+2026-09-22 22:52:13,693 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.060
+2026-09-22 22:52:13,693 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:52:13,998 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.068
+2026-09-22 22:52:13,998 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.7 秒内不重复触发
+2026-09-22 22:52:14,158 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.066
+2026-09-22 22:52:14,464 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.067
+2026-09-22 22:52:14,464 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:52:14,626 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.068
+2026-09-22 22:52:14,626 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.1 秒内不重复触发
+2026-09-22 22:52:14,936 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.066
+2026-09-22 22:52:15,091 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.063
+2026-09-22 22:52:15,258 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.060
+2026-09-22 22:52:15,412 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.058
+2026-09-22 22:52:15,723 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.056
+2026-09-22 22:52:16,032 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.051
+2026-09-22 22:52:16,200 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.045
+2026-09-22 22:52:16,368 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.040
+2026-09-22 22:52:16,524 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.037
+2026-09-22 22:52:16,693 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.035
+2026-09-22 22:52:16,848 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.033
+2026-09-22 22:52:17,153 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.027
+2026-09-22 22:52:17,312 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.022
+2026-09-22 22:52:17,631 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.021
+2026-09-22 22:52:17,792 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.020
+2026-09-22 22:52:18,102 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.019
+2026-09-22 22:52:18,256 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.018
+2026-09-22 22:52:18,568 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.020
+2026-09-22 22:52:18,568 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:52:18,688 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:52:18,688 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:52:18,853 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #33 age=adult source=mock alert_id=187
+2026-09-22 22:52:19,017 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.033
+2026-09-22 22:52:19,017 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:52:19,324 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.027
+2026-09-22 22:52:19,485 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.023
+2026-09-22 22:52:19,792 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:52:21,050 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.016
+2026-09-22 22:52:21,051 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:52:21,357 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.029
+2026-09-22 22:52:21,357 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:52:21,517 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.031
+2026-09-22 22:52:21,517 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.1 秒内不重复触发
+2026-09-22 22:52:21,824 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.027
+2026-09-22 22:52:21,984 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.028
+2026-09-22 22:52:21,984 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:52:22,289 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.023
+2026-09-22 22:52:22,447 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.018
+2026-09-22 22:52:22,756 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.023
+2026-09-22 22:52:22,756 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.8 秒内不重复触发
+2026-09-22 22:52:23,067 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.015
+2026-09-22 22:52:25,592 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.015
+2026-09-22 22:52:25,592 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:52:25,698 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:52:25,698 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:52:25,820 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #34 age=adult source=mock alert_id=188
+2026-09-22 22:52:25,980 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.017
+2026-09-22 22:52:25,981 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:52:26,285 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.022
+2026-09-22 22:52:26,285 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.3 秒内不重复触发
+2026-09-22 22:52:26,441 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.023
+2026-09-22 22:52:26,441 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:52:26,747 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.027
+2026-09-22 22:52:26,747 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.8 秒内不重复触发
+2026-09-22 22:52:26,906 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.031
+2026-09-22 22:52:26,906 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.7 秒内不重复触发
+2026-09-22 22:52:27,213 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.038
+2026-09-22 22:52:27,214 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.4 秒内不重复触发
+2026-09-22 22:52:27,528 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.031
+2026-09-22 22:52:27,697 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.029
+2026-09-22 22:52:28,006 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.028
+2026-09-22 22:52:28,327 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.031
+2026-09-22 22:52:28,327 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.3 秒内不重复触发
+2026-09-22 22:52:28,480 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.033
+2026-09-22 22:52:28,480 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.1 秒内不重复触发
+2026-09-22 22:52:28,638 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.034
+2026-09-22 22:52:28,639 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.0 秒内不重复触发
+2026-09-22 22:52:28,945 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.037
+2026-09-22 22:52:28,946 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:52:29,100 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.037
+2026-09-22 22:52:29,270 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.034
+2026-09-22 22:52:29,579 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.029
+2026-09-22 22:52:29,886 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.031
+2026-09-22 22:52:29,886 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.7 秒内不重复触发
+2026-09-22 22:52:30,041 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.034
+2026-09-22 22:52:30,041 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.6 秒内不重复触发
+2026-09-22 22:52:30,351 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.033
+2026-09-22 22:52:30,504 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.029
+2026-09-22 22:52:30,814 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.023
+2026-09-22 22:52:31,124 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.023
+2026-09-22 22:52:31,278 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.021
+2026-09-22 22:52:31,589 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.018
+2026-09-22 22:52:34,703 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.015
+2026-09-22 22:52:34,703 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:52:34,877 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:52:34,878 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:52:35,031 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #35 age=adult source=mock alert_id=189
+2026-09-22 22:52:35,195 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.017
+2026-09-22 22:52:35,195 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:52:35,351 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.017
+2026-09-22 22:52:35,352 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:52:35,505 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.018
+2026-09-22 22:52:35,505 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:52:35,661 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.019
+2026-09-22 22:52:35,662 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.0 秒内不重复触发
+2026-09-22 22:52:35,966 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.019
+2026-09-22 22:52:36,126 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.018
+2026-09-22 22:52:38,296 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.019
+2026-09-22 22:52:38,296 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.4 秒内不重复触发
+2026-09-22 22:52:38,454 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.030
+2026-09-22 22:52:38,454 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.2 秒内不重复触发
+2026-09-22 22:52:38,770 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.060
+2026-09-22 22:52:38,770 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:52:38,923 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.076
+2026-09-22 22:52:38,924 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.8 秒内不重复触发
+2026-09-22 22:52:39,240 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.142
+2026-09-22 22:52:39,240 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.5 秒内不重复触发
+2026-09-22 22:52:39,396 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.166
+2026-09-22 22:52:39,396 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.3 秒内不重复触发
+2026-09-22 22:52:39,706 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.191
+2026-09-22 22:52:39,707 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:52:39,886 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:52:39,886 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:52:40,042 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #36 age=adult source=mock alert_id=190
+2026-09-22 22:52:40,204 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.158
+2026-09-22 22:52:40,359 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.136
+2026-09-22 22:52:40,514 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.119
+2026-09-22 22:52:40,822 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.103
+2026-09-22 22:52:41,180 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.096
+2026-09-22 22:52:41,412 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.091
+2026-09-22 22:52:41,566 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.084
+2026-09-22 22:52:41,721 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.076
+2026-09-22 22:52:42,027 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.069
+2026-09-22 22:52:42,337 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.065
+2026-09-22 22:52:42,491 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.059
+2026-09-22 22:52:42,807 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.055
+2026-09-22 22:52:42,961 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.051
+2026-09-22 22:52:43,270 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.045
+2026-09-22 22:52:43,423 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.039
+2026-09-22 22:52:43,731 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.036
+2026-09-22 22:52:44,044 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.033
+2026-09-22 22:52:44,198 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.031
+2026-09-22 22:52:44,353 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.028
+2026-09-22 22:52:44,657 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.027
+2026-09-22 22:52:44,967 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.028
+2026-09-22 22:52:44,968 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:52:45,145 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:52:45,145 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:52:45,320 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #37 age=adult source=mock alert_id=191
+2026-09-22 22:52:45,474 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.032
+2026-09-22 22:52:45,474 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:52:45,628 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.028
+2026-09-22 22:52:45,781 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.025
+2026-09-22 22:52:46,089 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.023
+2026-09-22 22:52:46,257 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.022
+2026-09-22 22:52:46,568 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.020
+2026-09-22 22:52:46,721 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.018
+2026-09-22 22:52:47,031 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.016
+2026-09-22 22:52:47,185 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.015
+2026-09-22 22:52:50,288 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.027
+2026-09-22 22:52:50,288 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:52:50,453 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:52:50,453 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:52:50,620 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #38 age=adult source=mock alert_id=192
+2026-09-22 22:52:50,774 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.054
+2026-09-22 22:52:50,774 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:52:51,097 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.052
+2026-09-22 22:52:51,251 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.050
+2026-09-22 22:52:51,410 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.047
+2026-09-22 22:52:51,567 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.044
+2026-09-22 22:52:51,876 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.039
+2026-09-22 22:52:52,185 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.030
+2026-09-22 22:52:52,340 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.026
+2026-09-22 22:52:52,650 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.028
+2026-09-22 22:52:52,650 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.6 秒内不重复触发
+2026-09-22 22:52:52,819 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.026
+2026-09-22 22:52:53,127 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.021
+2026-09-22 22:52:53,282 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.018
+2026-09-22 22:52:53,440 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:52:53,751 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.018
+2026-09-22 22:52:53,752 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.5 秒内不重复触发
+2026-09-22 22:52:53,907 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:52:54,076 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.016
+2026-09-22 22:52:54,380 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.017
+2026-09-22 22:52:54,380 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:52:54,696 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.016
+2026-09-22 22:52:56,647 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:52:56,649 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:52:56,656 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:52:56,656 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:52:56,658 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:52:56,659 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:53:09,486 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.040
+2026-09-22 22:53:09,486 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:53:09,653 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:53:09,653 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:53:09,808 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #39 age=adult source=mock alert_id=193
+2026-09-22 22:53:09,971 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.129
+2026-09-22 22:53:09,972 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:53:10,124 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.139
+2026-09-22 22:53:10,125 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:53:10,430 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.104
+2026-09-22 22:53:10,591 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.087
+2026-09-22 22:53:10,895 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.100
+2026-09-22 22:53:10,896 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:53:11,212 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.157
+2026-09-22 22:53:11,212 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.3 秒内不重复触发
+2026-09-22 22:53:11,367 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.184
+2026-09-22 22:53:11,367 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.1 秒内不重复触发
+2026-09-22 22:53:11,521 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.221
+2026-09-22 22:53:11,521 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:53:11,832 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.264
+2026-09-22 22:53:11,832 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.7 秒内不重复触发
+2026-09-22 22:53:11,986 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.269
+2026-09-22 22:53:11,987 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:53:12,154 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.270
+2026-09-22 22:53:12,155 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.3 秒内不重复触发
+2026-09-22 22:53:12,463 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.269
+2026-09-22 22:53:12,622 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.262
+2026-09-22 22:53:12,928 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.256
+2026-09-22 22:53:13,089 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.250
+2026-09-22 22:53:13,398 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.250
+2026-09-22 22:53:13,552 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.251
+2026-09-22 22:53:13,553 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:53:13,719 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.257
+2026-09-22 22:53:13,720 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.8 秒内不重复触发
+2026-09-22 22:53:13,874 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.261
+2026-09-22 22:53:13,874 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.6 秒内不重复触发
+2026-09-22 22:53:14,192 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.253
+2026-09-22 22:53:14,503 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.225
+2026-09-22 22:53:14,657 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.223
+2026-09-22 22:53:14,966 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.224
+2026-09-22 22:53:14,966 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:53:15,130 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:53:15,130 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:53:15,308 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #40 age=adult source=mock alert_id=194
+2026-09-22 22:53:15,473 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.224
+2026-09-22 22:53:15,473 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:53:15,791 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.220
+2026-09-22 22:53:15,952 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.215
+2026-09-22 22:53:16,257 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.211
+2026-09-22 22:53:16,567 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.207
+2026-09-22 22:53:16,722 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.200
+2026-09-22 22:53:17,031 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.193
+2026-09-22 22:53:17,186 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.186
+2026-09-22 22:53:17,354 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.176
+2026-09-22 22:53:17,510 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.166
+2026-09-22 22:53:17,832 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.160
+2026-09-22 22:53:17,988 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.152
+2026-09-22 22:53:18,143 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.143
+2026-09-22 22:53:18,447 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.142
+2026-09-22 22:53:18,608 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.145
+2026-09-22 22:53:18,608 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.4 秒内不重复触发
+2026-09-22 22:53:18,913 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.160
+2026-09-22 22:53:18,913 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.1 秒内不重复触发
+2026-09-22 22:53:19,071 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.171
+2026-09-22 22:53:19,072 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:53:19,385 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.204
+2026-09-22 22:53:19,386 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.6 秒内不重复触发
+2026-09-22 22:53:19,541 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.218
+2026-09-22 22:53:19,542 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.4 秒内不重复触发
+2026-09-22 22:53:19,851 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.189
+2026-09-22 22:53:20,006 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.171
+2026-09-22 22:53:20,316 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.178
+2026-09-22 22:53:20,316 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:53:20,512 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:53:20,513 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:53:20,664 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #41 age=adult source=mock alert_id=195
+2026-09-22 22:53:20,817 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.181
+2026-09-22 22:53:20,818 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:53:20,979 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.170
+2026-09-22 22:53:21,147 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.159
+2026-09-22 22:53:21,453 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.164
+2026-09-22 22:53:21,453 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.9 秒内不重复触发
+2026-09-22 22:53:21,614 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.175
+2026-09-22 22:53:21,614 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.7 秒内不重复触发
+2026-09-22 22:53:21,918 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.195
+2026-09-22 22:53:21,919 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.4 秒内不重复触发
+2026-09-22 22:53:22,080 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.195
+2026-09-22 22:53:22,249 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.196
+2026-09-22 22:53:22,249 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.1 秒内不重复触发
+2026-09-22 22:53:22,417 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.197
+2026-09-22 22:53:22,417 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.9 秒内不重复触发
+2026-09-22 22:53:22,721 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.207
+2026-09-22 22:53:22,722 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.6 秒内不重复触发
+2026-09-22 22:53:22,875 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.208
+2026-09-22 22:53:22,876 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.4 秒内不重复触发
+2026-09-22 22:53:23,185 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.219
+2026-09-22 22:53:23,185 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.1 秒内不重复触发
+2026-09-22 22:53:23,500 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.234
+2026-09-22 22:53:23,500 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.8 秒内不重复触发
+2026-09-22 22:53:23,668 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.228
+2026-09-22 22:53:23,979 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.180
+2026-09-22 22:53:24,289 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.168
+2026-09-22 22:53:24,443 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.168
+2026-09-22 22:53:24,443 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:53:24,768 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.162
+2026-09-22 22:53:25,077 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.150
+2026-09-22 22:53:25,231 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.139
+2026-09-22 22:53:25,537 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.132
+2026-09-22 22:53:25,695 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.124
+2026-09-22 22:53:26,004 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.124
+2026-09-22 22:53:26,005 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:53:26,145 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:53:26,145 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:53:26,286 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #42 age=adult source=mock alert_id=196
+2026-09-22 22:53:26,453 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.129
+2026-09-22 22:53:26,454 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:53:26,764 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.144
+2026-09-22 22:53:26,764 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:53:26,919 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.146
+2026-09-22 22:53:26,920 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:53:27,225 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.149
+2026-09-22 22:53:27,225 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.8 秒内不重复触发
+2026-09-22 22:53:27,535 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.153
+2026-09-22 22:53:27,535 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.5 秒内不重复触发
+2026-09-22 22:53:27,847 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.161
+2026-09-22 22:53:27,848 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.2 秒内不重复触发
+2026-09-22 22:53:28,001 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.163
+2026-09-22 22:53:28,002 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:53:28,313 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.181
+2026-09-22 22:53:28,314 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.7 秒内不重复触发
+2026-09-22 22:53:28,469 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.189
+2026-09-22 22:53:28,469 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:53:28,795 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.184
+2026-09-22 22:53:28,963 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.137
+2026-09-22 22:53:29,271 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.162
+2026-09-22 22:53:29,272 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.7 秒内不重复触发
+2026-09-22 22:53:29,578 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.231
+2026-09-22 22:53:29,578 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.4 秒内不重复触发
+2026-09-22 22:53:29,886 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.272
+2026-09-22 22:53:29,887 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.1 秒内不重复触发
+2026-09-22 22:53:30,040 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.273
+2026-09-22 22:53:30,041 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.0 秒内不重复触发
+2026-09-22 22:53:30,350 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.288
+2026-09-22 22:53:30,351 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.7 秒内不重复触发
+2026-09-22 22:53:30,506 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.292
+2026-09-22 22:53:30,506 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.5 秒内不重复触发
+2026-09-22 22:53:30,816 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.280
+2026-09-22 22:53:31,122 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.259
+2026-09-22 22:53:31,277 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.245
+2026-09-22 22:53:31,588 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.241
+2026-09-22 22:53:31,903 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.235
+2026-09-22 22:53:32,063 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.223
+2026-09-22 22:53:32,375 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.213
+2026-09-22 22:53:32,528 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.201
+2026-09-22 22:53:32,839 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.194
+2026-09-22 22:53:33,149 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.189
+2026-09-22 22:53:33,303 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.183
+2026-09-22 22:53:33,613 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.177
+2026-09-22 22:53:33,768 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.170
+2026-09-22 22:53:33,922 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.161
+2026-09-22 22:53:34,077 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.153
+2026-09-22 22:53:34,389 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.145
+2026-09-22 22:53:34,714 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.137
+2026-09-22 22:53:34,870 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.129
+2026-09-22 22:53:35,025 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.121
+2026-09-22 22:53:35,334 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.115
+2026-09-22 22:53:35,489 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.107
+2026-09-22 22:53:35,799 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.101
+2026-09-22 22:53:35,954 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.093
+2026-09-22 22:53:36,265 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.085
+2026-09-22 22:53:36,419 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.076
+2026-09-22 22:53:36,729 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.067
+2026-09-22 22:53:36,885 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.061
+2026-09-22 22:53:37,193 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.056
+2026-09-22 22:53:37,348 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.050
+2026-09-22 22:53:37,517 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.047
+2026-09-22 22:53:37,821 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.041
+2026-09-22 22:53:37,980 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.035
+2026-09-22 22:53:38,136 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.032
+2026-09-22 22:53:38,291 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.028
+2026-09-22 22:53:38,601 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.022
+2026-09-22 22:53:38,770 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.016
+2026-09-22 22:53:41,587 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.023
+2026-09-22 22:53:41,588 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:53:41,756 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:53:41,756 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:53:41,886 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #43 age=adult source=mock alert_id=197
+2026-09-22 22:53:42,052 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.046
+2026-09-22 22:53:42,053 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:53:42,206 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.055
+2026-09-22 22:53:42,206 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.4 秒内不重复触发
+2026-09-22 22:53:42,517 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.113
+2026-09-22 22:53:42,518 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:53:42,673 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.187
+2026-09-22 22:53:42,674 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.9 秒内不重复触发
+2026-09-22 22:53:42,992 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.259
+2026-09-22 22:53:42,992 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.6 秒内不重复触发
+2026-09-22 22:53:43,152 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.263
+2026-09-22 22:53:43,152 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.4 秒内不重复触发
+2026-09-22 22:53:43,320 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.259
+2026-09-22 22:53:43,474 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.261
+2026-09-22 22:53:43,475 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.1 秒内不重复触发
+2026-09-22 22:53:43,784 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.258
+2026-09-22 22:53:43,940 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.256
+2026-09-22 22:53:44,250 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.291
+2026-09-22 22:53:44,250 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.3 秒内不重复触发
+2026-09-22 22:53:44,559 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.276
+2026-09-22 22:53:44,716 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.276
+2026-09-22 22:53:45,020 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.291
+2026-09-22 22:53:45,021 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.6 秒内不重复触发
+2026-09-22 22:53:45,180 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.295
+2026-09-22 22:53:45,180 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.4 秒内不重复触发
+2026-09-22 22:53:45,486 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.280
+2026-09-22 22:53:45,797 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.256
+2026-09-22 22:53:45,951 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.247
+2026-09-22 22:53:46,264 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.239
+2026-09-22 22:53:46,422 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.235
+2026-09-22 22:53:46,578 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.230
+2026-09-22 22:53:46,890 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.222
+2026-09-22 22:53:47,045 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.212
+2026-09-22 22:53:47,445 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.201
+2026-09-22 22:53:47,562 django.request:283 [WARNING] Not Found: /upload/snapshots/seed_welcome_20260922224758.jpg
+2026-09-22 22:53:47,600 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.189
+2026-09-22 22:53:47,910 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.931
+2026-09-22 22:53:47,910 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:53:48,053 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:53:48,053 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:53:48,230 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #44 age=adult source=mock alert_id=198
+2026-09-22 22:53:48,384 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.872
+2026-09-22 22:53:48,549 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.855
+2026-09-22 22:53:48,704 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.842
+2026-09-22 22:53:48,870 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.834
+2026-09-22 22:53:49,181 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.821
+2026-09-22 22:53:49,486 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.808
+2026-09-22 22:53:49,646 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.797
+2026-09-22 22:53:49,953 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.788
+2026-09-22 22:53:50,107 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.783
+2026-09-22 22:53:50,418 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.782
+2026-09-22 22:53:50,732 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.750
+2026-09-22 22:53:50,901 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.716
+2026-09-22 22:53:51,211 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.687
+2026-09-22 22:53:51,517 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.645
+2026-09-22 22:53:51,674 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.603
+2026-09-22 22:53:51,983 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.553
+2026-09-22 22:53:52,293 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.487
+2026-09-22 22:53:52,447 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.420
+2026-09-22 22:53:52,758 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.215
+2026-09-22 22:53:52,911 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.214
+2026-09-22 22:53:53,216 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.211
+2026-09-22 22:53:53,532 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.209
+2026-09-22 22:53:53,687 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.201
+2026-09-22 22:53:53,996 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.199
+2026-09-22 22:53:54,301 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.189
+2026-09-22 22:53:54,458 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.180
+2026-09-22 22:53:54,765 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.177
+2026-09-22 22:53:54,920 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.170
+2026-09-22 22:53:55,087 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.161
+2026-09-22 22:53:55,241 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.156
+2026-09-22 22:53:55,551 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.149
+2026-09-22 22:53:55,704 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.146
+2026-09-22 22:53:56,016 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.142
+2026-09-22 22:53:56,335 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.160
+2026-09-22 22:53:56,335 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:53:56,511 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:53:56,511 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:53:56,675 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #45 age=adult source=mock alert_id=199
+2026-09-22 22:53:56,685 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:53:56,686 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:53:56,688 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:53:56,688 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:53:56,695 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:53:56,696 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:53:56,829 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.186
+2026-09-22 22:53:56,829 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:53:57,145 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.213
+2026-09-22 22:53:57,146 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:53:57,316 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.240
+2026-09-22 22:53:57,316 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.0 秒内不重复触发
+2026-09-22 22:53:57,626 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.577
+2026-09-22 22:53:57,626 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.7 秒内不重复触发
+2026-09-22 22:53:57,937 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.665
+2026-09-22 22:53:57,937 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.4 秒内不重复触发
+2026-09-22 22:53:58,095 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.701
+2026-09-22 22:53:58,095 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.2 秒内不重复触发
+2026-09-22 22:53:58,416 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.725
+2026-09-22 22:53:58,416 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.9 秒内不重复触发
+2026-09-22 22:53:58,723 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.742
+2026-09-22 22:53:58,723 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.6 秒内不重复触发
+2026-09-22 22:53:58,882 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.732
+2026-09-22 22:53:59,196 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.718
+2026-09-22 22:53:59,350 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.675
+2026-09-22 22:53:59,504 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.626
+2026-09-22 22:53:59,658 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.589
+2026-09-22 22:53:59,966 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.541
+2026-09-22 22:54:00,123 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.487
+2026-09-22 22:54:00,430 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.417
+2026-09-22 22:54:00,585 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.339
+2026-09-22 22:54:00,746 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.263
+2026-09-22 22:54:00,900 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.135
+2026-09-22 22:54:01,207 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.114
+2026-09-22 22:54:01,361 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.101
+2026-09-22 22:54:01,517 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.090
+2026-09-22 22:54:01,828 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.078
+2026-09-22 22:54:01,984 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.065
+2026-09-22 22:54:02,292 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.062
+2026-09-22 22:54:02,447 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.055
+2026-09-22 22:54:02,764 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.052
+2026-09-22 22:54:02,928 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.044
+2026-09-22 22:54:03,238 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.035
+2026-09-22 22:54:03,392 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.025
+2026-09-22 22:54:04,334 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.017
+2026-09-22 22:54:04,334 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:54:04,475 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:54:04,475 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:54:04,641 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #46 age=adult source=mock alert_id=200
+2026-09-22 22:54:04,802 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.018
+2026-09-22 22:54:04,803 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:54:05,112 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.016
+2026-09-22 22:54:08,429 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.015
+2026-09-22 22:54:08,429 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:54:09,685 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.021
+2026-09-22 22:54:09,686 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:54:09,841 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:54:09,841 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:54:10,019 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #47 age=adult source=mock alert_id=201
+2026-09-22 22:54:10,183 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.038
+2026-09-22 22:54:10,184 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:54:10,494 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.041
+2026-09-22 22:54:10,495 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:54:10,663 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.038
+2026-09-22 22:54:10,818 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.037
+2026-09-22 22:54:11,128 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.034
+2026-09-22 22:54:11,283 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.037
+2026-09-22 22:54:11,284 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.4 秒内不重复触发
+2026-09-22 22:54:11,593 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.043
+2026-09-22 22:54:11,594 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.1 秒内不重复触发
+2026-09-22 22:54:11,760 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.105
+2026-09-22 22:54:11,760 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.9 秒内不重复触发
+2026-09-22 22:54:11,913 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.156
+2026-09-22 22:54:11,914 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.8 秒内不重复触发
+2026-09-22 22:54:12,222 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.229
+2026-09-22 22:54:12,222 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:54:12,527 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.270
+2026-09-22 22:54:12,528 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:54:12,684 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.287
+2026-09-22 22:54:12,684 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.0 秒内不重复触发
+2026-09-22 22:54:12,990 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.300
+2026-09-22 22:54:12,991 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.7 秒内不重复触发
+2026-09-22 22:54:13,149 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.303
+2026-09-22 22:54:13,150 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.5 秒内不重复触发
+2026-09-22 22:54:13,453 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.320
+2026-09-22 22:54:13,454 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.2 秒内不重复触发
+2026-09-22 22:54:13,767 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.337
+2026-09-22 22:54:13,767 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.9 秒内不重复触发
+2026-09-22 22:54:13,935 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.347
+2026-09-22 22:54:13,936 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.7 秒内不重复触发
+2026-09-22 22:54:14,245 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.352
+2026-09-22 22:54:14,246 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.4 秒内不重复触发
+2026-09-22 22:54:14,399 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.347
+2026-09-22 22:54:14,708 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.341
+2026-09-22 22:54:15,019 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.332
+2026-09-22 22:54:15,174 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.319
+2026-09-22 22:54:15,484 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.301
+2026-09-22 22:54:15,639 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.289
+2026-09-22 22:54:15,952 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.278
+2026-09-22 22:54:16,263 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.266
+2026-09-22 22:54:16,419 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.254
+2026-09-22 22:54:16,722 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.242
+2026-09-22 22:54:16,876 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.236
+2026-09-22 22:54:17,040 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.232
+2026-09-22 22:54:17,343 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.231
+2026-09-22 22:54:17,657 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.216
+2026-09-22 22:54:17,813 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.208
+2026-09-22 22:54:17,970 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.204
+2026-09-22 22:54:18,289 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.203
+2026-09-22 22:54:18,446 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.198
+2026-09-22 22:54:18,751 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.193
+2026-09-22 22:54:18,912 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.187
+2026-09-22 22:54:19,223 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.184
+2026-09-22 22:54:19,531 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.176
+2026-09-22 22:54:19,688 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.169
+2026-09-22 22:54:19,843 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.163
+2026-09-22 22:54:20,151 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.156
+2026-09-22 22:54:20,304 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.144
+2026-09-22 22:54:20,615 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.135
+2026-09-22 22:54:20,769 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.136
+2026-09-22 22:54:20,770 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:54:20,907 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:54:20,907 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:54:21,097 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #48 age=adult source=mock alert_id=202
+2026-09-22 22:54:21,264 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.141
+2026-09-22 22:54:21,264 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:54:21,573 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.123
+2026-09-22 22:54:21,883 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.112
+2026-09-22 22:54:22,040 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.102
+2026-09-22 22:54:22,361 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.091
+2026-09-22 22:54:22,517 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.075
+2026-09-22 22:54:22,823 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.067
+2026-09-22 22:54:23,138 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.059
+2026-09-22 22:54:23,295 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.050
+2026-09-22 22:54:23,464 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.042
+2026-09-22 22:54:23,773 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.045
+2026-09-22 22:54:23,774 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.0 秒内不重复触发
+2026-09-22 22:54:23,928 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.055
+2026-09-22 22:54:23,928 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.8 秒内不重复触发
+2026-09-22 22:54:24,096 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.077
+2026-09-22 22:54:24,096 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.7 秒内不重复触发
+2026-09-22 22:54:24,421 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.079
+2026-09-22 22:54:24,421 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.3 秒内不重复触发
+2026-09-22 22:54:24,731 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.045
+2026-09-22 22:54:24,886 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.035
+2026-09-22 22:54:25,194 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.039
+2026-09-22 22:54:25,194 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.6 秒内不重复触发
+2026-09-22 22:54:25,362 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.040
+2026-09-22 22:54:25,362 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.4 秒内不重复触发
+2026-09-22 22:54:25,673 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.042
+2026-09-22 22:54:25,673 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.1 秒内不重复触发
+2026-09-22 22:54:25,980 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.063
+2026-09-22 22:54:25,981 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:54:26,108 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:54:26,108 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:54:26,252 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #49 age=adult source=mock alert_id=203
+2026-09-22 22:54:26,414 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.109
+2026-09-22 22:54:26,414 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.6 秒内不重复触发
+2026-09-22 22:54:26,733 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.135
+2026-09-22 22:54:26,734 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:54:26,892 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.137
+2026-09-22 22:54:26,892 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.1 秒内不重复触发
+2026-09-22 22:54:27,198 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.089
+2026-09-22 22:54:27,504 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.055
+2026-09-22 22:54:27,663 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.069
+2026-09-22 22:54:27,663 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.3 秒内不重复触发
+2026-09-22 22:54:27,968 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.084
+2026-09-22 22:54:27,968 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:54:28,130 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.144
+2026-09-22 22:54:28,130 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.9 秒内不重复触发
+2026-09-22 22:54:28,298 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.207
+2026-09-22 22:54:28,298 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.7 秒内不重复触发
+2026-09-22 22:54:28,454 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.227
+2026-09-22 22:54:28,454 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.5 秒内不重复触发
+2026-09-22 22:54:28,760 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.244
+2026-09-22 22:54:28,760 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.2 秒内不重复触发
+2026-09-22 22:54:28,916 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.237
+2026-09-22 22:54:29,223 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.230
+2026-09-22 22:54:29,531 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.221
+2026-09-22 22:54:29,687 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.223
+2026-09-22 22:54:29,687 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.3 秒内不重复触发
+2026-09-22 22:54:29,997 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.268
+2026-09-22 22:54:29,997 services.welcome_scene:116 [INFO] 迎宾防抖命中，1.0 秒内不重复触发
+2026-09-22 22:54:30,165 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.274
+2026-09-22 22:54:30,165 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.8 秒内不重复触发
+2026-09-22 22:54:30,320 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.268
+2026-09-22 22:54:30,632 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.275
+2026-09-22 22:54:30,632 services.welcome_scene:116 [INFO] 迎宾防抖命中，0.3 秒内不重复触发
+2026-09-22 22:54:30,787 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.262
+2026-09-22 22:54:31,098 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.246
+2026-09-22 22:54:31,253 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.239
+2026-09-22 22:54:31,563 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.230
+2026-09-22 22:54:31,867 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.220
+2026-09-22 22:54:32,027 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.213
+2026-09-22 22:54:32,334 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.213
+2026-09-22 22:54:32,492 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.206
+2026-09-22 22:54:32,799 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.201
+2026-09-22 22:54:33,109 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.195
+2026-09-22 22:54:33,263 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.189
+2026-09-22 22:54:33,575 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.182
+2026-09-22 22:54:33,744 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.179
+2026-09-22 22:54:34,055 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.173
+2026-09-22 22:54:34,365 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.167
+2026-09-22 22:54:34,520 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.161
+2026-09-22 22:54:34,830 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.155
+2026-09-22 22:54:34,985 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.149
+2026-09-22 22:54:35,295 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.143
+2026-09-22 22:54:35,607 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.135
+2026-09-22 22:54:35,774 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.123
+2026-09-22 22:54:36,084 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.110
+2026-09-22 22:54:36,393 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.101
+2026-09-22 22:54:36,547 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.094
+2026-09-22 22:54:36,855 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.088
+2026-09-22 22:54:37,009 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.082
+2026-09-22 22:54:37,316 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.075
+2026-09-22 22:54:37,624 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.074
+2026-09-22 22:54:37,778 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.072
+2026-09-22 22:54:38,090 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.066
+2026-09-22 22:54:38,246 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.058
+2026-09-22 22:54:38,554 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.051
+2026-09-22 22:54:38,859 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.046
+2026-09-22 22:54:39,019 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.037
+2026-09-22 22:54:39,323 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.029
+2026-09-22 22:54:39,484 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.022
+2026-09-22 22:54:39,793 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.015
+2026-09-22 22:54:48,071 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.022
+2026-09-22 22:54:48,072 services.device_control:26 [INFO] [模拟PTZ] camera=local-cam 转向 -> center
+2026-09-22 22:54:48,227 services.device_control:35 [INFO] [模拟灯光] camera=local-cam 亮度 -> 80%
+2026-09-22 22:54:48,227 services.device_control:41 [INFO] [模拟语音] camera=local-cam 内容 -> 欢迎回家，已为您点亮灯光
+2026-09-22 22:54:48,374 services.welcome_scene:155 [WARNING] ★ 迎宾触发 #50 age=adult source=mock alert_id=204
+2026-09-22 22:54:48,533 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.037
+2026-09-22 22:54:48,533 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.5 秒内不重复触发
+2026-09-22 22:54:48,687 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.037
+2026-09-22 22:54:48,843 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.038
+2026-09-22 22:54:48,844 services.welcome_scene:116 [INFO] 迎宾防抖命中，4.2 秒内不重复触发
+2026-09-22 22:54:49,147 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.038
+2026-09-22 22:54:49,148 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.9 秒内不重复触发
+2026-09-22 22:54:49,307 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.035
+2026-09-22 22:54:49,611 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.030
+2026-09-22 22:54:49,925 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.029
+2026-09-22 22:54:50,078 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.029
+2026-09-22 22:54:50,078 services.welcome_scene:116 [INFO] 迎宾防抖命中，3.0 秒内不重复触发
+2026-09-22 22:54:50,237 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=approaching 变化占比=0.030
+2026-09-22 22:54:50,237 services.welcome_scene:116 [INFO] 迎宾防抖命中，2.8 秒内不重复触发
+2026-09-22 22:54:50,541 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.030
+2026-09-22 22:54:50,702 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.027
+2026-09-22 22:54:51,008 services.vlm_client:180 [INFO] [mock] 检测到运动人员 direction=leaving 变化占比=0.017
+2026-09-22 22:54:56,657 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 22:54:56,658 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:54:56,659 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 22:54:56,666 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 22:54:56,667 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 22:54:56,668 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 22:54:57,095 django.utils.autoreload:269 [INFO] E:\Anker黑客松\rebucca-main\rebucca-main\app\services\vlm_client.py changed, reloading.

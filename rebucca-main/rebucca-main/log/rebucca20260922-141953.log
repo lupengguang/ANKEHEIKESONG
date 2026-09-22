@@ -1,0 +1,81 @@
+2026-09-22 14:19:53,969 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 14:19:53,969 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 14:19:53,970 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 14:19:53,970 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 14:19:53,970 root:48 [INFO] logDebug=1
+2026-09-22 14:19:53,970 root:51 [INFO] argv_extend=test
+2026-09-22 14:19:53,970 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 14:19:53,970 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 14:19:53,970 root:410 [DEBUG] [GSS] start...
+2026-09-22 14:19:53,971 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 14:19:54,010 root:321 [INFO] InnerView.t_init_thread()
+2026-09-22 14:19:54,054 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,056 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,058 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,060 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,061 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,062 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=2 subject= action= anomaly=0.95
+2026-09-22 14:19:54,063 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,063 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=1 subject= action= anomaly=0.00
+2026-09-22 14:19:54,064 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,064 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=4 subject= action= anomaly=0.00
+2026-09-22 14:19:54,065 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,065 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=3 subject= action= anomaly=0.00
+2026-09-22 14:19:54,067 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,068 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,070 services.brain_center:82 [WARNING] VLM 返回无法解析为 JSON: hello
+2026-09-22 14:19:54,072 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,076 services.brain_center:292 [INFO] WeeklyReport 生成 id=1 week=2026-09-21~2026-09-27 anomaly=2
+2026-09-22 14:19:54,077 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,080 services.brain_center:292 [INFO] WeeklyReport 生成 id=1 week=2026-09-21~2026-09-27 anomaly=2
+2026-09-22 14:19:54,082 services.brain_center:292 [INFO] WeeklyReport 生成 id=2 week=2026-09-21~2026-09-27 anomaly=2
+2026-09-22 14:19:54,093 api.outdoor:77 [ERROR] outdoor_config_update 异常: 'int' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\outdoor_api.py", line 51, in outdoor_config_update
+    camera_id = (params.get("camera_id") or "").strip()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'strip'
+2026-09-22 14:19:54,102 api.outdoor:143 [ERROR] outdoor_trigger_intrusion 异常: 'int' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\outdoor_api.py", line 119, in outdoor_trigger_intrusion
+    camera_id = (params.get("camera_id") or "").strip()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'strip'
+2026-09-22 14:19:54,104 api.outdoor:111 [ERROR] outdoor_trigger_welcome 异常: 'int' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\outdoor_api.py", line 85, in outdoor_trigger_welcome
+    camera_id = (params.get("camera_id") or "").strip()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'strip'
+2026-09-22 14:19:54,105 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,111 services.outdoor_scene:317 [INFO] 灯光控制 cam=1 on=True brightness=80
+2026-09-22 14:19:54,115 services.outdoor_scene:297 [INFO] PTZ 控制 cam=1 direction=preset angle=3 (ONVIF 未真正实现)
+2026-09-22 14:19:54,116 services.outdoor_scene:332 [INFO] TTS 播报 cam=1 text=你好
+2026-09-22 14:19:54,119 services.outdoor_scene:297 [INFO] PTZ 控制 cam=100 direction=preset angle=2 (ONVIF 未真正实现)
+2026-09-22 14:19:54,119 services.outdoor_scene:317 [INFO] 灯光控制 cam=100 on=True brightness=80
+2026-09-22 14:19:54,119 services.outdoor_scene:332 [INFO] TTS 播报 cam=100 text=快递已到门口，请查收。
+2026-09-22 14:19:54,122 services.outdoor_scene:297 [INFO] PTZ 控制 cam=100 direction=preset angle=3 (ONVIF 未真正实现)
+2026-09-22 14:19:54,122 services.outdoor_scene:317 [INFO] 灯光控制 cam=100 on=True brightness=100
+2026-09-22 14:19:54,122 services.outdoor_scene:332 [INFO] TTS 播报 cam=100 text=这里是私人区域，请立即离开！
+2026-09-22 14:19:54,123 services.outdoor_scene:252 [WARNING] 入侵场景触发 cam=100
+2026-09-22 14:19:54,125 services.outdoor_scene:297 [INFO] PTZ 控制 cam=100 direction=preset angle=2 (ONVIF 未真正实现)
+2026-09-22 14:19:54,125 services.outdoor_scene:317 [INFO] 灯光控制 cam=100 on=True brightness=60
+2026-09-22 14:19:54,125 services.outdoor_scene:332 [INFO] TTS 播报 cam=100 text=您好，请问找谁？
+2026-09-22 14:19:54,128 services.outdoor_scene:297 [INFO] PTZ 控制 cam=100 direction=preset angle=1 (ONVIF 未真正实现)
+2026-09-22 14:19:54,128 services.outdoor_scene:317 [INFO] 灯光控制 cam=100 on=True brightness=80
+2026-09-22 14:19:54,128 services.outdoor_scene:332 [INFO] TTS 播报 cam=100 text=欢迎回家
+2026-09-22 14:19:54,128 services.outdoor_scene:204 [INFO] 迎宾场景 cam=100 person=family actions=3
+2026-09-22 14:19:54,131 services.outdoor_scene:297 [INFO] PTZ 控制 cam=200 direction=preset angle=1 (ONVIF 未真正实现)
+2026-09-22 14:19:54,131 services.outdoor_scene:317 [INFO] 灯光控制 cam=200 on=True brightness=80
+2026-09-22 14:19:54,131 services.outdoor_scene:332 [INFO] TTS 播报 cam=200 text=欢迎回家
+2026-09-22 14:19:54,131 services.outdoor_scene:204 [INFO] 迎宾场景 cam=200 person=family actions=3
+2026-09-22 14:19:54,132 services.outdoor_scene:109 [INFO] OutdoorEvent 入库 id=1 cam=200 scene=welcome person=family
+2026-09-22 14:19:54,135 services.outdoor_scene:297 [INFO] PTZ 控制 cam=200 direction=preset angle=2 (ONVIF 未真正实现)
+2026-09-22 14:19:54,135 services.outdoor_scene:317 [INFO] 灯光控制 cam=200 on=True brightness=60
+2026-09-22 14:19:54,135 services.outdoor_scene:332 [INFO] TTS 播报 cam=200 text=您好，请问找谁？
+2026-09-22 14:19:54,136 services.outdoor_scene:109 [INFO] OutdoorEvent 入库 id=1 cam=200 scene=visitor person=stranger
+2026-09-22 14:19:54,140 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:19:54,140 services.outdoor_scene:297 [INFO] PTZ 控制 cam=200 direction=preset angle=2 (ONVIF 未真正实现)
+2026-09-22 14:19:54,140 services.outdoor_scene:317 [INFO] 灯光控制 cam=200 on=True brightness=60
+2026-09-22 14:19:54,140 services.outdoor_scene:332 [INFO] TTS 播报 cam=200 text=您好，请问找谁？
+2026-09-22 14:19:54,140 services.outdoor_scene:109 [INFO] OutdoorEvent 入库 id=1 cam=200 scene=visitor person=unknown

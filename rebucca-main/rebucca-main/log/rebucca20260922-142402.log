@@ -1,0 +1,31 @@
+2026-09-22 14:24:02,078 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 14:24:02,079 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 14:24:02,079 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 14:24:02,079 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 14:24:02,079 root:48 [INFO] logDebug=1
+2026-09-22 14:24:02,079 root:51 [INFO] argv_extend=test
+2026-09-22 14:24:02,079 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 14:24:02,079 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 14:24:02,080 root:410 [DEBUG] [GSS] start...
+2026-09-22 14:24:02,080 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 14:24:02,120 root:321 [INFO] InnerView.t_init_thread()
+2026-09-22 14:24:02,151 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,153 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,155 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,157 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,158 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,159 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=2 subject= action= anomaly=0.95
+2026-09-22 14:24:02,160 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,160 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=1 subject= action= anomaly=0.00
+2026-09-22 14:24:02,161 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,162 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=4 subject= action= anomaly=0.00
+2026-09-22 14:24:02,162 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,163 services.brain_center:136 [INFO] BrainEvent 入库 id=1 cam=3 subject= action= anomaly=0.00
+2026-09-22 14:24:02,165 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,166 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,168 services.brain_center:82 [WARNING] VLM 返回无法解析为 JSON: hello
+2026-09-22 14:24:02,170 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,173 services.brain_center:292 [INFO] WeeklyReport 生成 id=1 week=2026-09-21~2026-09-27 anomaly=2
+2026-09-22 14:24:02,175 services.brain_center:50 [WARNING] 未找到启用的 LLMModel，BrainCenter 将无法调用 VLM
+2026-09-22 14:24:02,178 services.brain_center:292 [INFO] WeeklyReport 生成 id=1 week=2026-09-21~2026-09-27 anomaly=2
+2026-09-22 14:24:02,180 services.brain_center:292 [INFO] WeeklyReport 生成 id=2 week=2026-09-21~2026-09-27 anomaly=2

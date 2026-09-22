@@ -1,0 +1,834 @@
+2026-09-22 15:00:25,824 root:44 [INFO] rebucca v1.004,rebucca
+2026-09-22 15:00:25,824 root:45 [INFO] rebucca built on 2026/09/02
+2026-09-22 15:00:25,824 root:46 [INFO] g_filepath_config_json=E:\Anker黑客松\rebucca-main\rebucca-main\config.json
+2026-09-22 15:00:25,824 root:47 [INFO] config.json:{'safe': 'rebucca_safe_key_2026', 'host': '0.0.0.0', 'adminPort': 10001, 'mediaHttpPort': 10002, 'mediaRtspPort': 10554, 'mediaRtmpPort': 10935, 'isEnableMediaProxyRtmp': True, 'mediaSecret': 'aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM', 'mediaStartPath': 'zlm\\bin.x86.windows10\\rebucca_zlm.exe', 'mediaStartConfigPath': 'zlm\\bin.x86.windows10\\config.ini', 'autoStartMedia': True, 'ffmpeg': 'ffmpeg', 'fontPath': 'static\\fonts\\tsimhei.ttf', 'uploadDir': 'static\\upload', 'storageDir': 'static\\storage', 'autoAddStreamProxySleep': 16, 'autoAddStreamProxy': True, 'logDebug': True, 'isEnableLoginCaptcha': False, 'isEnableUpdatePopup': True, 'analysisTargetFps': 5, 'analysisConfThreshold': 0.4, 'analysisProcessMode': 1, 'analysisSharedInference': True, 'analysisInferenceWorkers': 2, 'recordingEnabled': False, 'recordingSegmentSeconds': 600, 'recordingRetainDays': 7, 'recordingRetainGb': 0.0, 'sipServer': {'sipServerIp': '192.168.1.7', 'sipServerPort': 15060, 'sipServerNonce': '12345678', 'sipTransferMode': 0, 'sipServerId': '34020000009000009999', 'sipServerRealm': '3402000000', 'sipServerPass': '123456', 'sipServerTimeout': 300, 'sipServerExpiry': 1800, 'rtpTransferMode': 0, 'rtpTransferAudioType': 0, 'autoInviteAfterRecCateLog': True}}
+2026-09-22 15:00:25,825 root:48 [INFO] logDebug=1
+2026-09-22 15:00:25,825 root:51 [INFO] argv_extend=runserver
+2026-09-22 15:00:25,825 root:19 [INFO] ZLMediaKitApi.__init__()
+2026-09-22 15:00:25,825 root:289 [DEBUG] GB28181SipServer.__init__()
+2026-09-22 15:00:25,825 root:410 [DEBUG] [GSS] start...
+2026-09-22 15:00:25,826 root:428 [DEBUG] [GSS] SIP服务器已启动: UDP 0.0.0.0:15060:192.168.1.7:15060
+2026-09-22 15:00:25,864 root:321 [INFO] InnerView.t_init_thread()
+2026-09-22 15:00:27,629 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 15:00:27,631 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1281
+2026-09-22 15:00:27,632 app.bootstrap:72 [INFO] autoStartMedia: ok=True 流媒体服务已在运行
+2026-09-22 15:00:37,439 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 15:00:41,866 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 15:00:41,867 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 15:00:41,869 root:330 [INFO] autoAddStreamProxy ret=1,msg=成功数量：0，失败数量：0
+2026-09-22 15:00:44,366 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 15:00:44,367 root:1139 [INFO] StreamView.openGetStatisticsStream() request_ip:127.0.0.1
+2026-09-22 15:00:44,368 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 15:00:44,369 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 15:00:44,370 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "POST /index/api/getThreadsLoad HTTP/1.1" 200 1285
+2026-09-22 15:00:44,371 root:1170 [INFO] StreamView.openGetStatisticsStream() res:{'code': 1000, 'msg': '操作成功', 'info': {'groupCount': 0, 'count': 0, 'forwardCount': 0}}
+2026-09-22 15:00:44,390 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 15:00:45,933 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): www.yuturuishi.com:80
+2026-09-22 15:00:46,783 urllib3.connectionpool:544 [DEBUG] http://www.yuturuishi.com:80 "POST /api/rebucca/checkVersion HTTP/1.1" 200 76
+2026-09-22 15:00:48,337 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 15:01:06,956 root:1083 [INFO] StreamView.openGetAllStreamData() request_ip:127.0.0.1,params:{}
+2026-09-22 15:01:06,957 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 15:01:06,959 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 15:01:06,960 root:1125 [INFO] StreamView.openGetAllStreamData() res.data length:0
+2026-09-22 15:01:06,984 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 15:01:23,534 api.brain:101 [ERROR] brain_weekly_report 异常: no such column: brain_weekly_report.create_time
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: brain_weekly_report.create_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\brain_api.py", line 87, in brain_weekly_report
+    wr = WeeklyReport.objects.order_by("-week_start").first()
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 1228, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 473, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 2287, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 131, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\sql\compiler.py", line 1643, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: brain_weekly_report.create_time
+2026-09-22 15:01:23,672 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=0
+2026-09-22 15:01:23,716 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:01:23,716 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:01:23,733 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DCB26900>
+2026-09-22 15:01:23,733 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:01:23,734 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:01:23,734 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:01:23,734 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:01:23,734 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:01:53,736 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:01:53,736 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:01:53,737 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:01:53,737 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:01:53,737 openai._base_client:1172 [DEBUG] 2 retries left
+2026-09-22 15:01:53,737 openai._base_client:1175 [INFO] Retrying request in 0.415156 seconds (retry 1 of 2)
+2026-09-22 15:01:54,152 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=1
+2026-09-22 15:01:54,153 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:01:54,153 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:01:54,169 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DBEE2E90>
+2026-09-22 15:01:54,169 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:01:54,169 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:01:54,169 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:01:54,169 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:01:54,169 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:02:24,179 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:02:24,179 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:02:24,179 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:02:24,179 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:02:24,179 openai._base_client:1170 [DEBUG] 1 retry left
+2026-09-22 15:02:24,179 openai._base_client:1175 [INFO] Retrying request in 0.950447 seconds (retry 2 of 2)
+2026-09-22 15:02:24,641 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 15:02:25,130 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=2
+2026-09-22 15:02:25,131 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:02:25,131 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:02:25,155 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DBEE2E90>
+2026-09-22 15:02:25,156 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:02:25,156 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:02:25,156 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:02:25,156 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:02:25,156 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:02:27,237 api.brain:101 [ERROR] brain_weekly_report 异常: no such column: brain_weekly_report.create_time
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: brain_weekly_report.create_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\brain_api.py", line 87, in brain_weekly_report
+    wr = WeeklyReport.objects.order_by("-week_start").first()
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 1228, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 473, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 2287, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 131, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\sql\compiler.py", line 1643, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: brain_weekly_report.create_time
+2026-09-22 15:02:31,090 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=0
+2026-09-22 15:02:31,090 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:02:31,090 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:02:31,113 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DCBAE8B0>
+2026-09-22 15:02:31,113 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:02:31,114 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:02:31,114 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:02:31,114 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:02:31,114 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:02:55,159 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:02:55,159 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:02:55,159 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:02:55,159 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:02:55,159 openai._base_client:1103 [DEBUG] Raising timeout error
+2026-09-22 15:02:55,159 services.brain_center:262 [WARNING] LLM 生成周报摘要失败: Request timed out.
+2026-09-22 15:02:55,161 api.brain:118 [ERROR] brain_generate_report 异常: table brain_weekly_report has no column named create_time
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table brain_weekly_report has no column named create_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\brain_api.py", line 115, in brain_generate_report
+    result = bc.generate_weekly_report(week_start=week_start)
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\services\brain_center.py", line 285, in generate_weekly_report
+    wr = WeeklyReport.objects.create(
+        week_start=week_start,
+    ...<3 lines>...
+        report_content=report_content,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 752, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\models.py", line 539, in save
+    ret = super(WeeklyReport, self).save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 904, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 996, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1201, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, insert_fields, returning_fields, raw
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1253, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 2166, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\sql\compiler.py", line 1954, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: table brain_weekly_report has no column named create_time
+2026-09-22 15:03:01,126 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:03:01,126 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:03:01,126 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:03:01,127 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:03:01,127 openai._base_client:1172 [DEBUG] 2 retries left
+2026-09-22 15:03:01,127 openai._base_client:1175 [INFO] Retrying request in 0.388581 seconds (retry 1 of 2)
+2026-09-22 15:03:01,516 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=1
+2026-09-22 15:03:01,516 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:03:01,517 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:03:01,530 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DCBAE9E0>
+2026-09-22 15:03:01,530 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:03:01,530 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:03:01,530 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:03:01,530 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:03:01,530 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:03:31,541 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:03:31,542 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:03:31,542 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:03:31,542 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:03:31,542 openai._base_client:1170 [DEBUG] 1 retry left
+2026-09-22 15:03:31,542 openai._base_client:1175 [INFO] Retrying request in 0.879897 seconds (retry 2 of 2)
+2026-09-22 15:03:32,411 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=0
+2026-09-22 15:03:32,412 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:03:32,412 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:03:32,422 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=2
+2026-09-22 15:03:32,423 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:03:32,423 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:03:32,425 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DC620950>
+2026-09-22 15:03:32,425 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:03:32,425 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:03:32,426 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:03:32,426 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:03:32,426 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:03:32,441 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DCC58F30>
+2026-09-22 15:03:32,441 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:03:32,441 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:03:32,441 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:03:32,441 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:03:32,441 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:04:02,433 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:04:02,433 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:04:02,434 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:04:02,434 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:04:02,434 openai._base_client:1172 [DEBUG] 2 retries left
+2026-09-22 15:04:02,434 openai._base_client:1175 [INFO] Retrying request in 0.410424 seconds (retry 1 of 2)
+2026-09-22 15:04:02,449 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:04:02,450 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:04:02,450 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:04:02,450 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:04:02,450 openai._base_client:1103 [DEBUG] Raising timeout error
+2026-09-22 15:04:02,450 services.brain_center:262 [WARNING] LLM 生成周报摘要失败: Request timed out.
+2026-09-22 15:04:02,452 api.brain:118 [ERROR] brain_generate_report 异常: table brain_weekly_report has no column named create_time
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table brain_weekly_report has no column named create_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\brain_api.py", line 115, in brain_generate_report
+    result = bc.generate_weekly_report(week_start=week_start)
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\services\brain_center.py", line 285, in generate_weekly_report
+    wr = WeeklyReport.objects.create(
+        week_start=week_start,
+    ...<3 lines>...
+        report_content=report_content,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 752, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\models.py", line 539, in save
+    ret = super(WeeklyReport, self).save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 904, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 996, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1201, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, insert_fields, returning_fields, raw
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1253, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 2166, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\sql\compiler.py", line 1954, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: table brain_weekly_report has no column named create_time
+2026-09-22 15:04:02,845 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=1
+2026-09-22 15:04:02,845 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:04:02,846 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:04:02,869 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DCC585A0>
+2026-09-22 15:04:02,869 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:04:02,869 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:04:02,869 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:04:02,869 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:04:02,869 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:04:32,883 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:04:32,883 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:04:32,883 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:04:32,883 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:04:32,883 openai._base_client:1170 [DEBUG] 1 retry left
+2026-09-22 15:04:32,883 openai._base_client:1175 [INFO] Retrying request in 0.790163 seconds (retry 2 of 2)
+2026-09-22 15:04:33,674 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=2
+2026-09-22 15:04:33,675 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:04:33,675 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:04:33,690 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DCBE8B50>
+2026-09-22 15:04:33,690 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:04:33,691 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:04:33,691 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:04:33,691 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:04:33,691 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:04:35,251 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=0
+2026-09-22 15:04:35,252 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:04:35,252 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:04:35,253 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DCE65650>
+2026-09-22 15:04:35,253 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:04:35,254 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:04:35,254 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:04:35,254 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:04:35,254 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:05:03,699 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:05:03,699 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:05:03,699 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:05:03,699 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:05:03,700 openai._base_client:1103 [DEBUG] Raising timeout error
+2026-09-22 15:05:03,700 services.brain_center:262 [WARNING] LLM 生成周报摘要失败: Request timed out.
+2026-09-22 15:05:03,701 api.brain:118 [ERROR] brain_generate_report 异常: table brain_weekly_report has no column named create_time
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table brain_weekly_report has no column named create_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\brain_api.py", line 115, in brain_generate_report
+    result = bc.generate_weekly_report(week_start=week_start)
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\services\brain_center.py", line 285, in generate_weekly_report
+    wr = WeeklyReport.objects.create(
+        week_start=week_start,
+    ...<3 lines>...
+        report_content=report_content,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 752, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\models.py", line 539, in save
+    ret = super(WeeklyReport, self).save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 904, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 996, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1201, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, insert_fields, returning_fields, raw
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1253, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 2166, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\sql\compiler.py", line 1954, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: table brain_weekly_report has no column named create_time
+2026-09-22 15:05:05,259 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:05:05,259 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:05:05,259 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:05:05,259 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:05:05,259 openai._base_client:1172 [DEBUG] 2 retries left
+2026-09-22 15:05:05,259 openai._base_client:1175 [INFO] Retrying request in 0.446251 seconds (retry 1 of 2)
+2026-09-22 15:05:05,706 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=1
+2026-09-22 15:05:05,707 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:05:05,707 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:05:05,725 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DC5A3980>
+2026-09-22 15:05:05,725 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:05:05,726 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:05:05,726 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:05:05,726 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:05:05,726 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:05:35,731 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:05:35,731 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:05:35,731 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:05:35,732 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:05:35,732 openai._base_client:1170 [DEBUG] 1 retry left
+2026-09-22 15:05:35,732 openai._base_client:1175 [INFO] Retrying request in 0.913224 seconds (retry 2 of 2)
+2026-09-22 15:05:36,646 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=2
+2026-09-22 15:05:36,646 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:05:36,646 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:05:36,669 root:1083 [INFO] StreamView.openGetAllStreamData() request_ip:127.0.0.1,params:{}
+2026-09-22 15:05:36,670 urllib3.connectionpool:241 [DEBUG] Starting new HTTP connection (1): 127.0.0.1:10002
+2026-09-22 15:05:36,672 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DC5A3B60>
+2026-09-22 15:05:36,672 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:05:36,672 urllib3.connectionpool:544 [DEBUG] http://127.0.0.1:10002 "GET /index/api/getMediaList?secret=aqxY9ps21fyhyKNRyYpGvJCTp1JBeGOM HTTP/1.1" 200 16
+2026-09-22 15:05:36,673 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:05:36,673 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:05:36,673 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:05:36,673 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:05:36,674 root:1125 [INFO] StreamView.openGetAllStreamData() res.data length:0
+2026-09-22 15:05:36,704 django.request:283 [WARNING] Not Found: /@vite/client
+2026-09-22 15:05:38,157 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=0
+2026-09-22 15:05:38,158 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:05:38,158 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:05:38,181 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DCE5F5B0>
+2026-09-22 15:05:38,182 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:05:38,182 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:05:38,182 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:05:38,182 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:05:38,182 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:06:06,685 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:06:06,686 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:06:06,686 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:06:06,686 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:06:06,686 openai._base_client:1103 [DEBUG] Raising timeout error
+2026-09-22 15:06:06,686 services.brain_center:262 [WARNING] LLM 生成周报摘要失败: Request timed out.
+2026-09-22 15:06:06,688 api.brain:118 [ERROR] brain_generate_report 异常: table brain_weekly_report has no column named create_time
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table brain_weekly_report has no column named create_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\brain_api.py", line 115, in brain_generate_report
+    result = bc.generate_weekly_report(week_start=week_start)
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\services\brain_center.py", line 285, in generate_weekly_report
+    wr = WeeklyReport.objects.create(
+        week_start=week_start,
+    ...<3 lines>...
+        report_content=report_content,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 752, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\models.py", line 539, in save
+    ret = super(WeeklyReport, self).save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 904, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 996, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1201, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, insert_fields, returning_fields, raw
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1253, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 2166, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\sql\compiler.py", line 1954, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: table brain_weekly_report has no column named create_time
+2026-09-22 15:06:08,194 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:06:08,194 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:06:08,194 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:06:08,194 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:06:08,194 openai._base_client:1172 [DEBUG] 2 retries left
+2026-09-22 15:06:08,194 openai._base_client:1175 [INFO] Retrying request in 0.467509 seconds (retry 1 of 2)
+2026-09-22 15:06:08,663 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=1
+2026-09-22 15:06:08,663 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:06:08,663 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:06:08,664 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DCE5F930>
+2026-09-22 15:06:08,665 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:06:08,665 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:06:08,665 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:06:08,665 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:06:08,665 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:06:38,672 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:06:38,672 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:06:38,672 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:06:38,672 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:06:38,672 openai._base_client:1170 [DEBUG] 1 retry left
+2026-09-22 15:06:38,672 openai._base_client:1175 [INFO] Retrying request in 0.788737 seconds (retry 2 of 2)
+2026-09-22 15:06:39,462 openai._base_client:522 [DEBUG] Building HTTP request: method=POST retries_taken=2
+2026-09-22 15:06:39,462 openai._base_client:1082 [DEBUG] Sending HTTP Request: POST
+2026-09-22 15:06:39,462 httpcore2.connection:45 [DEBUG] connect_tcp.started host='192.168.1.105' port=1234 local_address=None timeout=30 socket_options=None
+2026-09-22 15:06:39,477 httpcore2.connection:45 [DEBUG] connect_tcp.complete return_value=<httpcore2._backends.sync.SyncStream object at 0x00000224DC59C460>
+2026-09-22 15:06:39,477 httpcore2.http11:45 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-09-22 15:06:39,477 httpcore2.http11:45 [DEBUG] send_request_headers.complete
+2026-09-22 15:06:39,477 httpcore2.http11:45 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-09-22 15:06:39,477 httpcore2.http11:45 [DEBUG] send_request_body.complete
+2026-09-22 15:06:39,477 httpcore2.http11:45 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-09-22 15:07:09,483 httpcore2.http11:45 [DEBUG] receive_response_headers.failed exception=ReadTimeout(TimeoutError('timed out'))
+2026-09-22 15:07:09,483 httpcore2.http11:45 [DEBUG] response_closed.started
+2026-09-22 15:07:09,483 httpcore2.http11:45 [DEBUG] response_closed.complete
+2026-09-22 15:07:09,484 openai._base_client:1092 [DEBUG] Encountered a timeout exception: ReadTimeout
+2026-09-22 15:07:09,484 openai._base_client:1103 [DEBUG] Raising timeout error
+2026-09-22 15:07:09,484 services.brain_center:262 [WARNING] LLM 生成周报摘要失败: Request timed out.
+2026-09-22 15:07:09,485 api.brain:118 [ERROR] brain_generate_report 异常: table brain_weekly_report has no column named create_time
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table brain_weekly_report has no column named create_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\brain_api.py", line 115, in brain_generate_report
+    result = bc.generate_weekly_report(week_start=week_start)
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\services\brain_center.py", line 285, in generate_weekly_report
+    wr = WeeklyReport.objects.create(
+        week_start=week_start,
+    ...<3 lines>...
+        report_content=report_content,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 752, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anker黑客松\rebucca-main\rebucca-main\app\models.py", line 539, in save
+    ret = super(WeeklyReport, self).save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 904, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 996, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1201, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, insert_fields, returning_fields, raw
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\base.py", line 1253, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\query.py", line 2166, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\models\sql\compiler.py", line 1954, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python314\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: table brain_weekly_report has no column named create_time
